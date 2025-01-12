@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thicket:block/hazel_slab"
+    },
+    "type=double": {
+      "model": "thicket:block/hazel_planks"
+    },
+    "type=top": {
+      "model": "thicket:block/hazel_slab_top"
+    }
+  }
+}

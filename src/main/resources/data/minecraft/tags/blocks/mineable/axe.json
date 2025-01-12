@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thicket:carved_hazel",
+    "thicket:hazel_planks",
+    "thicket:hazel_slab",
+    "thicket:hazel_button",
+    "thicket:hazel_pressure_plate",
+    "thicket:hazel_stairs",
+    "thicket:hazel_fence",
+    "thicket:hazel_fence_gate"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "item.thicket.hazel_sapling": "Hazel Sapling",
+  "item.thicket.dowsing_rod": "Dowsing Rod",
+
+  "block.thicket.hazel_planks": "Hazel Planks",
+  "block.thicket.hazel_stairs": "Hazel Stairs",
+  "block.thicket.hazel_slab": "Hazel Slab",
+  "block.thicket.hazel_button": "Hazel Button",
+  "block.thicket.hazel_pressure_plate": "Hazel Pressure Plate",
+  "block.thicket.hazel_fence": "Hazel Fence",
+  "block.thicket.hazel_fence_gate": "Hazel Fence Gate",
+  "block.thicket.carved_hazel": "Carved Hazel",
+
+  "creativetab.thicket_tab": "Thicket Tab"
+}
