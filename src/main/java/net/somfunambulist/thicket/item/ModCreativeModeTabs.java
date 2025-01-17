@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.HAZEL_FENCE.get());
                         output.accept(ModBlocks.HAZEL_FENCE_GATE.get());
+                        output.accept(ModBlocks.HAZEL_DOOR.get());
+                        output.accept(ModBlocks.HAZEL_TRAPDOOR.get());
                         output.accept(ModBlocks.CARVED_HAZEL.get());
                     })).build());
 

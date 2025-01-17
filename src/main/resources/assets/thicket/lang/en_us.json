@@ -9,6 +9,9 @@
   "block.thicket.hazel_pressure_plate": "Hazel Pressure Plate",
   "block.thicket.hazel_fence": "Hazel Fence",
   "block.thicket.hazel_fence_gate": "Hazel Fence Gate",
+  "block.thicket.hazel_door": "Hazel Door",
+  "block.thicket.hazel_trapdoor": "Hazel Trapdoor",
+
   "block.thicket.carved_hazel": "Carved Hazel",
 
   "creativetab.thicket_tab": "Thicket Tab"

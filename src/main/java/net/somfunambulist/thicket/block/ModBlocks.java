@@ -44,6 +44,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> HAZEL_FENCE_GATE = registerBlock("hazel_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
+    public static final RegistryObject<Block> HAZEL_DOOR = registerBlock("hazel_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> HAZEL_TRAPDOOR = registerBlock("hazel_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+
+
     public static final RegistryObject<Block> CARVED_HAZEL = registerBlock("carved_hazel",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 

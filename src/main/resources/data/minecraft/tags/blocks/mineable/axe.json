@@ -8,6 +8,8 @@
     "thicket:hazel_pressure_plate",
     "thicket:hazel_stairs",
     "thicket:hazel_fence",
-    "thicket:hazel_fence_gate"
+    "thicket:hazel_fence_gate",
+    "thicket:hazel_door",
+    "thicket:hazel_trapdoor"
   ]
 }
