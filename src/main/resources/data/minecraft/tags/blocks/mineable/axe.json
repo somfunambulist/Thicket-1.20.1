@@ -10,6 +10,10 @@
     "thicket:hazel_fence",
     "thicket:hazel_fence_gate",
     "thicket:hazel_door",
-    "thicket:hazel_trapdoor"
+    "thicket:hazel_trapdoor",
+    "thicket:hazel_log",
+    "thicket:hazel_wood",
+    "thicket:stripped_hazel_log",
+    "thicket:stripped_hazel_wood"
   ]
 }

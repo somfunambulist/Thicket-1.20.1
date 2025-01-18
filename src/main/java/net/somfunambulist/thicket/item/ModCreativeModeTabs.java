@@ -18,7 +18,6 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DOWSING_ROD.get()))
                     .title(Component.translatable("creativetab.thicket_tab"))
                     .displayItems(((displayParameters, output) -> {
-                        output.accept(ModItems.HAZEL_SAPLING.get());
                         output.accept(ModItems.DOWSING_ROD.get());
 
                         output.accept(ModBlocks.HAZEL_PLANKS.get());
@@ -30,6 +29,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_FENCE_GATE.get());
                         output.accept(ModBlocks.HAZEL_DOOR.get());
                         output.accept(ModBlocks.HAZEL_TRAPDOOR.get());
+                        output.accept(ModBlocks.HAZEL_LOG.get());
+                        output.accept(ModBlocks.HAZEL_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_HAZEL_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_HAZEL_WOOD.get());
+                        output.accept(ModBlocks.HAZEL_LEAVES.get());
+                        output.accept(ModBlocks.HAZEL_SAPLING.get());
+
+
                         output.accept(ModBlocks.CARVED_HAZEL.get());
                     })).build());
 

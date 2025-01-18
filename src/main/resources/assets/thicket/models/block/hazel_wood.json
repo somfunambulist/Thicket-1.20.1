@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "thicket:block/hazel_log",
+    "side": "thicket:block/hazel_log"
+  }
+}

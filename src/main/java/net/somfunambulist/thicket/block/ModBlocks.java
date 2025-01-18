@@ -22,7 +22,7 @@ public class ModBlocks {
     //ADD BLOCKS HERE===================================================================================================
 
         public static final RegistryObject<Block> HAZEL_PLANKS = registerBlock("hazel_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> HAZEL_STAIRS = registerBlock("hazel_stairs",
             () -> new StairBlock(() -> ModBlocks.HAZEL_PLANKS.get().defaultBlockState(),
@@ -50,9 +50,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> HAZEL_TRAPDOOR = registerBlock("hazel_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
 
+    public static final RegistryObject<Block> HAZEL_LOG = registerBlock("hazel_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> HAZEL_WOOD = registerBlock("hazel_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_HAZEL_LOG = registerBlock("stripped_hazel_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_HAZEL_WOOD = registerBlock("stripped_hazel_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> HAZEL_LEAVES = registerBlock("hazel_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> HAZEL_SAPLING = registerBlock("hazel_sapling",
+            () -> new SaplingBlock(null,BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
 
     public static final RegistryObject<Block> CARVED_HAZEL = registerBlock("carved_hazel",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
