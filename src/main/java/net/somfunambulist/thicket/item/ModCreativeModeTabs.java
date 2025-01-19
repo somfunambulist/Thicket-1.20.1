@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thicket_tab"))
                     .displayItems(((displayParameters, output) -> {
 
+                        output.accept(ModItems.POCKET_KNIFE.get());
                         output.accept(ModBlocks.HAZEL_PLANKS.get());
                         output.accept(ModBlocks.HAZEL_SLAB.get());
                         output.accept(ModBlocks.HAZEL_STAIRS.get());

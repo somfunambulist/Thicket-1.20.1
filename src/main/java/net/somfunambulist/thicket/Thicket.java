@@ -1,6 +1,7 @@
 package net.somfunambulist.thicket;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -37,8 +38,11 @@ public class Thicket {
         modEventBus.addListener(this::addCreative);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
 
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.HAZEL_NUT.get(), 0.20F);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
