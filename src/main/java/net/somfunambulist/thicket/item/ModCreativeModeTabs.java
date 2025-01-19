@@ -38,6 +38,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_SAPLING.get());
                         output.accept(ModItems.DOWSING_ROD.get());
                         output.accept(ModItems.HAZEL_NUT.get());
+                        output.accept(ModBlocks.HAZEL_NUT_BUNDLE.get());
 
                     })).build());
 
