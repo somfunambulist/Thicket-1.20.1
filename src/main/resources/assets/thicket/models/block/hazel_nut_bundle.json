@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "thicket:block/hazel_nut_bundle_bottom",
-    "top": "thicket:block/hazel_nut_bundle_top",
-    "side": "thicket:block/hazel_nut_bundle_side"
-  }
-}

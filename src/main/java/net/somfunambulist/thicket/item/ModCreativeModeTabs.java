@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Thicket.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> SETUP_TAB = CREATIVE_MODE_TABS.register("thicket_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HAZEL_NUT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HAZELNUT.get()))
                     .title(Component.translatable("creativetab.thicket_tab"))
                     .displayItems(((displayParameters, output) -> {
 
@@ -37,8 +37,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_LEAVES.get());
                         output.accept(ModBlocks.HAZEL_SAPLING.get());
                         output.accept(ModItems.DOWSING_ROD.get());
-                        output.accept(ModItems.HAZEL_NUT.get());
-                        output.accept(ModBlocks.HAZEL_NUT_BUNDLE.get());
+                        output.accept(ModItems.HAZELNUT.get());
+                        output.accept(ModBlocks.HAZELNUT_BUNDLE.get());
 
                     })).build());
 

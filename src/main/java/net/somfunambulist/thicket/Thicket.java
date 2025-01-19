@@ -41,7 +41,7 @@ public class Thicket {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(ModItems.HAZEL_NUT.get(), 0.20F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HAZELNUT.get(), 0.20F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.HAZEL_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.HAZEL_LEAVES.get().asItem(), 0.30F);
         });

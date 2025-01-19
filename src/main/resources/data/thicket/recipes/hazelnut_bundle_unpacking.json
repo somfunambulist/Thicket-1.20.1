@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "thicket:hazel_nut_bundle"
+      "item": "thicket:hazelnut_bundle"
     }
   ],
   "result": {
-    "item": "thicket:hazel_nut",
+    "item": "thicket:hazelnut",
     "count": 9
   }
 }

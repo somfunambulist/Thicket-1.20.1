@@ -18,8 +18,8 @@ public class ModItems {
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> HAZEL_NUT = ITEMS.register("hazel_nut",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.HAZEL_NUT)));
+    public static final RegistryObject<Item> HAZELNUT = ITEMS.register("hazelnut",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.HAZELNUT)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -67,7 +67,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CARVED_HAZEL = registerBlock("carved_hazel",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
-    public static final RegistryObject<Block> HAZEL_NUT_BUNDLE = registerBlock("hazel_nut_bundle",
+    public static final RegistryObject<Block> HAZELNUT_BUNDLE = registerBlock("hazelnut_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
     //==================================================================================================================

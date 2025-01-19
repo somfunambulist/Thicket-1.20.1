@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "thicket:item/hazel_nut"
+    "layer0": "thicket:item/hazelnut"
   }
 }

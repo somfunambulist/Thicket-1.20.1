@@ -1,6 +1,6 @@
 {
   "item.thicket.dowsing_rod": "Dowsing Rod",
-  "item.thicket.hazel_nut": "Hazel Nut",
+  "item.thicket.hazelnut": "Hazelnut",
   "item.thicket.pocket_knife": "Pocket Knife",
 
   "block.thicket.hazel_planks": "Hazel Planks",
@@ -19,7 +19,7 @@
   "block.thicket.hazel_leaves": "Hazel Leaves",
   "block.thicket.hazel_sapling": "Hazel Sapling",
   "block.thicket.carved_hazel": "Carved Hazel",
-  "block.thicket.hazel_nut_bundle": "Hazel Nut Bundle",
+  "block.thicket.hazelnut_bundle": "Hazelnut Bundle",
 
   "creativetab.thicket_tab": "Thicket Tab"
 }

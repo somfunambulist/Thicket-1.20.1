@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "thicket:hazel_nut"
+      "item": "thicket:hazelnut"
     }
   },
   "result": {
-    "item": "thicket:hazel_nut_bundle"
+    "item": "thicket:hazelnut_bundle"
   }
 }
