@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.item.ModItems;
+import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -61,8 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> HAZEL_LEAVES = registerBlock("hazel_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> HAZEL_SAPLING = registerBlock("hazel_sapling",
-            () -> new SaplingBlock(null,BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
+            () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> CARVED_HAZEL = registerBlock("carved_hazel",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
