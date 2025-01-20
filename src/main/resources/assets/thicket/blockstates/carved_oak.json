@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "thicket:block/carved_oak_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "thicket:block/carved_oak"
+    },
+    "axis=z": {
+      "model": "thicket:block/carved_oak_horizontal",
+      "x": 90
     }
   }
 }

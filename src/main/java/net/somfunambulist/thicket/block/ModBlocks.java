@@ -52,7 +52,7 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
 
     public static final RegistryObject<Block> CARVED_OAK = registerBlock("carved_oak",
-            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> HAZEL_LOG = registerBlock("hazel_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -68,7 +68,7 @@ public class ModBlocks {
             () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> CARVED_HAZEL = registerBlock("carved_hazel",
-            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> HAZELNUT_BUNDLE = registerBlock("hazelnut_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
