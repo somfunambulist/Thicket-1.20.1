@@ -51,6 +51,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> HAZEL_TRAPDOOR = registerBlock("hazel_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
 
+    public static final RegistryObject<Block> CARVED_OAK = registerBlock("carved_oak",
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
     public static final RegistryObject<Block> HAZEL_LOG = registerBlock("hazel_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> HAZEL_WOOD = registerBlock("hazel_wood",

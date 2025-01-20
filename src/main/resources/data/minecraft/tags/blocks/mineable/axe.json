@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "thicket:carved_oak",
     "thicket:carved_hazel",
     "thicket:hazel_planks",
     "thicket:hazel_slab",

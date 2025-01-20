@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .displayItems(((displayParameters, output) -> {
 
                         output.accept(ModItems.POCKET_KNIFE.get());
+                        output.accept(ModBlocks.CARVED_OAK.get());
                         output.accept(ModBlocks.HAZEL_PLANKS.get());
                         output.accept(ModBlocks.HAZEL_SLAB.get());
                         output.accept(ModBlocks.HAZEL_STAIRS.get());
