@@ -24,5 +24,7 @@
   "block.thicket.carved_hazel": "Carved Hazel",
   "block.thicket.hazelnut_bundle": "Hazelnut Bundle",
 
-  "creativetab.thicket_tab": "Thicket Tab"
+  "creativetab.thicket_tab": "Thicket Tab",
+
+  "item.thicket.dowsing_rod.no_water": "No water source found."
 }
