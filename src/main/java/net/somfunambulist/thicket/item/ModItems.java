@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
+import net.somfunambulist.thicket.item.custom.AltDowsingRodItem;
 import net.somfunambulist.thicket.item.custom.DowsingRodItem;
 
 public class ModItems {
@@ -17,7 +18,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
-            () -> new DowsingRodItem(new Item.Properties()));
+            () -> new AltDowsingRodItem(new Item.Properties()));
 
     public static final RegistryObject<Item> HAZELNUT = ITEMS.register("hazelnut",
             () -> new Item(new Item.Properties().food(ModFoodProperties.HAZELNUT)));
