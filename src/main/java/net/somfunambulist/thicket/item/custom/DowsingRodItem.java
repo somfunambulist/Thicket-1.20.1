@@ -1,14 +1,11 @@
 package net.somfunambulist.thicket.item.custom;
 
-import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class DowsingRodItem extends Item {
@@ -17,39 +14,42 @@ public class DowsingRodItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext pContext) {
-        if(!pContext.getLevel().isClientSide()) {
-            BlockPos positionClicked = pContext.getClickedPos();
-            Player player = pContext.getPlayer();
-            boolean foundWater = false;
+    public void onInventoryTick(ItemStack stack, Level level, Player player, int slotIndex, int selectedIndex) {
+        if((slotIndex == selectedIndex)||(player.getOffhandItem() == stack)) {
+            if (!level.isClientSide()) {
+                BlockPos playerPosition = player.getOnPos();
+                boolean foundWater = false;
+                for (int i = 0; i <= playerPosition.getY() + 64; i++) {
+                    BlockState blockState = level.getBlockState(playerPosition.below(i));
 
-            for(int i = 0; i <= positionClicked.getY() + 64; i++) {
-                BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(i));
-
-                if(isWaterSource(blockState) == 8) {
-                    outputWaterSourceCoordinates(positionClicked.below(i), player, blockState.getBlock());
-                    foundWater = true;
-
-                    break;
+                    if (isWaterSource(blockState) == 8) {
+                        foundWater = true;
+                        break;
+                    }
+                }
+                if (foundWater) {
+                    CompoundTag tag = new CompoundTag();
+                    tag.putBoolean("foundWater", true);
+                    stack.setTag(tag);
+                } else {
+                    stack.setTag(new CompoundTag());
                 }
             }
-
-            if(!foundWater) {
-                outputNoWaterSourceFound(player);
-            }
-
-            return InteractionResult.SUCCESS;
+        } else {
+            stack.setTag(new CompoundTag());
         }
-
-        return super.useOn(pContext);
+        super.onInventoryTick(stack, level, player, slotIndex, selectedIndex);
     }
 
-    private void outputNoWaterSourceFound(Player player) {
-        player.sendSystemMessage(Component.translatable("item.thicket.dowsing_rod.no_water"));
+    @Override
+    public boolean onDroppedByPlayer(ItemStack item, Player player) {
+        item.setTag(new CompoundTag());
+        return super.onDroppedByPlayer(item, player);
     }
 
-    private void outputWaterSourceCoordinates(BlockPos below, Player player, Block block) {
-        player.sendSystemMessage(Component.literal("Water Found"));
+    @Override
+    public boolean isFoil(ItemStack pStack) {
+        return pStack.hasTag();
     }
 
     private int isWaterSource(BlockState blockState) {
