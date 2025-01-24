@@ -1,6 +1,7 @@
 package net.somfunambulist.thicket;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -59,6 +60,10 @@ public class Thicket {
             event.accept(ModBlocks.CARVED_HAZEL);
         }
          */
+    }
+
+    public static ResourceLocation modPrefix(String path) {
+        return new ResourceLocation(Thicket.MOD_ID, path);
     }
 
     @SubscribeEvent
