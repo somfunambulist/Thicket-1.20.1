@@ -9,6 +9,5 @@ import net.somfunambulist.thicket.Thicket;
 public class ModItemTags {
 
     public static final TagKey<Item> POCKET_KNIVES = TagKey.create(Registries.ITEM, Thicket.modPrefix("pocket_knives"));
-    public static final TagKey<Item> HAZEL_NUTS = TagKey.create(Registries.ITEM, new ResourceLocation("forge", "crops/hazel_nuts"));
 
 }
