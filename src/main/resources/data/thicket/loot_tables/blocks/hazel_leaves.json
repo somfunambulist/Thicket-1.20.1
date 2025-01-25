@@ -17,7 +17,8 @@
                       "condition": "minecraft:match_tool",
                       "predicate": {
                         "items": [
-                          "minecraft:shears"
+                          "minecraft:shears",
+                          "thicket:pocket_knife"
                         ]
                       }
                     },
@@ -75,7 +76,8 @@
                 "condition": "minecraft:match_tool",
                 "predicate": {
                   "items": [
-                    "minecraft:shears"
+                    "minecraft:shears",
+                    "thicket:pocket_knife"
                   ]
                 }
               },
@@ -143,7 +145,8 @@
                 "condition": "minecraft:match_tool",
                 "predicate": {
                   "items": [
-                    "minecraft:shears"
+                    "minecraft:shears",
+                    "thicket:pocket_knife"
                   ]
                 }
               },

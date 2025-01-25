@@ -7,13 +7,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.item.custom.DowsingRodItem;
+import net.somfunambulist.thicket.item.custom.PocketKnifeItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Thicket.MOD_ID);
 
     public static final RegistryObject<Item> POCKET_KNIFE = ITEMS.register("pocket_knife",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new PocketKnifeItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             () -> new DowsingRodItem(new Item.Properties().stacksTo(1)));
