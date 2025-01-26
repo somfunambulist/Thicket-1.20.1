@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
   "group": "planks",
   "ingredients": [
-    "#thicket:hazel_logs"
+    {
+      "tag": "thicket:hazel_logs"
+    }
   ],
   "result": {
     "count": 4,
-    "id": "thicket:hazel_planks"
+    "item": "thicket:hazel_planks"
   }
 }
