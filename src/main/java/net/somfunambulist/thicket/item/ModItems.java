@@ -1,11 +1,14 @@
 package net.somfunambulist.thicket.item;
 
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
+import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.entity.custom.ModBoatEntity;
 import net.somfunambulist.thicket.item.custom.DowsingRodItem;
 import net.somfunambulist.thicket.item.custom.HazelbutterItem;
@@ -28,6 +31,12 @@ public class ModItems {
             () -> new HazelbutterItem(new Item.Properties().food(ModFoodProperties.HAZELBUTTER)));
     public static final RegistryObject<Item> HAZELBUTTER_TREAT = ITEMS.register("hazelbutter_treat",
             () -> new Item(new Item.Properties().food(ModFoodProperties.HAZELBUTTER_TREAT)));
+
+    public static final RegistryObject<Item> HAZEL_SIGN = ITEMS.register("hazel_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.HAZEL_SIGN.get(), ModBlocks.HAZEL_WALL_SIGN.get()));
+    public static final RegistryObject<Item> HAZEL_HANGING_SIGN = ITEMS.register("hazel_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.HAZEL_HANGING_SIGN.get(), ModBlocks.HAZEL_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> HAZEL_BOAT = ITEMS.register("hazel_boat",
             () -> new ModBoatItem(false, ModBoatEntity.Type.HAZEL, new Item.Properties()));

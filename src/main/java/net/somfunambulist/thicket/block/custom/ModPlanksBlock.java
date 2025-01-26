@@ -1,13 +1,13 @@
-package net.somfunambulist.thicket.block;
+package net.somfunambulist.thicket.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModLeavesBlock extends LeavesBlock {
-    public ModLeavesBlock(Properties pProperties) {
+public class ModPlanksBlock extends Block {
+    public ModPlanksBlock(Properties pProperties) {
         super(pProperties);
     }
 
@@ -18,11 +18,11 @@ public class ModLeavesBlock extends LeavesBlock {
 
     @Override
     public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 60;
+        return 20;
     }
 
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 30;
+        return 5;
     }
 }

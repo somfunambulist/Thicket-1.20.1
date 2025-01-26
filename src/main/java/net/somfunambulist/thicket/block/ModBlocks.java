@@ -11,7 +11,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
+import net.somfunambulist.thicket.block.custom.*;
 import net.somfunambulist.thicket.item.ModItems;
+import net.somfunambulist.thicket.util.ModWoodTypes;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
 
 import java.util.function.Supplier;
@@ -57,6 +59,8 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<ModPlanksBlock> HAZEL_PLANKS = registerBlock("hazel_planks",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> HAZEL_CARVING = registerBlock("hazel_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> HAZEL_STAIRS = registerBlock("hazel_stairs",
             () -> new StairBlock(() -> ModBlocks.HAZEL_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
@@ -75,8 +79,14 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
     public static final RegistryObject<Block> HAZEL_TRAPDOOR = registerBlock("hazel_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
-    public static final RegistryObject<Block> HAZEL_CARVING = registerBlock("hazel_carving",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> HAZEL_SIGN = BLOCKS.register("hazel_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.HAZEL));
+    public static final RegistryObject<Block> HAZEL_WALL_SIGN = BLOCKS.register("hazel_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.HAZEL));
+    public static final RegistryObject<Block> HAZEL_HANGING_SIGN = BLOCKS.register("hazel_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.HAZEL));
+    public static final RegistryObject<Block> HAZEL_WALL_HANGING_SIGN = BLOCKS.register("hazel_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.HAZEL));
     public static final RegistryObject<Block> HAZELNUT_BUNDLE = registerBlock("hazelnut_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 

@@ -48,6 +48,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_FENCE_GATE.get());
                         output.accept(ModBlocks.HAZEL_DOOR.get());
                         output.accept(ModBlocks.HAZEL_TRAPDOOR.get());
+                        output.accept(ModItems.HAZEL_SIGN.get());
+                        output.accept(ModItems.HAZEL_HANGING_SIGN.get());
                         output.accept(ModItems.HAZEL_BOAT.get());
                         output.accept(ModItems.HAZEL_CHEST_BOAT.get());
                         output.accept(ModItems.HAZELNUT.get());

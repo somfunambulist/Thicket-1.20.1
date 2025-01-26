@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.somfunambulist.thicket.block.ModBlocks;
+import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.entity.client.ModBoatRenderer;
 import net.somfunambulist.thicket.item.ModCreativeModeTabs;
@@ -22,6 +23,7 @@ import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.somfunambulist.thicket.util.ModWoodTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -38,7 +40,7 @@ public class Thicket {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        //ModBlockEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -79,6 +81,8 @@ public class Thicket {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Sheets.addWoodType(ModWoodTypes.HAZEL);
+
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
             });
