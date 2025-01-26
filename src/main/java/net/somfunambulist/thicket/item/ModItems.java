@@ -6,8 +6,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
+import net.somfunambulist.thicket.entity.custom.ModBoatEntity;
 import net.somfunambulist.thicket.item.custom.DowsingRodItem;
 import net.somfunambulist.thicket.item.custom.HazelbutterItem;
+import net.somfunambulist.thicket.item.custom.ModBoatItem;
 import net.somfunambulist.thicket.item.custom.PocketKnifeItem;
 
 public class ModItems {
@@ -26,6 +28,11 @@ public class ModItems {
             () -> new HazelbutterItem(new Item.Properties().food(ModFoodProperties.HAZELBUTTER)));
     public static final RegistryObject<Item> HAZELBUTTER_TREAT = ITEMS.register("hazelbutter_treat",
             () -> new Item(new Item.Properties().food(ModFoodProperties.HAZELBUTTER_TREAT)));
+
+    public static final RegistryObject<Item> HAZEL_BOAT = ITEMS.register("hazel_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.HAZEL, new Item.Properties()));
+    public static final RegistryObject<Item> HAZEL_CHEST_BOAT = ITEMS.register("hazel_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

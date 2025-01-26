@@ -39,6 +39,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_HAZEL_LOG.get());
                         output.accept(ModBlocks.STRIPPED_HAZEL_WOOD.get());
                         output.accept(ModBlocks.HAZEL_PLANKS.get());
+                        output.accept(ModBlocks.HAZEL_CARVING.get());
                         output.accept(ModBlocks.HAZEL_SLAB.get());
                         output.accept(ModBlocks.HAZEL_STAIRS.get());
                         output.accept(ModBlocks.HAZEL_BUTTON.get());
@@ -47,7 +48,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_FENCE_GATE.get());
                         output.accept(ModBlocks.HAZEL_DOOR.get());
                         output.accept(ModBlocks.HAZEL_TRAPDOOR.get());
-                        output.accept(ModBlocks.HAZEL_CARVING.get());
+                        output.accept(ModItems.HAZEL_BOAT.get());
+                        output.accept(ModItems.HAZEL_CHEST_BOAT.get());
                         output.accept(ModItems.HAZELNUT.get());
                         output.accept(ModBlocks.HAZELNUT_BUNDLE.get());
                         output.accept(ModItems.HAZELBUTTER.get());

@@ -19,6 +19,7 @@
   "block.thicket.stripped_hazel_log": "Stripped Hazel Log",
   "block.thicket.stripped_hazel_wood": "Stripped Hazel Wood",
   "block.thicket.hazel_planks": "Hazel Planks",
+  "block.thicket.carved_hazel": "Carved Hazel",
   "block.thicket.hazel_slab": "Hazel Slab",
   "block.thicket.hazel_stairs": "Hazel Stairs",
   "block.thicket.hazel_button": "Hazel Button",
@@ -27,7 +28,8 @@
   "block.thicket.hazel_fence_gate": "Hazel Fence Gate",
   "block.thicket.hazel_door": "Hazel Door",
   "block.thicket.hazel_trapdoor": "Hazel Trapdoor",
-  "block.thicket.carved_hazel": "Carved Hazel",
+  "item.thicket.hazel_boat": "Hazel Boat",
+  "item.thicket.hazel_chest_boat": "Hazel Chest Boat",
   "block.thicket.hazelnut_bundle": "Hazelnut Bundle",
   "item.thicket.dowsing_rod": "Dowsing Rod",
   "item.thicket.hazelnut": "Hazelnut",
@@ -38,5 +40,5 @@
 
   "creativetab.thicket_tab": "Thicket Tab",
 
-  "item.thicket.dowsing_rod.no_water": "No water source found."
+  "entity.thicket.mod_chest_boat": "Chest Boat"
 }
