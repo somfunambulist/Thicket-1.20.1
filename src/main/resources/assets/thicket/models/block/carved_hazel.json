@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "thicket:block/stripped_hazel_log_top",
-    "side": "thicket:block/carved_hazel"
-  }
-}

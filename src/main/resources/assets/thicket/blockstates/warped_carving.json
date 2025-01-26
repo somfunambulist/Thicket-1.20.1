@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thicket:block/warped_carving_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thicket:block/warped_carving"
+    },
+    "axis=z": {
+      "model": "thicket:block/warped_carving_horizontal",
+      "x": 90
+    }
+  }
+}

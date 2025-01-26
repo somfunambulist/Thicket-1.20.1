@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "W": {
+      "item": "thicket:hazelbutter"
+    }
+  },
+  "pattern": [
+    "#",
+    "W",
+    "#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "thicket:hazelbutter_treat"
+  },
+  "show_notification": true
+}

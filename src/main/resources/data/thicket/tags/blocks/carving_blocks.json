@@ -1,7 +1,16 @@
 {
   "replace": false,
   "values": [
-    "thicket:carved_oak",
-    "thicket:carved_hazel"
+    "thicket:oak_carving",
+    "thicket:birch_carving",
+    "thicket:spruce_carving",
+    "thicket:jungle_carving",
+    "thicket:acacia_carving",
+    "thicket:dark_oak_carving",
+    "thicket:mangrove_carving",
+    "thicket:cherry_carving",
+    "thicket:crimson_carving",
+    "thicket:warped_carving",
+    "thicket:hazel_carving"
   ]
 }

@@ -1,8 +1,20 @@
 {
   "replace": false,
   "values": [
-    "thicket:carved_oak",
-    "thicket:carved_hazel",
+    "thicket:oak_carving",
+    "thicket:birch_carving",
+    "thicket:spruce_carving",
+    "thicket:jungle_carving",
+    "thicket:acacia_carving",
+    "thicket:dark_oak_carving",
+    "thicket:mangrove_carving",
+    "thicket:cherry_carving",
+    "thicket:crimson_carving",
+    "thicket:warped_carving",
+    "thicket:hazel_log",
+    "thicket:hazel_wood",
+    "thicket:stripped_hazel_log",
+    "thicket:stripped_hazel_wood",
     "thicket:hazel_planks",
     "thicket:hazel_slab",
     "thicket:hazel_button",
@@ -12,10 +24,8 @@
     "thicket:hazel_fence_gate",
     "thicket:hazel_door",
     "thicket:hazel_trapdoor",
-    "thicket:hazel_log",
-    "thicket:hazel_wood",
-    "thicket:stripped_hazel_log",
-    "thicket:stripped_hazel_wood",
-    "thicket:hazelnut_bundle"
+    "thicket:hazel_carving",
+    "thicket:hazelnut_bundle",
+    "thicket:walnut_bundle"
   ]
 }

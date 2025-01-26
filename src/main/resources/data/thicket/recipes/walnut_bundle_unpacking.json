@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thicket:walnut_bundle"
+    }
+  ],
+  "result": {
+    "item": "ecologics:walnut",
+    "count": 9
+  }
+}

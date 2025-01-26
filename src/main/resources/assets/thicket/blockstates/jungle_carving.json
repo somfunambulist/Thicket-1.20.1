@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thicket:block/jungle_carving_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thicket:block/jungle_carving"
+    },
+    "axis=z": {
+      "model": "thicket:block/jungle_carving_horizontal",
+      "x": 90
+    }
+  }
+}

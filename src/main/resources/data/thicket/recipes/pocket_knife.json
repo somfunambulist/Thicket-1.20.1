@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "key": {
+    "#": {
+      "tag": "minecraft:saplings"
+    },
+    "W": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "W",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "item": "thicket:pocket_knife"
+  },
+  "show_notification": true
+}

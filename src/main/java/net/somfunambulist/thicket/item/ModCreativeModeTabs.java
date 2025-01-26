@@ -18,9 +18,26 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.HAZELNUT.get()))
                     .title(Component.translatable("creativetab.thicket_tab"))
                     .displayItems(((displayParameters, output) -> {
-
+                        //tools
                         output.accept(ModItems.POCKET_KNIFE.get());
-                        output.accept(ModBlocks.CARVED_OAK.get());
+                        //vanilla carving blocks
+                        output.accept(ModBlocks.OAK_CARVING.get());
+                        output.accept(ModBlocks.BIRCH_CARVING.get());
+                        output.accept(ModBlocks.SPRUCE_CARVING.get());
+                        output.accept(ModBlocks.JUNGLE_CARVING.get());
+                        output.accept(ModBlocks.ACACIA_CARVING.get());
+                        output.accept(ModBlocks.DARK_OAK_CARVING.get());
+                        output.accept(ModBlocks.MANGROVE_CARVING.get());
+                        output.accept(ModBlocks.CHERRY_CARVING.get());
+                        output.accept(ModBlocks.CRIMSON_CARVING.get());
+                        output.accept(ModBlocks.WARPED_CARVING.get());
+                        //hazel
+                        output.accept(ModBlocks.HAZEL_SAPLING.get());
+                        output.accept(ModBlocks.HAZEL_LEAVES.get());
+                        output.accept(ModBlocks.HAZEL_LOG.get());
+                        output.accept(ModBlocks.HAZEL_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_HAZEL_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_HAZEL_WOOD.get());
                         output.accept(ModBlocks.HAZEL_PLANKS.get());
                         output.accept(ModBlocks.HAZEL_SLAB.get());
                         output.accept(ModBlocks.HAZEL_STAIRS.get());
@@ -30,16 +47,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.HAZEL_FENCE_GATE.get());
                         output.accept(ModBlocks.HAZEL_DOOR.get());
                         output.accept(ModBlocks.HAZEL_TRAPDOOR.get());
-                        output.accept(ModBlocks.HAZEL_LOG.get());
-                        output.accept(ModBlocks.HAZEL_WOOD.get());
-                        output.accept(ModBlocks.STRIPPED_HAZEL_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_HAZEL_WOOD.get());
-                        output.accept(ModBlocks.CARVED_HAZEL.get());
-                        output.accept(ModBlocks.HAZEL_LEAVES.get());
-                        output.accept(ModBlocks.HAZEL_SAPLING.get());
-                        output.accept(ModItems.DOWSING_ROD.get());
+                        output.accept(ModBlocks.HAZEL_CARVING.get());
                         output.accept(ModItems.HAZELNUT.get());
                         output.accept(ModBlocks.HAZELNUT_BUNDLE.get());
+                        output.accept(ModItems.HAZELBUTTER.get());
+                        output.accept(ModItems.HAZELBUTTER_TREAT.get());
+                        output.accept(ModItems.DOWSING_ROD.get());
+                        //modded compat
+                        output.accept(ModBlocks.WALNUT_BUNDLE.get());
 
                     })).build());
 
