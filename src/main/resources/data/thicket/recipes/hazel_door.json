@@ -1,9 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
   "group": "wooden_door",
   "key": {
-    "#": "thicket:hazel_planks"
+    "#": {
+      "item": "thicket:hazel_planks"
+    }
   },
   "pattern": [
     "##",
@@ -12,6 +13,6 @@
   ],
   "result": {
     "count": 3,
-    "id": "thicket:hazel_door"
+    "item": "thicket:hazel_door"
   }
 }

@@ -1,9 +1,10 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
   "group": "wooden_trapdoor",
   "key": {
-    "#": "thicket:hazel_planks"
+    "#": {
+      "item": "thicket:hazel_planks"
+    }
   },
   "pattern": [
     "###",
@@ -11,6 +12,6 @@
   ],
   "result": {
     "count": 2,
-    "id": "thicket:hazel_trapdoor"
+    "item": "thicket:hazel_trapdoor"
   }
 }
