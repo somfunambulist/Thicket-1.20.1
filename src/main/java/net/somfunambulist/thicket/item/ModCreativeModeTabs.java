@@ -57,6 +57,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HAZELBUTTER.get());
                         output.accept(ModItems.HAZELBUTTER_TREAT.get());
                         output.accept(ModItems.DOWSING_ROD.get());
+
+                        output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         //modded compat
                         output.accept(ModBlocks.WALNUT_BUNDLE.get());
 
