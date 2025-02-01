@@ -17,7 +17,7 @@ public class HazelLogBlock extends ModFlammableRotatedPillarBlock{
     @Override
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         pState = ModBlocks.FIREMILK_MUSHROOM.get().defaultBlockState();
-        if (pRandom.nextInt(20) == 0) {
+        if (pRandom.nextInt(18) == 0) {
             int i = 3;
             int j = 4;
 
