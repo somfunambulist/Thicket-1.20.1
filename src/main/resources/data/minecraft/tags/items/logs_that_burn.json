@@ -4,6 +4,10 @@
     "thicket:hazel_log",
     "thicket:hazel_wood",
     "thicket:stripped_hazel_log",
-    "thicket:stripped_hazel_wood"
+    "thicket:stripped_hazel_wood",
+    {
+      "id": "thicket:hazel_beam",
+      "required": false
+    }
   ]
 }
