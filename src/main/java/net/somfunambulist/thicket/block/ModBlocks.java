@@ -7,14 +7,18 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.somfunambulist.thicket.ModCompat;
 import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.custom.*;
 import net.somfunambulist.thicket.item.ModItems;
 import net.somfunambulist.thicket.util.ModWoodTypes;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
+import net.minecraftforge.fml.ModList;
+import static net.somfunambulist.thicket.ModCompat.ECOLOGICS_ID;
 
 import java.util.function.Supplier;
 
@@ -92,9 +96,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
             () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM),null));
-
-    public static final RegistryObject<Block> WALNUT_BUNDLE = registerBlock("walnut_bundle",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -5,10 +5,16 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.ModBlocks;
+import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
+import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
+
+import static net.somfunambulist.thicket.ModCompat.DECORATIVE_BLOCKS_ID;
+import static net.somfunambulist.thicket.ModCompat.ECOLOGICS_ID;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -60,7 +66,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         //modded compat
-                        output.accept(ModBlocks.WALNUT_BUNDLE.get());
+                        if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {
+                            output.accept(DecorativeBlocksBlocks.HAZEL_BEAM.get());
+                        }
+                        if (ModList.get().isLoaded(ECOLOGICS_ID)) {
+                            output.accept(EcologicsBlocks.WALNUT_BUNDLE.get());
+                        }
 
                     })).build());
 

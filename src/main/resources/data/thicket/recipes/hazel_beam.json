@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "decorative_beams",
+  "key": {
+    "x": {
+      "item": "thicket:stripped_hazel_log"
+    }
+  },
+  "pattern": [
+    " x ",
+    " x "
+  ],
+  "result": {
+    "count": 2,
+    "item": "thicket:hazel_beam"
+  },
+  "show_notification": true
+}
