@@ -8,6 +8,10 @@
     {
       "id": "thicket:hazel_beam",
       "required": false
-    }
+    },
+    "thicket:sassafras_log",
+    "thicket:sassafras_wood",
+    "thicket:stripped_sassafras_log",
+    "thicket:stripped_sassafras_wood"
   ]
 }

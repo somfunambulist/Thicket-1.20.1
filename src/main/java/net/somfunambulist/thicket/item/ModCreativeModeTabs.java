@@ -37,7 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHERRY_CARVING.get());
                         output.accept(ModBlocks.CRIMSON_CARVING.get());
                         output.accept(ModBlocks.WARPED_CARVING.get());
-                        //hazel
+                        //hazel=========================================================================================
                         output.accept(ModBlocks.HAZEL_SAPLING.get());
                         output.accept(ModBlocks.HAZEL_LEAVES.get());
                         output.accept(ModBlocks.HAZEL_LOG.get());
@@ -63,7 +63,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HAZELBUTTER.get());
                         output.accept(ModItems.HAZELBUTTER_TREAT.get());
                         output.accept(ModItems.DOWSING_ROD.get());
-
+                        //sassafras=====================================================================================
+                        output.accept(ModBlocks.SASSAFRAS_SAPLING.get());
+                        output.accept(ModBlocks.SASSAFRAS_LEAVES.get());
+                        output.accept(ModBlocks.SASSAFRAS_LOG.get());
+                        output.accept(ModBlocks.SASSAFRAS_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_WOOD.get());
+                        output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
+                        //other blocks==================================================================================
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         //modded compat
                         if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {

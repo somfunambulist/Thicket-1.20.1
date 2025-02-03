@@ -18,6 +18,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HAZEL_KEY = registerKey("hazel");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SASSAFRAS_KEY = registerKey("sassafras");
 /*
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 

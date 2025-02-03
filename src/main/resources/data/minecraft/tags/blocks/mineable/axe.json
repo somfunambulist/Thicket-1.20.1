@@ -26,7 +26,18 @@
     "thicket:hazel_trapdoor",
     "thicket:hazel_carving",
     "thicket:hazelnut_bundle",
-    "thicket:walnut_bundle",
-    "thicket:hazel_beam"
+    {
+      "id": "thicket:walnut_bundle",
+      "required": false
+    },
+    {
+      "id": "thicket:hazel_beam",
+      "required": false
+    },
+    "thicket:sassafras_log",
+    "thicket:sassafras_wood",
+    "thicket:stripped_sassafras_log",
+    "thicket:stripped_sassafras_wood",
+    "thicket:sassafras_planks"
   ]
 }

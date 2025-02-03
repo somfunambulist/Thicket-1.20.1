@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_planks"
+    "thicket:hazel_planks",
+    "thicket:sassafras_planks"
   ]
 }

@@ -18,6 +18,8 @@ import net.somfunambulist.thicket.item.ModItems;
 import net.somfunambulist.thicket.util.ModWoodTypes;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
 import net.minecraftforge.fml.ModList;
+import net.somfunambulist.thicket.worldgen.tree.SassafrasTreeGrower;
+
 import static net.somfunambulist.thicket.ModCompat.ECOLOGICS_ID;
 
 import java.util.function.Supplier;
@@ -48,7 +50,7 @@ public class ModBlocks {
             () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE)));
     public static final RegistryObject<Block> WARPED_CARVING = registerBlock("warped_carving",
             () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE)));
-
+    //hazel=============================================================================================================
     public static final RegistryObject<Block> HAZEL_SAPLING = registerBlock("hazel_sapling",
             () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> HAZEL_LEAVES = registerBlock("hazel_leaves",
@@ -93,7 +95,22 @@ public class ModBlocks {
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.HAZEL));
     public static final RegistryObject<Block> HAZELNUT_BUNDLE = registerBlock("hazelnut_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
-
+    //sassafras=========================================================================================================
+    public static final RegistryObject<Block> SASSAFRAS_SAPLING = registerBlock("sassafras_sapling",
+            () -> new SaplingBlock(new SassafrasTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<ModLeavesBlock> SASSAFRAS_LEAVES = registerBlock("sassafras_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> SASSAFRAS_LOG = registerBlock("sassafras_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> SASSAFRAS_WOOD = registerBlock("sassafras_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_SASSAFRAS_LOG = registerBlock("stripped_sassafras_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_SASSAFRAS_WOOD = registerBlock("stripped_sassafras_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<ModPlanksBlock> SASSAFRAS_PLANKS = registerBlock("sassafras_planks",
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    //other blocks======================================================================================================
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
             () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM),null));
 

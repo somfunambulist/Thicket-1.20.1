@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:stripped_hazel_wood"
+    "thicket:stripped_hazel_wood",
+    "thicket:stripped_sassafras_wood"
   ]
 }

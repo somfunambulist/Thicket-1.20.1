@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_sapling"
+    "thicket:hazel_sapling",
+    "thicket:sassafras_sapling"
   ]
 }

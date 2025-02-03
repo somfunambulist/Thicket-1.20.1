@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "thicket:block/sassafras_log_top",
+    "side": "thicket:block/sassafras_log"
+  }
+}

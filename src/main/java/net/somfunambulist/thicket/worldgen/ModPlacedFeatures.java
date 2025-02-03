@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> HAZEL_PLACED_KEY = registerKey("hazel_placed");
+    public static final ResourceKey<PlacedFeature> SASSAFRAS_PLACED_KEY = registerKey("sassafras_placed");
 /*
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
