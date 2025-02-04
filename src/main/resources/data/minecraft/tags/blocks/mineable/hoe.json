@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_leaves"
+    "thicket:hazel_leaves",
+    "thicket:mistletoe_leaves",
+    "thicket:sassafras_leaves"
   ]
 }

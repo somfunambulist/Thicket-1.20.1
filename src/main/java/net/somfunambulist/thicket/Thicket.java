@@ -69,6 +69,8 @@ public class Thicket {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_LEAVES.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.FIREMILK_MUSHROOM.get().asItem(), 0.30F);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MISTLETOE.get().asItem(), 0.30F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MISTLETOE_LEAVES.get().asItem(), 0.30F);
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER, ModBlocks.FIREMILK_MUSHROOM.get().asItem(), Potions.AWKWARD));
         });

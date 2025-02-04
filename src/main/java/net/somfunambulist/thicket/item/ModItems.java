@@ -43,6 +43,9 @@ public class ModItems {
     public static final RegistryObject<Item> HAZEL_CHEST_BOAT = ITEMS.register("hazel_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
 
+    public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
+            () -> new DowsingRodItem(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
