@@ -1,5 +1,11 @@
 {
   "item.thicket.pocket_knife": "Pocket Knife",
+  "item.thicket.cruxwood_pickaxe": "Cruxwood Pickaxe",
+  "item.thicket.cruxwood_shovel": "Cruxwood Shovel",
+  "item.thicket.cruxwood_axe": "Cruxwood Axe",
+  "item.thicket.cruxwood_hoe": "Cruxwood Hoe",
+  "item.thicket.cruxwood_sword": "Cruxwood Sword",
+  "item.thicket.cruxwood_bow": "Cruxwood Bow",
 
   "block.thicket.oak_carving": "Oak Carving",
   "block.thicket.birch_carving": "Birch Carving",

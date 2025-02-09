@@ -26,6 +26,13 @@ public class ModCreativeModeTabs {
                     .displayItems(((displayParameters, output) -> {
                         //tools
                         output.accept(ModItems.POCKET_KNIFE.get());
+                        output.accept(ModItems.CRUXWOOD_PICKAXE.get());
+                        output.accept(ModItems.CRUXWOOD_SHOVEL.get());
+                        output.accept(ModItems.CRUXWOOD_AXE.get());
+                        output.accept(ModItems.CRUXWOOD_HOE.get());
+                        output.accept(ModItems.CRUXWOOD_SWORD.get());
+                        output.accept(ModItems.CRUXWOOD_BOW.get());
+
                         //vanilla carving blocks
                         output.accept(ModBlocks.OAK_CARVING.get());
                         output.accept(ModBlocks.BIRCH_CARVING.get());

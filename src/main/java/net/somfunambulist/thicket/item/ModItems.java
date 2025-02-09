@@ -1,8 +1,6 @@
 package net.somfunambulist.thicket.item;
 
-import net.minecraft.world.item.HangingSignItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,6 +43,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
             () -> new DowsingRodItem(new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_SWORD = ITEMS.register("cruxwood_sword",
+            () -> new SwordItem(ModToolTiers.CRUXWOOD,3,-2.4F,new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_PICKAXE = ITEMS.register("cruxwood_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.CRUXWOOD,1,-2.8F,new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_SHOVEL = ITEMS.register("cruxwood_shovel",
+            () -> new ShovelItem(ModToolTiers.CRUXWOOD,1.5F,-3.0F,new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_AXE = ITEMS.register("cruxwood_axe",
+            () -> new AxeItem(ModToolTiers.CRUXWOOD,6,-3.2F,new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_HOE = ITEMS.register("cruxwood_hoe",
+            () -> new HoeItem(ModToolTiers.CRUXWOOD,0,-3.0F,new Item.Properties()));
+    public static final RegistryObject<Item> CRUXWOOD_BOW = ITEMS.register("cruxwood_bow",
+            () -> new BowItem(new Item.Properties().durability(120)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
