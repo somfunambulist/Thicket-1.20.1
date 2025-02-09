@@ -108,10 +108,10 @@ public class ModBlocks {
     //other blocks======================================================================================================
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
             () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM),null));
-    public static final RegistryObject<BloomingMistletoeBlock> BLOOMING_MISTLETOE_LEAVES = registerBlock("blooming_mistletoe_leaves",
-            () -> new BloomingMistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<MistletoeBlock> BLOOMING_MISTLETOE_LEAVES = registerBlock("blooming_mistletoe_leaves",
+            () -> new MistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<ModLeavesBlock> MISTLETOE_LEAVES = registerBlock("mistletoe_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            () -> new MistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

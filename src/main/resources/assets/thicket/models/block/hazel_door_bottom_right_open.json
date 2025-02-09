@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/door_bottom_right",
+  "parent": "minecraft:block/door_bottom_right_open",
   "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "thicket:block/hazel_door_bottom_right",
