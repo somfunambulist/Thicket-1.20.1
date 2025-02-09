@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tools",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "  W",
+    " WW",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "thicket:gold_sickle"
+  },
+  "show_notification": true
+}

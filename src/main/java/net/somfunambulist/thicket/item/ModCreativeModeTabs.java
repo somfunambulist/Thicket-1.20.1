@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                     .displayItems(((displayParameters, output) -> {
                         //tools
                         output.accept(ModItems.POCKET_KNIFE.get());
+                        output.accept(ModItems.GOLD_SICKLE.get());
                         output.accept(ModItems.CRUXWOOD_PICKAXE.get());
                         output.accept(ModItems.CRUXWOOD_SHOVEL.get());
                         output.accept(ModItems.CRUXWOOD_AXE.get());

@@ -1,5 +1,6 @@
 {
   "item.thicket.pocket_knife": "Pocket Knife",
+  "item.thicket.gold_sickle": "Gold Sickle",
   "item.thicket.cruxwood_pickaxe": "Cruxwood Pickaxe",
   "item.thicket.cruxwood_shovel": "Cruxwood Shovel",
   "item.thicket.cruxwood_axe": "Cruxwood Axe",
@@ -69,6 +70,7 @@
   "block.thicket.blooming_mistletoe_leaves": "Blooming Mistletoe Leaves",
   "block.thicket.mistletoe_leaves": "Mistletoe Leaves",
   "item.thicket.mistletoe": "Mistletoe",
+  "item.thicket.enchanted_mistletoe": "Mistletoe",
 
   "block.thicket.hazel_beam": "Hazel Beam",
   "block.thicket.walnut_bundle": "Walnut Bundle",

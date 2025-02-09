@@ -24,6 +24,7 @@ import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.entity.client.ModBoatRenderer;
 import net.somfunambulist.thicket.item.ModCreativeModeTabs;
+import net.somfunambulist.thicket.item.ModItemProperties;
 import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.client.renderer.Sheets;
 import net.somfunambulist.thicket.potion.BetterBrewingRecipe;
@@ -98,6 +99,7 @@ public class Thicket {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
                 Sheets.addWoodType(ModWoodTypes.HAZEL);
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));

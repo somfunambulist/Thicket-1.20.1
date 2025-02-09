@@ -8,10 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.entity.custom.ModBoatEntity;
-import net.somfunambulist.thicket.item.custom.DowsingRodItem;
-import net.somfunambulist.thicket.item.custom.HazelbutterItem;
-import net.somfunambulist.thicket.item.custom.ModBoatItem;
-import net.somfunambulist.thicket.item.custom.PocketKnifeItem;
+import net.somfunambulist.thicket.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -42,7 +39,9 @@ public class ModItems {
             () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
 
     public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
-            () -> new DowsingRodItem(new Item.Properties()));
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ENCHANTED_MISTLETOE = ITEMS.register("enchanted_mistletoe",
+            () -> new EnchantedMistletoeItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> CRUXWOOD_SWORD = ITEMS.register("cruxwood_sword",
             () -> new SwordItem(ModToolTiers.CRUXWOOD,3,-2.4F,new Item.Properties()));
     public static final RegistryObject<Item> CRUXWOOD_PICKAXE = ITEMS.register("cruxwood_pickaxe",
@@ -55,6 +54,9 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.CRUXWOOD,0,-3.0F,new Item.Properties()));
     public static final RegistryObject<Item> CRUXWOOD_BOW = ITEMS.register("cruxwood_bow",
             () -> new BowItem(new Item.Properties().durability(120)));
+
+    public static final RegistryObject<Item> GOLD_SICKLE = ITEMS.register("gold_sickle",
+            () -> new SickleItem(new Item.Properties().stacksTo(1).durability(32)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
