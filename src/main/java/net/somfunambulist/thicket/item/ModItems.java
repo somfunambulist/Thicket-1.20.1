@@ -42,6 +42,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ENCHANTED_MISTLETOE = ITEMS.register("enchanted_mistletoe",
             () -> new EnchantedMistletoeItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> APOCRYPHAL_TEMPLATE = ITEMS.register("apocryphal_template",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> CRUXWOOD_SWORD = ITEMS.register("cruxwood_sword",
             () -> new SwordItem(ModToolTiers.CRUXWOOD,3,-2.4F,new Item.Properties()));
     public static final RegistryObject<Item> CRUXWOOD_PICKAXE = ITEMS.register("cruxwood_pickaxe",

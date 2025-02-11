@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         //tools
                         output.accept(ModItems.POCKET_KNIFE.get());
                         output.accept(ModItems.GOLD_SICKLE.get());
+                        output.accept(ModItems.APOCRYPHAL_TEMPLATE.get());
                         output.accept(ModItems.CRUXWOOD_PICKAXE.get());
                         output.accept(ModItems.CRUXWOOD_SHOVEL.get());
                         output.accept(ModItems.CRUXWOOD_AXE.get());
@@ -84,6 +85,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOOMING_MISTLETOE_LEAVES.get());
                         output.accept(ModBlocks.MISTLETOE_LEAVES.get());
                         output.accept(ModItems.MISTLETOE.get());
+                        output.accept(ModBlocks.SUSPICIOUS_ROOTS.get());
                         //modded compat
                         if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {
                             output.accept(DecorativeBlocksBlocks.HAZEL_BEAM.get());
