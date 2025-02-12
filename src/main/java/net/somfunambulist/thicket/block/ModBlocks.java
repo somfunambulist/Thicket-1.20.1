@@ -113,7 +113,7 @@ public class ModBlocks {
     public static final RegistryObject<ModLeavesBlock> MISTLETOE_LEAVES = registerBlock("mistletoe_leaves",
             () -> new MistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<BrushableBlock> SUSPICIOUS_ROOTS = registerBlock("suspicious_roots",
-            () -> new BrushableBlock(Blocks.ROOTED_DIRT,BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT),SoundEvents.BRUSH_GRAVEL,SoundEvents.BRUSH_GRAVEL_COMPLETED));
+            () -> new ModSusBlock(Blocks.ROOTED_DIRT,BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT),SoundEvents.BRUSH_GRAVEL,SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

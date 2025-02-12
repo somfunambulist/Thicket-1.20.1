@@ -8,6 +8,7 @@ import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.somfunambulist.thicket.block.entity.client.ModSusBlockEntityRenderer;
 
 @Mod.EventBusSubscriber(modid = Thicket.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventClientBusEvents {
@@ -17,6 +18,7 @@ public class ModEventClientBusEvents {
 
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.MOD_SUS_BLOCK.get(), ModSusBlockEntityRenderer::new);
     }
 
 }

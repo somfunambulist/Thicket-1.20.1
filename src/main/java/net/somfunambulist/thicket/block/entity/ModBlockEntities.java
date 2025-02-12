@@ -25,5 +25,9 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
                             ModBlocks.HAZEL_HANGING_SIGN.get(), ModBlocks.HAZEL_WALL_HANGING_SIGN.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<ModSusBlockEntity>> MOD_SUS_BLOCK =
+            BLOCK_ENTITIES.register("mod_sus_block", ()->
+                    BlockEntityType.Builder.of(ModSusBlockEntity::new, ModBlocks.SUSPICIOUS_ROOTS.get()).build(null));
+
     public static void register(IEventBus eventBus) { BLOCK_ENTITIES.register(eventBus); }
 }
