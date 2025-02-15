@@ -18,13 +18,34 @@
                       "predicate": {
                         "items": [
                           "thicket:gold_sickle"
-                        ]
+                        ],
+                        "nbt": "{fullMoon:1b}"
                       }
                     }
                   ]
                 }
               ],
               "name": "thicket:enchanted_mistletoe"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:all_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "items": [
+                          "thicket:gold_sickle"
+                        ],
+                        "nbt": "{fullMoon:0b}"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "name": "thicket:mistletoe"
             },
             {
               "type": "minecraft:item",
