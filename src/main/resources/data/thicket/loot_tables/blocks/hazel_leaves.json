@@ -173,11 +173,11 @@
           "conditions": [
             {
               "chances": [
-                0.03,
-                0.032222223,
-                0.035,
-                0.043333335,
-                0.1
+                0.04,
+                0.0444444456,
+                0.05,
+                0.066666672,
+                0.2
               ],
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune"
@@ -185,13 +185,13 @@
           ],
           "functions": [
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "function": "minecraft:apply_bonus",
+              "parameters": {
+                "extra": 3,
+                "probability": 0.5714286
+              }
             },
             {
               "function": "minecraft:explosion_decay"

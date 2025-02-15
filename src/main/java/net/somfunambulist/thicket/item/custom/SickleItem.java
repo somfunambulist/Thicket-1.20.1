@@ -1,5 +1,6 @@
 package net.somfunambulist.thicket.item.custom;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -31,9 +32,18 @@ public class SickleItem extends ShearsItem {
 
     @Override
     public boolean isFoil(ItemStack pStack) {
+        /*
         if(pStack.hasTag()) {
             return pStack.getTag().getBoolean("fullMoon");
         } else {
+            return false;
+        }
+        */
+        assert Minecraft.getInstance().level != null;
+        if (Minecraft.getInstance().level.isClientSide) {
+            return isFullMoon(Minecraft.getInstance().level);
+        }
+        else {
             return false;
         }
     }
