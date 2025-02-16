@@ -1,7 +1,7 @@
 {
   "item.thicket.pocket_knife": "Pocket Knife",
   "item.thicket.gold_sickle": "Gold Sickle",
-  "item.thicket.apocryphal_template": "Apocryphal Template",
+  "item.thicket.apocryphal_smithing_template": "Apocryphal Template",
   "item.thicket.cruxwood_pickaxe": "Cruxwood Pickaxe",
   "item.thicket.cruxwood_shovel": "Cruxwood Shovel",
   "item.thicket.cruxwood_axe": "Cruxwood Axe",
@@ -79,5 +79,11 @@
 
   "creativetab.thicket_tab": "Thicket Tab",
 
-  "entity.thicket.mod_chest_boat": "Chest Boat"
+  "entity.thicket.mod_chest_boat": "Chest Boat",
+
+  "upgrade.thicket.apocryphal_upgrade": "Apocryphal Upgrade",
+  "item.thicket.smithing_template.apocryphal_upgrade.applies_to": "Wooden Equipment",
+  "item.thicket.smithing_template.apocryphal_upgrade.ingredients": "Enchanted Mistletoe",
+  "item.thicket.smithing_template.apocryphal_upgrade.base_slot_description": "Add Wooden Equipment",
+  "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "Add Enchanted Mistletoe"
 }

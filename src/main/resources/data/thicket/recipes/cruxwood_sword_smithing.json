@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thicket:enchanted_mistletoe"
+  },
+  "base": {
+    "item": "minecraft:wooden_sword"
+  },
+  "result": {
+    "item": "thicket:cruxwood_sword"
+  },
+  "template": {
+    "item": "thicket:apocryphal_smithing_template"
+  }
+}
