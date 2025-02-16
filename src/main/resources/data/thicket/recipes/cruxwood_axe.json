@@ -1,0 +1,24 @@
+{
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:fortune\"},{lvl:1s,id:\"minecraft:efficiency\"},{lvl:1s,id:\"minecraft:unbreaking\"}]}",
+    "item": "thicket:cruxwood_axe",
+    "type": "minecraft:item_nbt"
+  },
+  "pattern": [
+    "##",
+    "#X",
+    " M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "X": {
+      "tag": "forge:rods/wooden"
+    },
+    "M": {
+      "item": "thicket:enchanted_mistletoe"
+    }
+  }
+}

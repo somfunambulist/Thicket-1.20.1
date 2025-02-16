@@ -1,0 +1,24 @@
+{
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:infinity\"},{lvl:1s,id:\"minecraft:unbreaking\"}]}",
+    "item": "thicket:cruxwood_bow",
+    "type": "minecraft:item_nbt"
+  },
+  "pattern": [
+    " XS",
+    "M S",
+    " XS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "tag": "forge:rods/wooden"
+    },
+    "M": {
+      "item": "thicket:enchanted_mistletoe"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:fortune\"},{lvl:1s,id:\"minecraft:efficiency\"},{lvl:1s,id:\"minecraft:unbreaking\"}]}",
+    "item": "thicket:cruxwood_shovel",
+    "type": "minecraft:item_nbt"
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wooden_shovel"
+    },
+    {
+      "item": "thicket:enchanted_mistletoe"
+    }
+  ]
+}

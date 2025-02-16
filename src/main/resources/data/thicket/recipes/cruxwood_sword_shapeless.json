@@ -1,0 +1,16 @@
+{
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:looting\"},{lvl:1s,id:\"minecraft:unbreaking\"}]}",
+    "item": "thicket:cruxwood_sword",
+    "type": "minecraft:item_nbt"
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wooden_sword"
+    },
+    {
+      "item": "thicket:enchanted_mistletoe"
+    }
+  ]
+}

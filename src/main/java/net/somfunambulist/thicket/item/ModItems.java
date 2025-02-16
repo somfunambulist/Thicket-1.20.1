@@ -60,7 +60,7 @@ public class ModItems {
     public static final RegistryObject<Item> CRUXWOOD_HOE = ITEMS.register("cruxwood_hoe",
             () -> new HoeItem(ModToolTiers.CRUXWOOD,0,-3.0F,new Item.Properties()));
     public static final RegistryObject<Item> CRUXWOOD_BOW = ITEMS.register("cruxwood_bow",
-            () -> new BowItem(new Item.Properties().durability(120)));
+            () -> new BowItem(new Item.Properties().durability(60)));
 
     public static final RegistryObject<Item> GOLD_SICKLE = ITEMS.register("gold_sickle",
             () -> new SickleItem(new Item.Properties().stacksTo(1).durability(32)));
@@ -85,11 +85,15 @@ public class ModItems {
     private static final ResourceLocation EMPTY_SLOT_SHOVEL = new ResourceLocation("item/empty_slot_shovel");
     private static final ResourceLocation EMPTY_SLOT_PICKAXE = new ResourceLocation("item/empty_slot_pickaxe");
     //templates ========================================================================================================
+    /*
     public static final RegistryObject<Item> APOCRYPHAL_SMITHING_TEMPLATE = ITEMS.register("apocryphal_smithing_template",
             () -> new SmithingTemplateItem(APOCRYPHAL_WEAPON_APPLIES_TO, APOCRYPHAL_WEAPON_INGREDIENTS, APOCRYPHAL_WEAPON_UPGRADE,
                     APOCRYPHAL_WEAPON_BASE_SLOT_DESCRIPTION, APOCRYPHAL_WEAPON_ADDITIONS_SLOT_DESCRIPTION,
                     List.of(EMPTY_SLOT_SWORD, EMPTY_SLOT_PICKAXE, EMPTY_SLOT_AXE, EMPTY_SLOT_HOE, EMPTY_SLOT_SHOVEL, EMPTY_SLOT_BOW),
                     List.of(EMPTY_SLOT_MISTLETOE)));
+    */
+    public static final RegistryObject<Item> APOCRYPHAL_SMITHING_TEMPLATE = ITEMS.register("apocryphal_smithing_template",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
