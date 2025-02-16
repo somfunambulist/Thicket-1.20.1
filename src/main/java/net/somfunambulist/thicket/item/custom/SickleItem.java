@@ -10,8 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-
-import static java.lang.Math.floor;
+import net.somfunambulist.thicket.Thicket;
 
 public class SickleItem extends ShearsItem {
     public static final String FULL_MOON_TAG_KEY = "fullMoon";
@@ -27,6 +26,12 @@ public class SickleItem extends ShearsItem {
 
     @Override
     public boolean isFoil(ItemStack pStack) {
+        // Try to get the fullMoon state from the client if we can (like in a container)
+        if (Thicket.Proxy.getClientLevel() != null) {
+            return isFullMoon(Thicket.Proxy.getClientLevel());
+        }
+
+        // Return the default from the tag -- works on servers and clients both
         CompoundTag tag = pStack.getOrCreateTag();
         return tag.contains(FULL_MOON_TAG_KEY) && tag.getBoolean(FULL_MOON_TAG_KEY);
     }
