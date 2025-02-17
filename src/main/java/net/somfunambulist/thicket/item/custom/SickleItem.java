@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ShearsItem;
@@ -67,11 +68,11 @@ public class SickleItem extends ShearsItem {
             - 0.25 is sunset/moonrise
             - 0.5 is midnight
             - 0.75 is sunrise/moonset
-         */
-        var currentTimeScale = level.getTimeOfDay(0.F /* pPartialTick is unused in this impl */);
+        var currentTimeScale = level.getTimeOfDay(0.F);
         return currentTimeScale >= 0.25 && currentTimeScale <= 0.75;
     }
 
+    /*
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         if (!pContext.getLevel().isClientSide()) {
@@ -84,5 +85,11 @@ public class SickleItem extends ShearsItem {
         }
 
         return super.useOn(pContext);
+    }
+    */
+
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return slotChanged;
     }
 }
