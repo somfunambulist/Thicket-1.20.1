@@ -12,6 +12,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -28,12 +29,16 @@ import net.somfunambulist.thicket.item.ModItemProperties;
 import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.client.renderer.Sheets;
 import net.somfunambulist.thicket.potion.BetterBrewingRecipe;
+import net.somfunambulist.thicket.util.CommonProxy;
+import net.somfunambulist.thicket.client.ClientProxy;
 import net.somfunambulist.thicket.util.ModWoodTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Thicket.MOD_ID)
 public class Thicket {
+    public static final CommonProxy Proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
+
     public static final String MOD_ID = "thicket";
     private static final Logger LOGGER = LogUtils.getLogger();
 
