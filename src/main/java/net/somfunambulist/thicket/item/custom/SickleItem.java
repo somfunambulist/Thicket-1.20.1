@@ -68,6 +68,7 @@ public class SickleItem extends ShearsItem {
             - 0.25 is sunset/moonrise
             - 0.5 is midnight
             - 0.75 is sunrise/moonset
+        */
         var currentTimeScale = level.getTimeOfDay(0.F);
         return currentTimeScale >= 0.25 && currentTimeScale <= 0.75;
     }
