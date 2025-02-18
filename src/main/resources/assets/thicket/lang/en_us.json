@@ -85,5 +85,7 @@
   "item.thicket.smithing_template.apocryphal_upgrade.applies_to": "Wooden Equipment",
   "item.thicket.smithing_template.apocryphal_upgrade.ingredients": "Enchanted Mistletoe",
   "item.thicket.smithing_template.apocryphal_upgrade.base_slot_description": "Add Wooden Equipment",
-  "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "Add Enchanted Mistletoe"
+  "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "Add Enchanted Mistletoe",
+
+  "enchantment.thicket.occult": "Occult"
 }

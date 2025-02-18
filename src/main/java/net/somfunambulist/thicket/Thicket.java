@@ -22,6 +22,7 @@ import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
 import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
+import net.somfunambulist.thicket.enchantment.ModEnchantments;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.entity.client.ModBoatRenderer;
 import net.somfunambulist.thicket.item.ModCreativeModeTabs;
@@ -49,6 +50,8 @@ public class Thicket {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
