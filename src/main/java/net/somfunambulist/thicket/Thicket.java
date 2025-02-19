@@ -30,6 +30,7 @@ import net.somfunambulist.thicket.item.ModItemProperties;
 import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.client.renderer.Sheets;
 import net.somfunambulist.thicket.potion.BetterBrewingRecipe;
+import net.somfunambulist.thicket.tags.ModBlockTags;
 import net.somfunambulist.thicket.util.CommonProxy;
 import net.somfunambulist.thicket.client.ClientProxy;
 import net.somfunambulist.thicket.util.ModWoodTypes;

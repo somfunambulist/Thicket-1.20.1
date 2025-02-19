@@ -1,15 +1,15 @@
 package net.somfunambulist.thicket.enchantment;
 
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
-import net.minecraft.world.entity.monster.Shulker;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.somfunambulist.thicket.tags.ModEntityTags;
 
 public class OccultEnchantment extends Enchantment {
     protected OccultEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pApplicableSlots) {
@@ -39,12 +39,38 @@ public class OccultEnchantment extends Enchantment {
 
         // Only apply to the Monster entity type
         // You can also use entity_type tags and use evt.getTarget().is({ENTITY_TAG})
-        if (!(evt.getEntity() instanceof EnderDragon)) return;
+        //if (!(evt.getEntity() instanceof EnderDragon)) return;
+        if (!(evt.getEntity().getType().is(ModEntityTags.OCCULT_TARGET))) return;
 
-        float damageModifierBase = 2000.0F; /* So level 1 will have +2.0 damage, 2 -> 4.0, 3 -> 6.0, etc. */
+        float damageModifierBase = 6.0F; /* So level 1 will have +2.0 damage, 2 -> 4.0, 3 -> 6.0, etc. */
         evt.setAmount(evt.getAmount() + (damageModifierBase * enchantmentLevel));
+        player.magicCrit(evt.getEntity());
 
         /* END: Check to see if the enchantment can be applied to the mob we hurt, and apply it */
     }
 
+    @Override
+    public boolean isAllowedOnBooks() {
+        return false;
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
+    @Override
+    public boolean isTradeable() {
+        return false;
+    }
+
+    @Override
+    public int getMaxLevel() {
+        return 1;
+    }
+
+    @Override
+    public boolean isDiscoverable() {
+        return false;
+    }
 }
