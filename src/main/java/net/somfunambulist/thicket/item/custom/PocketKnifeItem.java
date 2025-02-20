@@ -65,7 +65,7 @@ public class PocketKnifeItem extends ShearsItem {
         var pos = context.getClickedPos();
         var from = level.getBlockState(pos);
 
-        level.setBlockAndUpdate(pos, to.setValue(AXIS, from.getValue(AXIS))); //???
+        level.setBlockAndUpdate(pos, to.setValue(AXIS, from.getValue(AXIS)));
         level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(context.getPlayer(), from));
 
         if (particles) {

@@ -25,7 +25,13 @@
                   ]
                 }
               ],
-              "name": "thicket:enchanted_mistletoe"
+              "name": "thicket:enchanted_mistletoe",
+              "functions": [
+                {
+                  "function": "set_damage",
+                  "damage": 0.2
+                }
+              ]
             },
             {
               "type": "minecraft:item",
