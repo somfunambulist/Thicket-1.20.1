@@ -60,7 +60,7 @@ public class ModItems {
     public static final RegistryObject<Item> CRUXWOOD_HOE = ITEMS.register("cruxwood_hoe",
             () -> new HoeItem(ModToolTiers.CRUXWOOD,0,-3.0F,new Item.Properties()));
     public static final RegistryObject<Item> CRUXWOOD_BOW = ITEMS.register("cruxwood_bow",
-            () -> new BowItem(new Item.Properties().durability(60)));
+            () -> new CruxwoodBowItem(new Item.Properties().durability(40)));
 
     public static final RegistryObject<Item> GOLD_SICKLE = ITEMS.register("gold_sickle",
             () -> new SickleItem(new Item.Properties().stacksTo(1).durability(32)));
