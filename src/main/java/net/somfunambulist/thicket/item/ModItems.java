@@ -45,7 +45,7 @@ public class ModItems {
             () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
 
     public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
-            () -> new Item(new Item.Properties()));
+            () -> new MistletoeItem(new Item.Properties()));
     public static final RegistryObject<Item> ENCHANTED_MISTLETOE = ITEMS.register("enchanted_mistletoe",
             () -> new EnchantedMistletoeItem(new Item.Properties().stacksTo(1)));
 

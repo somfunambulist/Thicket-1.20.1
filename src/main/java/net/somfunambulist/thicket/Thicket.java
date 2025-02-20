@@ -24,6 +24,7 @@ import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.somfunambulist.thicket.enchantment.ModEnchantments;
 import net.somfunambulist.thicket.entity.ModEntities;
+import net.somfunambulist.thicket.entity.client.MistletoeArrowRenderer;
 import net.somfunambulist.thicket.entity.client.ModBoatRenderer;
 import net.somfunambulist.thicket.item.ModCreativeModeTabs;
 import net.somfunambulist.thicket.item.ModItemProperties;
@@ -113,6 +114,7 @@ public class Thicket {
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
+                EntityRenderers.register(ModEntities.MISTLETOE_ARROW.get(), MistletoeArrowRenderer::new);
             });
         }
     }
