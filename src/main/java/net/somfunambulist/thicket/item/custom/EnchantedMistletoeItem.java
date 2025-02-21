@@ -1,22 +1,43 @@
 package net.somfunambulist.thicket.item.custom;
 
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.BoneMealItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BucketPickup;
+import net.minecraft.world.level.block.IceBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.Tags;
+
+import java.util.List;
 
 import static net.minecraft.world.level.block.RotatedPillarBlock.AXIS;
 
@@ -44,7 +65,32 @@ public class EnchantedMistletoeItem extends Item {
         }
 
         if (context.getPlayer() != null) {
-            context.getPlayer().playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 1F, 1.5F);
+            context.getPlayer().playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 0.8F, 2F);
+            context.getPlayer().playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 0.4F, 0.8F);
+
+            context.getItemInHand().hurtAndBreak(1, context.getPlayer(), player -> {
+                player.broadcastBreakEvent(context.getHand());
+            });
+        }
+
+        return InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    private InteractionResult replaceBlockAbove(UseOnContext context, BlockState to, boolean particles) {
+        var level = context.getLevel();
+        var pos = context.getClickedPos().above();
+        var from = level.getBlockState(pos);
+
+        level.setBlockAndUpdate(pos, to);
+        level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(context.getPlayer(), from));
+
+        if (particles) {
+            level.addDestroyBlockEffect(pos, from);
+        }
+
+        if (context.getPlayer() != null) {
+            context.getPlayer().playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 0.8F, 2F);
+            context.getPlayer().playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 0.4F, 0.8F);
 
             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), player -> {
                 player.broadcastBreakEvent(context.getHand());
@@ -60,8 +106,7 @@ public class EnchantedMistletoeItem extends Item {
 
         if (state.getBlock() == Blocks.DIRT) {
             if (context.getLevel().isClientSide) {
-                addGrowthParticles(context.getLevel(), context.getClickedPos(), 15);
-                return InteractionResult.SUCCESS;
+                addGrowthParticles(context.getLevel(), context.getClickedPos(), 8);
             }
             if (context.getLevel().getBiome(context.getClickedPos()).is(Tags.Biomes.IS_MUSHROOM)) {
                 return replaceBlock(context, Blocks.MYCELIUM.defaultBlockState(), false);
@@ -72,7 +117,6 @@ public class EnchantedMistletoeItem extends Item {
             if (state.getBlock() == Blocks.NETHERRACK) {
                 if (context.getLevel().isClientSide) {
                     addGrowthParticles(context.getLevel(), context.getClickedPos(), 15);
-                    return InteractionResult.SUCCESS;
                 }
                 if (context.getLevel().getBiome(context.getClickedPos()).is(Biomes.CRIMSON_FOREST)) {
                     return replaceBlock(context, Blocks.CRIMSON_NYLIUM.defaultBlockState(), false);
@@ -89,7 +133,6 @@ public class EnchantedMistletoeItem extends Item {
                 }
             }
         }
-
         return super.useOn(context);
     }
 
