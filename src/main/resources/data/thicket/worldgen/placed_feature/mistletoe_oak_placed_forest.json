@@ -1,5 +1,5 @@
 {
-  "feature": "thicket:hazel",
+  "feature": "thicket:mistletoe_oak",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "thicket:hazel_sapling",
+          "Name": "minecraft:oak_sapling",
           "Properties": {
             "stage": "0"
           }
