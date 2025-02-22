@@ -36,6 +36,7 @@ import net.somfunambulist.thicket.tags.ModBlockTags;
 import net.somfunambulist.thicket.util.CommonProxy;
 import net.somfunambulist.thicket.client.ClientProxy;
 import net.somfunambulist.thicket.util.ModWoodTypes;
+import net.somfunambulist.thicket.worldgen.feature.ModFeatureTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -58,6 +59,8 @@ public class Thicket {
 
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
+
+        ModFeatureTypes.register(modEventBus);
 
         ModPaintings.register(modEventBus);
 
