@@ -82,6 +82,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
                         //other blocks==================================================================================
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
+                        output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());
+                        output.accept(ModBlocks.DARK_FIREMILK_MUSHROOM_BLOCK.get());
                         output.accept(ModBlocks.BLOOMING_MISTLETOE_LEAVES.get());
                         output.accept(ModBlocks.MISTLETOE_LEAVES.get());
                         output.accept(ModItems.MISTLETOE.get());

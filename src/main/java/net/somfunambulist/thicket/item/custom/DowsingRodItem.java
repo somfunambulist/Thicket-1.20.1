@@ -52,6 +52,11 @@ public class DowsingRodItem extends Item {
         return pStack.hasTag();
     }
 
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return slotChanged;
+    }
+
     private int isWaterSource(BlockState blockState) {
         return (blockState.getFluidState()).getAmount();
     }

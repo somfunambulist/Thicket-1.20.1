@@ -68,6 +68,8 @@
   "item.thicket.sassafras_chest_boat": "Sassafras Chest Boat",
 
   "block.thicket.firemilk_mushroom": "Firemilk Mushroom",
+  "block.thicket.firemilk_mushroom_block": "Firemilk Mushroom Block",
+  "block.thicket.dark_firemilk_mushroom_block": "Dark Firemilk Mushroom Block",
   "block.thicket.blooming_mistletoe_leaves": "Blooming Mistletoe Leaves",
   "block.thicket.mistletoe_leaves": "Mistletoe Leaves",
   "item.thicket.mistletoe": "Mistletoe",
@@ -86,6 +88,9 @@
   "item.thicket.smithing_template.apocryphal_upgrade.ingredients": "Enchanted Mistletoe",
   "item.thicket.smithing_template.apocryphal_upgrade.base_slot_description": "Add Wooden Equipment",
   "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "Add Enchanted Mistletoe",
+
+  "painting.thicket.ritual.title": "Ritual",
+  "painting.thicket.ritual.author": "Somfunambulist",
 
   "enchantment.thicket.occult": "Occult"
 }
