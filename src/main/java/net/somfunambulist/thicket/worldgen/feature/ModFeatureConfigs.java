@@ -7,21 +7,21 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.somfunambulist.thicket.Thicket;
-import net.somfunambulist.thicket.worldgen.feature.custom.HugeFiremilkFeature;
+import net.somfunambulist.thicket.worldgen.feature.custom.HugeFiremilkConfiguration;
 
-public class ModFeatureTypes {
-    public static final DeferredRegister<Feature<?>> FEATURE_TYPES =
+public class ModFeatureConfigs {
+    public static final DeferredRegister<Feature<?>> FEATURE_CONFIGS =
             DeferredRegister.create(Registries.FEATURE, Thicket.MOD_ID);
 
-    public static final RegistryObject<Feature<HugeFiremilkFeature>> HUGE_FIREMILK_FEATURE =
-            FEATURE_TYPES.register("huge_firemilk_feature", () -> new Feature<>(HugeFiremilkFeature.CODEC) {
+    public static final RegistryObject<Feature<HugeFiremilkConfiguration>> HUGE_FIREMILK_FEATURE =
+            FEATURE_CONFIGS.register("huge_firemilk_feature", () -> new Feature<>(HugeFiremilkConfiguration.CODEC) {
                 @Override
-                public boolean place(FeaturePlaceContext<HugeFiremilkFeature> pContext) {
+                public boolean place(FeaturePlaceContext<HugeFiremilkConfiguration> pContext) {
                     return false;
                 }
             });
 
     public static void register(IEventBus eventBus) {
-        FEATURE_TYPES.register(eventBus);
+        FEATURE_CONFIGS.register(eventBus);
     }
 }

@@ -32,11 +32,10 @@ import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.client.renderer.Sheets;
 import net.somfunambulist.thicket.painting.ModPaintings;
 import net.somfunambulist.thicket.potion.BetterBrewingRecipe;
-import net.somfunambulist.thicket.tags.ModBlockTags;
 import net.somfunambulist.thicket.util.CommonProxy;
 import net.somfunambulist.thicket.client.ClientProxy;
 import net.somfunambulist.thicket.util.ModWoodTypes;
-import net.somfunambulist.thicket.worldgen.feature.ModFeatureTypes;
+import net.somfunambulist.thicket.worldgen.feature.ModFeatureConfigs;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -60,7 +59,7 @@ public class Thicket {
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
 
-        ModFeatureTypes.register(modEventBus);
+        ModFeatureConfigs.register(modEventBus);
 
         ModPaintings.register(modEventBus);
 
