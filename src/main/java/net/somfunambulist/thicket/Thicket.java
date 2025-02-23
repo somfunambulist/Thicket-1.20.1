@@ -35,7 +35,7 @@ import net.somfunambulist.thicket.potion.BetterBrewingRecipe;
 import net.somfunambulist.thicket.util.CommonProxy;
 import net.somfunambulist.thicket.client.ClientProxy;
 import net.somfunambulist.thicket.util.ModWoodTypes;
-import net.somfunambulist.thicket.worldgen.feature.ModFeatureConfigs;
+import net.somfunambulist.thicket.worldgen.ModFeatures;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -59,9 +59,9 @@ public class Thicket {
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
 
-        ModFeatureConfigs.register(modEventBus);
-
         ModPaintings.register(modEventBus);
+
+        ModFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

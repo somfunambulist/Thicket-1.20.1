@@ -14,6 +14,7 @@ import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.custom.*;
 import net.somfunambulist.thicket.item.ModItems;
 import net.somfunambulist.thicket.util.ModWoodTypes;
+import net.somfunambulist.thicket.worldgen.ModFeatures;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
 import net.somfunambulist.thicket.worldgen.tree.SassafrasTreeGrower;
 
@@ -107,7 +108,7 @@ public class ModBlocks {
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     //other blocks======================================================================================================
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
-            () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM),null));
+            () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM), ModFeatures.HUGE_FIREMILK_KEY));
     public static final RegistryObject<HugeMushroomBlock> FIREMILK_MUSHROOM_BLOCK = registerBlock("firemilk_mushroom_block",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK)));
     public static final RegistryObject<HugeMushroomBlock> DARK_FIREMILK_MUSHROOM_BLOCK = registerBlock("dark_firemilk_mushroom_block",
