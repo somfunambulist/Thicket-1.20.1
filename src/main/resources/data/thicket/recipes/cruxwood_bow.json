@@ -1,6 +1,6 @@
 {
   "result": {
-    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:infinity\"},{lvl:1s,id:\"minecraft:unbreaking\"}]}",
+    "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:unbreaking\"},{lvl:1s,id:\"thicket:occult\"}]}",
     "item": "thicket:cruxwood_bow",
     "type": "minecraft:item_nbt"
   },

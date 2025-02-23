@@ -14,8 +14,6 @@ import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.entity.custom.ModBoatEntity;
 import net.somfunambulist.thicket.item.custom.*;
 
-import java.util.List;
-
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Thicket.MOD_ID);
@@ -45,7 +43,7 @@ public class ModItems {
             () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
 
     public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
-            () -> new MistletoeItem(new Item.Properties()));
+            () -> new MistletoeItem( new Item.Properties(), ModBlocks.HANGING_MISTLETOE.get()));
     public static final RegistryObject<Item> ENCHANTED_MISTLETOE = ITEMS.register("enchanted_mistletoe",
             () -> new EnchantedMistletoeItem(new Item.Properties().stacksTo(1).durability(24)));
 
