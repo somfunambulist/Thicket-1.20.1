@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.somfunambulist.thicket.Thicket;
 
@@ -73,24 +74,18 @@ public class SickleItem extends ShearsItem {
         return currentTimeScale >= 0.25 && currentTimeScale <= 0.75;
     }
 
-    /*
-    @Override
-    public InteractionResult useOn(UseOnContext pContext) {
-        if (!pContext.getLevel().isClientSide()) {
-            Player player = pContext.getPlayer();
-            if (isFullMoon(player.level())) {
-                player.sendSystemMessage(Component.literal("true"));
-            } else {
-                player.sendSystemMessage(Component.literal("false"));
-            }
-        }
-
-        return super.useOn(pContext);
-    }
-    */
-
     @Override
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
         return slotChanged;
+    }
+
+    @Override
+    public int getEnchantmentValue(ItemStack stack) {
+        return 22;
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return super.canApplyAtEnchantingTable(stack, enchantment);
     }
 }

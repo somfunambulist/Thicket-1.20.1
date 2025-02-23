@@ -26,14 +26,6 @@ public class ModCreativeModeTabs {
                     .displayItems(((displayParameters, output) -> {
                         //tools
                         output.accept(ModItems.POCKET_KNIFE.get());
-                        output.accept(ModItems.GOLD_SICKLE.get());
-                        output.accept(ModItems.APOCRYPHAL_SMITHING_TEMPLATE.get());
-                        output.accept(ModItems.CRUXWOOD_PICKAXE.get());
-                        output.accept(ModItems.CRUXWOOD_SHOVEL.get());
-                        output.accept(ModItems.CRUXWOOD_AXE.get());
-                        output.accept(ModItems.CRUXWOOD_HOE.get());
-                        output.accept(ModItems.CRUXWOOD_SWORD.get());
-                        output.accept(ModItems.CRUXWOOD_BOW.get());
 
                         //vanilla carving blocks
                         output.accept(ModBlocks.OAK_CARVING.get());
@@ -72,23 +64,32 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HAZELBUTTER.get());
                         output.accept(ModItems.HAZELBUTTER_TREAT.get());
                         output.accept(ModItems.DOWSING_ROD.get());
-                        //sassafras=====================================================================================
-                        output.accept(ModBlocks.SASSAFRAS_SAPLING.get());
-                        output.accept(ModBlocks.SASSAFRAS_LEAVES.get());
-                        output.accept(ModBlocks.SASSAFRAS_LOG.get());
-                        output.accept(ModBlocks.SASSAFRAS_WOOD.get());
-                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_LOG.get());
-                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_WOOD.get());
-                        output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
-                        //other blocks==================================================================================
+                        //hazel supporting features
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());
                         output.accept(ModBlocks.DARK_FIREMILK_MUSHROOM_BLOCK.get());
-                        output.accept(ModBlocks.BLOOMING_MISTLETOE_LEAVES.get());
                         output.accept(ModBlocks.MISTLETOE_LEAVES.get());
+                        output.accept(ModBlocks.BLOOMING_MISTLETOE_LEAVES.get());
                         output.accept(ModItems.MISTLETOE.get());
-                        output.accept(ModBlocks.HANGING_MISTLETOE.get());
-                        output.accept(ModBlocks.SUSPICIOUS_ROOTS.get());
+                        output.accept(ModItems.ENCHANTED_MISTLETOE.get());
+                        output.accept(ModItems.GOLD_SICKLE.get());
+                        //output.accept(ModItems.APOCRYPHAL_SMITHING_TEMPLATE.get());
+                        output.accept(ModItems.CRUXWOOD_PICKAXE.get());
+                        output.accept(ModItems.CRUXWOOD_SHOVEL.get());
+                        output.accept(ModItems.CRUXWOOD_AXE.get());
+                        output.accept(ModItems.CRUXWOOD_HOE.get());
+                        output.accept(ModItems.CRUXWOOD_SWORD.get());
+                        output.accept(ModItems.CRUXWOOD_BOW.get());
+                        //sassafras=====================================================================================
+                        //output.accept(ModBlocks.SASSAFRAS_SAPLING.get());
+                        //output.accept(ModBlocks.SASSAFRAS_LEAVES.get());
+                        //output.accept(ModBlocks.SASSAFRAS_LOG.get());
+                        //output.accept(ModBlocks.SASSAFRAS_WOOD.get());
+                        //output.accept(ModBlocks.STRIPPED_SASSAFRAS_LOG.get());
+                        //output.accept(ModBlocks.STRIPPED_SASSAFRAS_WOOD.get());
+                        //output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
+                        //other blocks==================================================================================
+                        //output.accept(ModBlocks.SUSPICIOUS_ROOTS.get());
                         //modded compat
                         if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {
                             output.accept(DecorativeBlocksBlocks.HAZEL_BEAM.get());
