@@ -38,6 +38,8 @@
     "thicket:sassafras_wood",
     "thicket:stripped_sassafras_log",
     "thicket:stripped_sassafras_wood",
-    "thicket:sassafras_planks"
+    "thicket:sassafras_planks",
+    "thicket:firemilk_mushroom_block",
+    "thicket:dark_firemilk_mushroom_block"
   ]
 }

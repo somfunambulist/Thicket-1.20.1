@@ -1,17 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_log",
-    "thicket:hazel_wood",
-    "thicket:stripped_hazel_log",
-    "thicket:stripped_hazel_wood",
-    {
-      "id": "thicket:hazel_beam",
-      "required": false
-    },
-    "thicket:sassafras_log",
-    "thicket:sassafras_wood",
-    "thicket:stripped_sassafras_log",
-    "thicket:stripped_sassafras_wood"
+    "#thicket:hazel_logs",
+    "#thicket:sassafras_logs"
   ]
 }
