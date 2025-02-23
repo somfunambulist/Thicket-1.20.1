@@ -67,10 +67,6 @@ public class FiremilkMushroomBlock extends MushroomBlock {
         }
     }
 
-    public boolean isValidBonemealTarget(LevelReader pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
-        return false;
-    }
-
     public FiremilkMushroomBlock(Properties pProperties, ResourceKey<ConfiguredFeature<?, ?>> pFeature) {
         super(pProperties, pFeature);
     }
