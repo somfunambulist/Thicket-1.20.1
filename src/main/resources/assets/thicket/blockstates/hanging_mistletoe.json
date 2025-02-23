@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "facing=west,hanging=false": {
+      "model": "thicket:block/hanging_mistletoe",
+      "y": 90
+    },
+    "facing=south,hanging=false": {
+      "model": "thicket:block/hanging_mistletoe"
+    },
+    "facing=north,hanging=false": {
+      "model": "thicket:block/hanging_mistletoe",
+      "y": 180
+    },
+    "facing=east,hanging=false": {
+      "model": "thicket:block/hanging_mistletoe",
+      "y": 270
+    },
+    "hanging=true,facing=north": {
+      "model": "thicket:block/hanging_mistletoe_ceiling"
+    },
+    "hanging=true,facing=south": {
+      "model": "thicket:block/hanging_mistletoe_ceiling"
+    },
+    "hanging=true,facing=east": {
+      "model": "thicket:block/hanging_mistletoe_ceiling"
+    },
+    "hanging=true,facing=west": {
+      "model": "thicket:block/hanging_mistletoe_ceiling"
+    }
+  }
+}

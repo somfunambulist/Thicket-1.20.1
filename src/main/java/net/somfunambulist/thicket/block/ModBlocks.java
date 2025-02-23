@@ -112,10 +112,12 @@ public class ModBlocks {
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK)));
     public static final RegistryObject<HugeMushroomBlock> DARK_FIREMILK_MUSHROOM_BLOCK = registerBlock("dark_firemilk_mushroom_block",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK)));
-    public static final RegistryObject<MistletoeBlock> BLOOMING_MISTLETOE_LEAVES = registerBlock("blooming_mistletoe_leaves",
-            () -> new MistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
-    public static final RegistryObject<ModLeavesBlock> MISTLETOE_LEAVES = registerBlock("mistletoe_leaves",
-            () -> new MistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<MistletoeLeavesBlock> BLOOMING_MISTLETOE_LEAVES = registerBlock("blooming_mistletoe_leaves",
+            () -> new MistletoeLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<MistletoeLeavesBlock> MISTLETOE_LEAVES = registerBlock("mistletoe_leaves",
+            () -> new MistletoeLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<HangingMistletoeBlock> HANGING_MISTLETOE = registerBlock("hanging_mistletoe",
+            () -> new HangingMistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)));
     public static final RegistryObject<BrushableBlock> SUSPICIOUS_ROOTS = registerBlock("suspicious_roots",
             () -> new ModSusBlock(Blocks.ROOTED_DIRT,BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT),SoundEvents.BRUSH_GRAVEL,SoundEvents.BRUSH_GRAVEL_COMPLETED));
 

@@ -87,6 +87,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOOMING_MISTLETOE_LEAVES.get());
                         output.accept(ModBlocks.MISTLETOE_LEAVES.get());
                         output.accept(ModItems.MISTLETOE.get());
+                        output.accept(ModBlocks.HANGING_MISTLETOE.get());
                         output.accept(ModBlocks.SUSPICIOUS_ROOTS.get());
                         //modded compat
                         if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {

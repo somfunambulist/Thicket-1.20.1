@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.tags.ModBlockTags;
 
-public class MistletoeBlock extends ModLeavesBlock{
-    public MistletoeBlock(Properties pProperties) {
+public class MistletoeLeavesBlock extends ModLeavesBlock{
+    public MistletoeLeavesBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(DISTANCE, Integer.valueOf(7)).setValue(PERSISTENT, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
