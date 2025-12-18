@@ -83,6 +83,8 @@ public class Thicket {
             ComposterBlock.COMPOSTABLES.put(ModItems.HAZELNUT.get(), 0.20F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.HAZEL_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.HAZEL_LEAVES.get().asItem(), 0.30F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MYRRH_SAPLING.get().asItem(), 0.30F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MYRRH_LEAVES.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_LEAVES.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.FIREMILK_MUSHROOM.get().asItem(), 0.30F);
@@ -117,6 +119,7 @@ public class Thicket {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
                 Sheets.addWoodType(ModWoodTypes.HAZEL);
+                Sheets.addWoodType(ModWoodTypes.MYRRH);
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));

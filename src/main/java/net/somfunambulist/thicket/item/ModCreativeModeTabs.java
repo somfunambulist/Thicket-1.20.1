@@ -64,6 +64,26 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HAZELBUTTER.get());
                         output.accept(ModItems.HAZELBUTTER_TREAT.get());
                         output.accept(ModItems.DOWSING_ROD.get());
+                        //myrrh=========================================================================================
+                        output.accept(ModBlocks.MYRRH_SAPLING.get());
+                        output.accept(ModBlocks.MYRRH_LEAVES.get());
+                        output.accept(ModBlocks.MYRRH_LOG.get());
+                        output.accept(ModBlocks.MYRRH_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_MYRRH_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_MYRRH_WOOD.get());
+                        output.accept(ModBlocks.MYRRH_PLANKS.get());
+                        output.accept(ModBlocks.MYRRH_CARVING.get());
+                        output.accept(ModBlocks.MYRRH_SLAB.get());
+                        output.accept(ModBlocks.MYRRH_STAIRS.get());
+                        output.accept(ModBlocks.MYRRH_BUTTON.get());
+                        output.accept(ModBlocks.MYRRH_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.MYRRH_FENCE.get());
+                        output.accept(ModBlocks.MYRRH_FENCE_GATE.get());
+                        output.accept(ModBlocks.MYRRH_DOOR.get());
+                        output.accept(ModBlocks.MYRRH_TRAPDOOR.get());
+                        output.accept(ModItems.MYRRH_SIGN.get());
+                        output.accept(ModItems.MYRRH_HANGING_SIGN.get());
+                        output.accept(ModBlocks.MYRRH_RESIN_BUNDLE.get());
                         //hazel supporting features
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());

@@ -63,6 +63,12 @@ public class ModItems {
     public static final RegistryObject<Item> GOLD_SICKLE = ITEMS.register("gold_sickle",
             () -> new SickleItem(new Item.Properties().stacksTo(1).durability(32)));
 
+    public static final RegistryObject<Item> MYRRH_SIGN = ITEMS.register("myrrh_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.MYRRH_SIGN.get(), ModBlocks.MYRRH_WALL_SIGN.get()));
+    public static final RegistryObject<Item> MYRRH_HANGING_SIGN = ITEMS.register("myrrh_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.MYRRH_HANGING_SIGN.get(), ModBlocks.MYRRH_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
     //template setup ===================================================================================================
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;

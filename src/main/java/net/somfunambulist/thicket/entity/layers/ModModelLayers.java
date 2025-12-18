@@ -12,4 +12,10 @@ public class ModModelLayers {
     public static final ModelLayerLocation HAZEL_CHEST_BOAT_LAYER = new ModelLayerLocation(
             new ResourceLocation(Thicket.MOD_ID, "chest_boat/hazel"), "main");
 
+    public static final ModelLayerLocation MYRRH_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Thicket.MOD_ID, "boat/myrrh"), "main");
+
+    public static final ModelLayerLocation MYRRH_CHEST_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Thicket.MOD_ID, "chest_boat/myrrh"), "main");
+
 }

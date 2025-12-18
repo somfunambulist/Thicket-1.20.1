@@ -22,6 +22,18 @@ public class ModRotatedPillarBlock extends RotatedPillarBlock {
             if(state.is(ModBlocks.HAZEL_WOOD.get())) {
                 return ModBlocks.STRIPPED_HAZEL_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
+            if(state.is(ModBlocks.MYRRH_LOG.get())) {
+                return ModBlocks.STRIPPED_MYRRH_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.GREEN_MYRRH_LOG.get())) {
+                return ModBlocks.STRIPPED_GREEN_MYRRH_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.MYRRH_WOOD.get())) {
+                return ModBlocks.STRIPPED_MYRRH_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if(state.is(ModBlocks.GREEN_MYRRH_WOOD.get())) {
+                return ModBlocks.STRIPPED_GREEN_MYRRH_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
         }
 
         return super.getToolModifiedState(state, context, toolAction, simulate);

@@ -10,6 +10,7 @@ public class ModItemTags {
 
     public static final TagKey<Item> POCKET_KNIVES = TagKey.create(Registries.ITEM, Thicket.modPrefix("pocket_knives"));
     public static final TagKey<Item> HAZEL_LOGS = TagKey.create(Registries.ITEM, Thicket.modPrefix("hazel_logs"));
+    public static final TagKey<Item> MYRRH_LOGS = TagKey.create(Registries.ITEM, Thicket.modPrefix("myrrh_logs"));
     public static final TagKey<Item> SASSAFRAS_LOGS = TagKey.create(Registries.ITEM, Thicket.modPrefix("sassafras_logs"));
 
 }

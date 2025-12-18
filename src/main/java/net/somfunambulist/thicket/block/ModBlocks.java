@@ -91,6 +91,64 @@ public class ModBlocks {
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.HAZEL));
     public static final RegistryObject<Block> HAZELNUT_BUNDLE = registerBlock("hazelnut_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    //myrrh=============================================================================================================
+    public static final RegistryObject<Block> MYRRH_SAPLING = registerBlock("myrrh_sapling",
+            () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<ModLeavesBlock> MYRRH_LEAVES = registerBlock("myrrh_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> MYRRH_LOG = registerBlock("myrrh_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> GREEN_MYRRH_LOG = registerBlock("green_myrrh_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> MYRRH_WOOD = registerBlock("myrrh_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> GREEN_MYRRH_WOOD = registerBlock("green_myrrh_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_MYRRH_LOG = registerBlock("stripped_myrrh_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_GREEN_MYRRH_LOG = registerBlock("stripped_green_myrrh_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_MYRRH_WOOD = registerBlock("stripped_myrrh_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_GREEN_MYRRH_WOOD = registerBlock("stripped_green_myrrh_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<ModPlanksBlock> MYRRH_PLANKS = registerBlock("myrrh_planks",
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+
+
+    public static final RegistryObject<Block> MYRRH_CARVING = registerBlock("myrrh_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> GREEN_MYRRH_CARVING = registerBlock("green_myrrh_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> MYRRH_STAIRS = registerBlock("myrrh_stairs",
+            () -> new StairBlock(() -> ModBlocks.MYRRH_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> MYRRH_SLAB = registerBlock("myrrh_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> MYRRH_PRESSURE_PLATE = registerBlock("myrrh_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+    public static final RegistryObject<Block> MYRRH_BUTTON = registerBlock("myrrh_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK,30,true));
+    public static final RegistryObject<Block> MYRRH_FENCE = registerBlock("myrrh_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<Block> MYRRH_FENCE_GATE = registerBlock("myrrh_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> MYRRH_DOOR = registerBlock("myrrh_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> MYRRH_TRAPDOOR = registerBlock("myrrh_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> MYRRH_SIGN = BLOCKS.register("myrrh_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MYRRH));
+    public static final RegistryObject<Block> MYRRH_WALL_SIGN = BLOCKS.register("myrrh_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MYRRH));
+    public static final RegistryObject<Block> MYRRH_HANGING_SIGN = BLOCKS.register("myrrh_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MYRRH));
+    public static final RegistryObject<Block> MYRRH_WALL_HANGING_SIGN = BLOCKS.register("myrrh_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MYRRH));
+    public static final RegistryObject<Block> MYRRH_RESIN_BUNDLE = registerBlock("myrrh_resin_bundle",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //sassafras=========================================================================================================
     public static final RegistryObject<Block> SASSAFRAS_SAPLING = registerBlock("sassafras_sapling",
             () -> new SaplingBlock(new SassafrasTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
