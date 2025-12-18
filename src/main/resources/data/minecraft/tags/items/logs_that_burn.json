@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "#thicket:hazel_logs",
+    "#thicket:myrrh_logs",
+    "#thicket:green_myrrh_logs",
     "#thicket:sassafras_logs"
   ]
 }

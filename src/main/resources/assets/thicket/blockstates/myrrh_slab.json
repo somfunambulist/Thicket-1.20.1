@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thicket:block/myrrh_slab"
+    },
+    "type=double": {
+      "model": "thicket:block/myrrh_planks"
+    },
+    "type=top": {
+      "model": "thicket:block/myrrh_slab_top"
+    }
+  }
+}

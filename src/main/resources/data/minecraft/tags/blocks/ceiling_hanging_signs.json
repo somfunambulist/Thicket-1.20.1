@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_hanging_sign"
+    "thicket:hazel_hanging_sign",
+    "thicket:myrrh_hanging_sign"
   ]
 }

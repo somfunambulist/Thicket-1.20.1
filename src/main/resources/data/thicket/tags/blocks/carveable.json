@@ -11,6 +11,8 @@
     "minecraft:stripped_cherry_log",
     "minecraft:stripped_crimson_stem",
     "minecraft:stripped_warped_stem",
-    "thicket:stripped_hazel_log"
+    "thicket:stripped_hazel_log",
+    "thicket:stripped_myrrh_log",
+    "thicket:stripped_green_myrrh_log"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "thicket:myrrh_planks"
+    }
+  ],
+  "result": {
+    "item": "thicket:myrrh_button"
+  }
+}

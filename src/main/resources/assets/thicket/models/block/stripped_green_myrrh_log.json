@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "thicket:block/stripped_green_myrrh_log_top",
+    "side": "thicket:block/stripped_green_myrrh_log"
+  }
+}

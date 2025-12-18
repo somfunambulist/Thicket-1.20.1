@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thicket:myrrh_log",
+    "thicket:myrrh_wood",
+    "thicket:stripped_myrrh_log",
+    "thicket:stripped_myrrh_wood",
+    "thicket:green_myrrh_log",
+    "thicket:green_myrrh_wood",
+    "thicket:stripped_green_myrrh_log",
+    "thicket:stripped_green_myrrh_wood"
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_fence"
+    "thicket:hazel_fence",
+    "thicket:myrrh_fence"
   ]
 }

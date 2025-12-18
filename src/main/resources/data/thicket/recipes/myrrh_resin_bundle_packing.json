@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "thicket:myrrh_resin"
+    }
+  },
+  "result": {
+    "item": "thicket:myrrh_resin_bundle"
+  }
+}

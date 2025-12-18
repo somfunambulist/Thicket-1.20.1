@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_boat"
+    "thicket:hazel_boat",
+    "thicket:myrrh_boat"
   ]
 }
