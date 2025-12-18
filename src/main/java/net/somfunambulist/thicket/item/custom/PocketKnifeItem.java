@@ -49,6 +49,8 @@ public class PocketKnifeItem extends ShearsItem {
         registerCarvingBlock(Blocks.STRIPPED_CRIMSON_STEM, ModBlocks.CRIMSON_CARVING);
         registerCarvingBlock(Blocks.STRIPPED_WARPED_STEM, ModBlocks.WARPED_CARVING);
         registerCarvingBlock(ModBlocks.STRIPPED_HAZEL_LOG.get(), ModBlocks.HAZEL_CARVING);
+        registerCarvingBlock(ModBlocks.STRIPPED_MYRRH_LOG.get(), ModBlocks.MYRRH_CARVING);
+        registerCarvingBlock(ModBlocks.STRIPPED_GREEN_MYRRH_LOG.get(), ModBlocks.GREEN_MYRRH_CARVING);
     }
 
     public PocketKnifeItem(Properties properties) {

@@ -16,6 +16,7 @@ import net.somfunambulist.thicket.item.ModItems;
 import net.somfunambulist.thicket.util.ModWoodTypes;
 import net.somfunambulist.thicket.worldgen.ModFeatures;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
+import net.somfunambulist.thicket.worldgen.tree.MyrrhTreeGrower;
 import net.somfunambulist.thicket.worldgen.tree.SassafrasTreeGrower;
 
 import java.util.function.Supplier;
@@ -93,7 +94,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //myrrh=============================================================================================================
     public static final RegistryObject<Block> MYRRH_SAPLING = registerBlock("myrrh_sapling",
-            () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(new MyrrhTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> MYRRH_LEAVES = registerBlock("myrrh_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> MYRRH_LOG = registerBlock("myrrh_log",
@@ -112,11 +113,8 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> STRIPPED_GREEN_MYRRH_WOOD = registerBlock("stripped_green_myrrh_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
-
     public static final RegistryObject<ModPlanksBlock> MYRRH_PLANKS = registerBlock("myrrh_planks",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-
-
     public static final RegistryObject<Block> MYRRH_CARVING = registerBlock("myrrh_carving",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> GREEN_MYRRH_CARVING = registerBlock("green_myrrh_carving",

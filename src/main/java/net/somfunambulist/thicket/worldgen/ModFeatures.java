@@ -17,6 +17,7 @@ public class ModFeatures {
     public static final DeferredRegister<Feature<?>> FeatureRegistry = DeferredRegister.create(ForgeRegistries.FEATURES, Thicket.MOD_ID);
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> HAZEL_KEY = registerKey("hazel");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MYRRH_KEY = registerKey("myrrh");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SASSAFRAS_KEY = registerKey("sassafras");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HUGE_FIREMILK_KEY = registerKey("huge_firemilk_mushroom");
 

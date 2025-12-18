@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "thicket:myrrh_placed_savanna",
+  "step": "vegetal_decoration"
+}
