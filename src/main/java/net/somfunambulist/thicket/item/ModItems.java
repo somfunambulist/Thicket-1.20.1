@@ -38,9 +38,9 @@ public class ModItems {
                     new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> HAZEL_BOAT = ITEMS.register("hazel_boat",
-            () -> new ModBoatItem(false, ModBoatEntity.Type.HAZEL, new Item.Properties()));
+            () -> new ModBoatItem(false, ModBoatEntity.Type.HAZEL, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> HAZEL_CHEST_BOAT = ITEMS.register("hazel_chest_boat",
-            () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties()));
+            () -> new ModBoatItem(true, ModBoatEntity.Type.HAZEL, new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> MISTLETOE = ITEMS.register("mistletoe",
             () -> new MistletoeItem( new Item.Properties(), ModBlocks.HANGING_MISTLETOE.get()));
@@ -68,6 +68,11 @@ public class ModItems {
     public static final RegistryObject<Item> MYRRH_HANGING_SIGN = ITEMS.register("myrrh_hanging_sign",
             () -> new HangingSignItem(ModBlocks.MYRRH_HANGING_SIGN.get(), ModBlocks.MYRRH_WALL_HANGING_SIGN.get(),
                     new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> MYRRH_BOAT = ITEMS.register("myrrh_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.MYRRH, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MYRRH_CHEST_BOAT = ITEMS.register("myrrh_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.MYRRH, new Item.Properties().stacksTo(1)));
 
     //template setup ===================================================================================================
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;

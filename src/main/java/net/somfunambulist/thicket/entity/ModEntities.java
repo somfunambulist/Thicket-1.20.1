@@ -14,10 +14,10 @@ public class ModEntities {
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Thicket.MOD_ID);
 
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
-            ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
+            ENTITY_TYPES.register("boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_boat"));
     public static final RegistryObject<EntityType<ModChestBoatEntity>> MOD_CHEST_BOAT =
-            ENTITY_TYPES.register("mod_chest_boat", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
+            ENTITY_TYPES.register("chest_boat", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_chest_boat"));
     public static final RegistryObject<EntityType<MistletoeArrow>> MISTLETOE_ARROW =
             ENTITY_TYPES.register("mistletoe_arrow", () -> EntityType.Builder.<MistletoeArrow>of(MistletoeArrow::new, MobCategory.MISC)

@@ -1,6 +1,9 @@
 package net.somfunambulist.thicket.event;
 
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.somfunambulist.thicket.Thicket;
+import net.somfunambulist.thicket.entity.custom.ModBoatEntity;
 import net.somfunambulist.thicket.entity.layers.ModModelLayers;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
@@ -12,8 +15,9 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(ModModelLayers.HAZEL_BOAT_LAYER, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ModModelLayers.HAZEL_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
-
+        for (ModBoatEntity.Type type : ModBoatEntity.Type.values()) {
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(Thicket.MOD_ID, type.getModelLocation()), "main"), BoatModel::createBodyModel);
+            event.registerLayerDefinition(new ModelLayerLocation(new ResourceLocation(Thicket.MOD_ID, type.getChestModelLocation()), "main"), ChestBoatModel::createBodyModel);
+        }
     }
 }

@@ -54,9 +54,9 @@ public class ModBoatItem extends Item {
             if (hitresult.getType() == HitResult.Type.BLOCK) {
                 Boat boat = this.getBoat(pLevel, hitresult);
                 if(boat instanceof ModChestBoatEntity chestBoat) {
-                    chestBoat.setVariant(this.type);
+                    chestBoat.setWoodType(this.type);
                 } else if(boat instanceof ModBoatEntity) {
-                    ((ModBoatEntity)boat).setVariant(this.type);
+                    ((ModBoatEntity)boat).setWoodType(this.type);
                 }
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
@@ -79,8 +79,7 @@ public class ModBoatItem extends Item {
         }
     }
 
-    private Boat getBoat(Level p_220017_, HitResult p_220018_) {
-        return (this.hasChest ? new ModChestBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z) :
-                new ModBoatEntity(p_220017_, p_220018_.getLocation().x, p_220018_.getLocation().y, p_220018_.getLocation().z));
+    private ModBoatEntity getBoat(Level level, HitResult hitResult) {
+        return this.hasChest ? new ModChestBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) : new ModBoatEntity(level, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z);
     }
 }

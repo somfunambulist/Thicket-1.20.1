@@ -1,5 +1,10 @@
 package net.somfunambulist.thicket.entity.custom;
 
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
+import net.minecraft.resources.ResourceLocation;
+import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.item.ModItems;
@@ -15,13 +20,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
+import java.util.function.Supplier;
+
 import java.util.function.IntFunction;
 
 public class ModBoatEntity extends Boat {
-    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> WOOD_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
 
     public ModBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.blocksBuilding = true;
     }
 
     public ModBoatEntity(Level pLevel, double pX, double pY, double pZ) {
@@ -33,76 +41,102 @@ public class ModBoatEntity extends Boat {
     }
 
     @Override
-    public Item getDropItem() {
-        switch (getModVariant()) {
-            case HAZEL -> {
-                return ModItems.HAZEL_BOAT.get();
-            }
-        }
-        return super.getDropItem();
-    }
-
-    public void setVariant(ModBoatEntity.Type pVariant) {
-        this.entityData.set(DATA_ID_TYPE, pVariant.ordinal());
-    }
-
-    public ModBoatEntity.Type getModVariant() {
-        return ModBoatEntity.Type.byId(this.entityData.get(DATA_ID_TYPE));
-    }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(DATA_ID_TYPE, Type.HAZEL.ordinal());
+        this.entityData.define(WOOD_TYPE, 0);
     }
 
-    protected void addAdditionalSaveData(CompoundTag pCompound) {
-        pCompound.putString("Type", this.getModVariant().getSerializedName());
-    }
-
+    @Override
     protected void readAdditionalSaveData(CompoundTag pCompound) {
         if (pCompound.contains("Type", 8)) {
-            this.setVariant(ModBoatEntity.Type.byName(pCompound.getString("Type")));
+            this.setWoodType(Type.byName(pCompound.getString("Type")));
         }
     }
 
-    public static enum Type implements StringRepresentable {
-        HAZEL(ModBlocks.HAZEL_PLANKS.get(), "hazel");
+    @Override
+    protected void addAdditionalSaveData(CompoundTag pCompound) {
+        super.addAdditionalSaveData(pCompound);
+        pCompound.putString("Type", this.getWoodType().getName());
+    }
+
+    public Type getWoodType() {
+        return Type.byId(this.entityData.get(WOOD_TYPE));
+    }
+
+    public void setWoodType(Type type) {
+        this.entityData.set(WOOD_TYPE, type.ordinal());
+    }
+
+    @Override
+    public Item getDropItem() {
+        return this.getWoodType().getItem().get();
+    }
+
+    @Override
+    public Packet<ClientGamePacketListener> getAddEntityPacket() {
+        return new ClientboundAddEntityPacket(this);
+    }
+
+    public enum Type {
+        HAZEL("hazel", () -> ModItems.HAZEL_BOAT.get(), () -> ModItems.HAZEL_CHEST_BOAT.get()),
+        MYRRH("myrrh", () -> ModItems.MYRRH_BOAT.get(), () -> ModItems.MYRRH_CHEST_BOAT.get());
 
         private final String name;
-        private final Block planks;
-        public static final StringRepresentable.EnumCodec<ModBoatEntity.Type> CODEC = StringRepresentable.fromEnum(ModBoatEntity.Type::values);
-        private static final IntFunction<Type> BY_ID = ByIdMap.continuous(Enum::ordinal, values(), ByIdMap.OutOfBoundsStrategy.ZERO);
+        private final Supplier<Item> item;
+        private final Supplier<Item> chestItem;
 
-        private Type(Block pPlanks, String pName) {
-            this.name = pName;
-            this.planks = pPlanks;
+        Type(String name, Supplier<Item> boatItem, Supplier<Item> chestBoatItem) {
+            this.name = name;
+            this.item = boatItem;
+            this.chestItem = chestBoatItem;
         }
 
-        public String getSerializedName() {
-            return this.name;
+        public ResourceLocation getTexture(boolean hasChest) {
+            if (hasChest) {
+                return new ResourceLocation(Thicket.MOD_ID, "textures/entity/mod_chest_boat/" + name + ".png");
+            }
+            return new ResourceLocation(Thicket.MOD_ID, "textures/entity/mod_boat/" + name + ".png");
+        }
+
+        public String getModelLocation() {
+            return "boat/" + name;
+        }
+
+        public String getChestModelLocation() {
+            return "chest_boat/" + name;
         }
 
         public String getName() {
             return this.name;
         }
 
-        public Block getPlanks() {
-            return this.planks;
+        public Supplier<Item> getItem() {
+            return item;
         }
 
-        public String toString() {
-            return this.name;
+        public Supplier<Item> getChestItem() {
+            return chestItem;
         }
 
-        /**
-         * Get a boat type by its enum ordinal
-         */
-        public static ModBoatEntity.Type byId(int pId) {
-            return BY_ID.apply(pId);
+        public static Type byId(int id) {
+            Type[] values = values();
+            if (id < 0 || id >= values.length) {
+                id = 0;
+            }
+
+            return values[id];
         }
 
-        public static ModBoatEntity.Type byName(String pName) {
-            return CODEC.byName(pName, HAZEL);
+        public static Type byName(String name) {
+            Type[] values = values();
+
+            for(int i = 0; i < values.length; ++i) {
+                if (values[i].getName().equals(name)) {
+                    return values[i];
+                }
+            }
+
+            return values[0];
         }
     }
 }

@@ -1,4 +1,6 @@
 {
+  "entity.thicket.boat": "Boat",
+  "entity.thicket.chest_boat": "Boat with Chest",
   "item.thicket.pocket_knife": "Pocket Knife",
   "item.thicket.gold_sickle": "Gold Sickle",
   "item.thicket.apocryphal_smithing_template": "Apocryphal Template",

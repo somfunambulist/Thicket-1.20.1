@@ -121,8 +121,8 @@ public class Thicket {
                 Sheets.addWoodType(ModWoodTypes.HAZEL);
                 Sheets.addWoodType(ModWoodTypes.MYRRH);
 
-                EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
-                EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
+                EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer<>(pContext, false));
+                EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer<>(pContext, true));
                 EntityRenderers.register(ModEntities.MISTLETOE_ARROW.get(), MistletoeArrowRenderer::new);
             });
         }
