@@ -83,7 +83,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MYRRH_TRAPDOOR.get());
                         output.accept(ModItems.MYRRH_SIGN.get());
                         output.accept(ModItems.MYRRH_HANGING_SIGN.get());
-                        output.accept(ModBlocks.MYRRH_RESIN_BUNDLE.get());
+                        output.accept(ModBlocks.MYRRH_BUNDLE.get());
                         //hazel supporting features
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());

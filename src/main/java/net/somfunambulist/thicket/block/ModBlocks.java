@@ -147,7 +147,7 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MYRRH));
     public static final RegistryObject<Block> MYRRH_WALL_HANGING_SIGN = BLOCKS.register("myrrh_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MYRRH));
-    public static final RegistryObject<Block> MYRRH_RESIN_BUNDLE = registerBlock("myrrh_resin_bundle",
+    public static final RegistryObject<Block> MYRRH_BUNDLE = registerBlock("myrrh_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //sassafras=========================================================================================================
     public static final RegistryObject<Block> SASSAFRAS_SAPLING = registerBlock("sassafras_sapling",

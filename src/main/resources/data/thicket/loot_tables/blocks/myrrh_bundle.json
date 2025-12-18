@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "thicket:myrrh_resin_bundle"
+          "name": "thicket:myrrh_bundle"
         }
       ],
       "conditions": [

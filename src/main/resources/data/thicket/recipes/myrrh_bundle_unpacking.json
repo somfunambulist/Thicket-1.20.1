@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "thicket:myrrh_resin_bundle"
+      "item": "thicket:myrrh_bundle"
     }
   ],
   "result": {
