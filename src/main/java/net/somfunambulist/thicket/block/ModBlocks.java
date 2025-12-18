@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -145,6 +146,8 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MYRRH));
     public static final RegistryObject<Block> MYRRH_WALL_HANGING_SIGN = BLOCKS.register("myrrh_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MYRRH));
+    public static final RegistryObject<Block> MYRRH_RESIN = BLOCKS.register("myrrh_resin",
+            () -> new GlowLichenBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).noCollission().strength(0.2f).sound(SoundType.WOOD).lightLevel(GlowLichenBlock.emission(0))));
     public static final RegistryObject<Block> MYRRH_BUNDLE = registerBlock("myrrh_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //sassafras=========================================================================================================

@@ -74,6 +74,9 @@ public class ModItems {
     public static final RegistryObject<Item> MYRRH_CHEST_BOAT = ITEMS.register("myrrh_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.MYRRH, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> MYRRH_RESIN = ITEMS.register("myrrh_resin",
+            () -> new MistletoeItem( new Item.Properties(), ModBlocks.MYRRH_RESIN.get()));
+
     //template setup ===================================================================================================
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;
