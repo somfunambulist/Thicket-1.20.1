@@ -95,9 +95,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //myrrh=============================================================================================================
     public static final RegistryObject<Block> MYRRH_SAPLING = registerBlock("myrrh_sapling",
-            () -> new SaplingBlock(new MyrrhTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new SpikySaplingBlock(new MyrrhTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> MYRRH_LEAVES = registerBlock("myrrh_leaves",
-            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+            () -> new SpikyLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> MYRRH_LOG = registerBlock("myrrh_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> GREEN_MYRRH_LOG = registerBlock("green_myrrh_log",
