@@ -13,6 +13,18 @@
     "minecraft:stripped_warped_stem",
     "thicket:stripped_hazel_log",
     "thicket:stripped_myrrh_log",
-    "thicket:stripped_green_myrrh_log"
+    "thicket:stripped_green_myrrh_log",
+    {
+      "id": "windswept:stripped_chestnut_log",
+      "required": false
+    },
+    {
+      "id": "windswept:stripped_holly_log",
+      "required": false
+    },
+    {
+      "id": "windswept:stripped_pine_log",
+      "required": false
+    }
   ]
 }

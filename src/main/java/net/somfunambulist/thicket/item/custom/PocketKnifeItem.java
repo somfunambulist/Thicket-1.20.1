@@ -2,6 +2,8 @@ package net.somfunambulist.thicket.item.custom;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,7 +18,10 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraftforge.fml.ModList;
+import net.somfunambulist.thicket.ModCompat;
 import net.somfunambulist.thicket.block.ModBlocks;
+import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,6 +56,20 @@ public class PocketKnifeItem extends ShearsItem {
         registerCarvingBlock(ModBlocks.STRIPPED_HAZEL_LOG.get(), ModBlocks.HAZEL_CARVING);
         registerCarvingBlock(ModBlocks.STRIPPED_MYRRH_LOG.get(), ModBlocks.MYRRH_CARVING);
         registerCarvingBlock(ModBlocks.STRIPPED_GREEN_MYRRH_LOG.get(), ModBlocks.GREEN_MYRRH_CARVING);
+        if (ModList.get().isLoaded(ModCompat.WINDSWEPT_ID)) {
+            Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation("windswept","stripped_chestnut_log"));
+            if (block != null) {
+                registerCarvingBlock(block, WindsweptBlocks.CHESTNUT_CARVING);
+            }
+            block = BuiltInRegistries.BLOCK.get(new ResourceLocation("windswept","stripped_holly_log"));
+            if (block != null) {
+                registerCarvingBlock(block, WindsweptBlocks.HOLLY_CARVING);
+            }
+            block = BuiltInRegistries.BLOCK.get(new ResourceLocation("windswept","stripped_pine_log"));
+            if (block != null) {
+                registerCarvingBlock(block, WindsweptBlocks.PINE_CARVING);
+            }
+        }
     }
 
     public PocketKnifeItem(Properties properties) {

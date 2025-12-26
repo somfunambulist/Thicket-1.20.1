@@ -21,6 +21,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
 import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
+import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.somfunambulist.thicket.enchantment.ModEnchantments;
 import net.somfunambulist.thicket.entity.ModEntities;
@@ -75,6 +76,9 @@ public class Thicket {
         }
         if (ModList.get().isLoaded(ModCompat.ECOLOGICS_ID)) {
             EcologicsBlocks.register(modEventBus);
+        }
+        if (ModList.get().isLoaded(ModCompat.WINDSWEPT_ID)) {
+            WindsweptBlocks.register(modEventBus);
         }
     }
 

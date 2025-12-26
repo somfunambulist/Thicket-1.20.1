@@ -12,9 +12,9 @@ import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
 import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
+import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
 
-import static net.somfunambulist.thicket.ModCompat.DECORATIVE_BLOCKS_ID;
-import static net.somfunambulist.thicket.ModCompat.ECOLOGICS_ID;
+import static net.somfunambulist.thicket.ModCompat.*;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -119,6 +119,11 @@ public class ModCreativeModeTabs {
                         }
                         if (ModList.get().isLoaded(ECOLOGICS_ID)) {
                             output.accept(EcologicsBlocks.WALNUT_BUNDLE.get());
+                        }
+                        if (ModList.get().isLoaded(WINDSWEPT_ID)) {
+                            output.accept(WindsweptBlocks.CHESTNUT_CARVING.get());
+                            output.accept(WindsweptBlocks.HOLLY_CARVING.get());
+                            output.accept(WindsweptBlocks.PINE_CARVING.get());
                         }
 
                     })).build());

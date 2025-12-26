@@ -26,14 +26,6 @@
     "thicket:hazel_trapdoor",
     "thicket:hazel_carving",
     "thicket:hazelnut_bundle",
-    {
-      "id": "thicket:walnut_bundle",
-      "required": false
-    },
-    {
-      "id": "thicket:hazel_beam",
-      "required": false
-    },
     "thicket:myrrh_log",
     "thicket:green_myrrh_log",
     "thicket:myrrh_wood",
@@ -60,6 +52,26 @@
     "thicket:stripped_sassafras_wood",
     "thicket:sassafras_planks",
     "thicket:firemilk_mushroom_block",
-    "thicket:dark_firemilk_mushroom_block"
+    "thicket:dark_firemilk_mushroom_block",
+    {
+      "id": "thicket:walnut_bundle",
+      "required": false
+    },
+    {
+      "id": "thicket:hazel_beam",
+      "required": false
+    },
+    {
+      "id": "thicket:chestnut_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:holly_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:pine_carving",
+      "required": false
+    }
   ]
 }

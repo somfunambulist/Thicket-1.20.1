@@ -13,6 +13,18 @@
     "thicket:warped_carving",
     "thicket:hazel_carving",
     "thicket:myrrh_carving",
-    "thicket:green_myrrh_carving"
+    "thicket:green_myrrh_carving",
+    {
+      "id": "thicket:chestnut_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:holly_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:pine_carving",
+      "required": false
+    }
   ]
 }
