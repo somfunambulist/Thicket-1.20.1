@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "thicket:hazel_boat",
-    "thicket:myrrh_boat"
+    "thicket:myrrh_boat",
+    "thicket:boswellia_boat"
   ]
 }

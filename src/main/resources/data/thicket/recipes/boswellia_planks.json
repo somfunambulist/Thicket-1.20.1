@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "thicket:boswellia_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "thicket:boswellia_planks"
+  }
+}

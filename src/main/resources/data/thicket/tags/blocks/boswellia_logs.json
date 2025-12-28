@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "thicket:boswellia_log",
+    "thicket:boswellia_wood",
+    "thicket:stripped_boswellia_log",
+    "thicket:stripped_boswellia_wood",
+    "thicket:red_boswellia_log",
+    "thicket:red_boswellia_wood",
+    "thicket:stripped_red_boswellia_log",
+    "thicket:stripped_red_boswellia_wood"
+  ]
+}
