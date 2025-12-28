@@ -5,30 +5,24 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.somfunambulist.thicket.Thicket;
-import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.item.ModItems;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.util.ByIdMap;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;
-
-import java.util.function.IntFunction;
 
 public class ModBoatEntity extends Boat {
     private static final EntityDataAccessor<Integer> WOOD_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
 
-    public ModBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+    public ModBoatEntity(EntityType<? extends Boat> type, Level level) {
+        super(type, level);
         this.blocksBuilding = true;
     }
 
@@ -79,7 +73,8 @@ public class ModBoatEntity extends Boat {
 
     public enum Type {
         HAZEL("hazel", () -> ModItems.HAZEL_BOAT.get(), () -> ModItems.HAZEL_CHEST_BOAT.get()),
-        MYRRH("myrrh", () -> ModItems.MYRRH_BOAT.get(), () -> ModItems.MYRRH_CHEST_BOAT.get());
+        MYRRH("myrrh", () -> ModItems.MYRRH_BOAT.get(), () -> ModItems.MYRRH_CHEST_BOAT.get()),
+        BOSWELLIA("boswellia", () -> ModItems.BOSWELLIA_BOAT.get(), () -> ModItems.BOSWELLIA_CHEST_BOAT.get());
 
         private final String name;
         private final Supplier<Item> item;

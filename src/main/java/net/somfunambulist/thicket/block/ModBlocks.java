@@ -16,6 +16,7 @@ import net.somfunambulist.thicket.block.custom.*;
 import net.somfunambulist.thicket.item.ModItems;
 import net.somfunambulist.thicket.util.ModWoodTypes;
 import net.somfunambulist.thicket.worldgen.ModFeatures;
+import net.somfunambulist.thicket.worldgen.tree.BoswelliaTreeGrower;
 import net.somfunambulist.thicket.worldgen.tree.HazelTreeGrower;
 import net.somfunambulist.thicket.worldgen.tree.MyrrhTreeGrower;
 import net.somfunambulist.thicket.worldgen.tree.SassafrasTreeGrower;
@@ -149,6 +150,63 @@ public class ModBlocks {
     public static final RegistryObject<Block> MYRRH_RESIN = BLOCKS.register("myrrh_resin",
             () -> new AmethystClusterBlock(7,3,BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).noCollission().strength(0.2f).sound(SoundType.WOOD).lightLevel(GlowLichenBlock.emission(0))));
     public static final RegistryObject<Block> MYRRH_BUNDLE = registerBlock("myrrh_bundle",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    //boswellia=========================================================================================================
+    public static final RegistryObject<Block> BOSWELLIA_SAPLING = registerBlock("boswellia_sapling",
+            () -> new SaplingBlock(new BoswelliaTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<ModLeavesBlock> BOSWELLIA_LEAVES = registerBlock("boswellia_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> BOSWELLIA_LOG = registerBlock("boswellia_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> RED_BOSWELLIA_LOG = registerBlock("red_boswellia_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> BOSWELLIA_WOOD = registerBlock("boswellia_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> RED_BOSWELLIA_WOOD = registerBlock("red_boswellia_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_BOSWELLIA_LOG = registerBlock("stripped_boswellia_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_RED_BOSWELLIA_LOG = registerBlock("stripped_red_boswellia_log",
+            () -> new ResinousBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_BOSWELLIA_WOOD = registerBlock("stripped_boswellia_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_RED_BOSWELLIA_WOOD = registerBlock("stripped_red_boswellia_wood",
+            () -> new ResinousBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<ModPlanksBlock> BOSWELLIA_PLANKS = registerBlock("boswellia_planks",
+            () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> BOSWELLIA_CARVING = registerBlock("boswellia_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> RED_BOSWELLIA_CARVING = registerBlock("red_boswellia_carving",
+            () -> new ResinousBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> BOSWELLIA_STAIRS = registerBlock("boswellia_stairs",
+            () -> new StairBlock(() -> ModBlocks.BOSWELLIA_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> BOSWELLIA_SLAB = registerBlock("boswellia_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> BOSWELLIA_PRESSURE_PLATE = registerBlock("boswellia_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+    public static final RegistryObject<Block> BOSWELLIA_BUTTON = registerBlock("boswellia_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK,30,true));
+    public static final RegistryObject<Block> BOSWELLIA_FENCE = registerBlock("boswellia_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<Block> BOSWELLIA_FENCE_GATE = registerBlock("boswellia_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> BOSWELLIA_DOOR = registerBlock("boswellia_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BOSWELLIA_TRAPDOOR = registerBlock("boswellia_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BOSWELLIA_SIGN = BLOCKS.register("boswellia_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.BOSWELLIA));
+    public static final RegistryObject<Block> BOSWELLIA_WALL_SIGN = BLOCKS.register("boswellia_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.BOSWELLIA));
+    public static final RegistryObject<Block> BOSWELLIA_HANGING_SIGN = BLOCKS.register("boswellia_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.BOSWELLIA));
+    public static final RegistryObject<Block> BOSWELLIA_WALL_HANGING_SIGN = BLOCKS.register("boswellia_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BOSWELLIA));
+    public static final RegistryObject<Block> FRANKINCENSE_RESIN = BLOCKS.register("frankincense_resin",
+            () -> new AmethystClusterBlock(7,3,BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).noCollission().strength(0.2f).sound(SoundType.WOOD).lightLevel(GlowLichenBlock.emission(0))));
+    public static final RegistryObject<Block> FRANKINCENSE_BUNDLE = registerBlock("frankincense_bundle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     //sassafras=========================================================================================================
     public static final RegistryObject<Block> SASSAFRAS_SAPLING = registerBlock("sassafras_sapling",

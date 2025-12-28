@@ -80,15 +80,17 @@ public class ModChestBoatEntity extends ModBoatEntity implements HasCustomInvent
 
     @Override
     public void remove(RemovalReason pReason) {
-        if (!this.level().isClientSide() && pReason.shouldDestroy()) {
+        if (!this.level().isClientSide && pReason.shouldDestroy()) {
             Containers.dropContents(this.level(), this, this);
         }
+
+        super.remove(pReason);
     }
 
     @Override
     public void openCustomInventoryScreen(Player player) {
         player.openMenu(this);
-        if (!player.level().isClientSide()) {
+        if (!player.level().isClientSide) {
             this.gameEvent(GameEvent.CONTAINER_OPEN, player);
             PiglinAi.angerNearbyPiglins(player, true);
         }

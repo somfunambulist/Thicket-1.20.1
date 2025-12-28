@@ -87,6 +87,29 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MYRRH_CHEST_BOAT.get());
                         output.accept(ModItems.MYRRH_RESIN.get());
                         output.accept(ModBlocks.MYRRH_BUNDLE.get());
+                        //boswellia=========================================================================================
+                        output.accept(ModBlocks.BOSWELLIA_SAPLING.get());
+                        output.accept(ModBlocks.BOSWELLIA_LEAVES.get());
+                        output.accept(ModBlocks.BOSWELLIA_LOG.get());
+                        output.accept(ModBlocks.BOSWELLIA_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_BOSWELLIA_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_BOSWELLIA_WOOD.get());
+                        output.accept(ModBlocks.BOSWELLIA_PLANKS.get());
+                        output.accept(ModBlocks.BOSWELLIA_CARVING.get());
+                        output.accept(ModBlocks.BOSWELLIA_SLAB.get());
+                        output.accept(ModBlocks.BOSWELLIA_STAIRS.get());
+                        output.accept(ModBlocks.BOSWELLIA_BUTTON.get());
+                        output.accept(ModBlocks.BOSWELLIA_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.BOSWELLIA_FENCE.get());
+                        output.accept(ModBlocks.BOSWELLIA_FENCE_GATE.get());
+                        output.accept(ModBlocks.BOSWELLIA_DOOR.get());
+                        output.accept(ModBlocks.BOSWELLIA_TRAPDOOR.get());
+                        output.accept(ModItems.BOSWELLIA_SIGN.get());
+                        output.accept(ModItems.BOSWELLIA_HANGING_SIGN.get());
+                        output.accept(ModItems.BOSWELLIA_BOAT.get());
+                        output.accept(ModItems.BOSWELLIA_CHEST_BOAT.get());
+                        output.accept(ModItems.FRANKINCENSE_RESIN.get());
+                        output.accept(ModBlocks.FRANKINCENSE_BUNDLE.get());
                         //hazel supporting features
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());

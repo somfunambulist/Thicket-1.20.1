@@ -56,6 +56,8 @@ public class PocketKnifeItem extends ShearsItem {
         registerCarvingBlock(ModBlocks.STRIPPED_HAZEL_LOG.get(), ModBlocks.HAZEL_CARVING);
         registerCarvingBlock(ModBlocks.STRIPPED_MYRRH_LOG.get(), ModBlocks.MYRRH_CARVING);
         registerCarvingBlock(ModBlocks.STRIPPED_GREEN_MYRRH_LOG.get(), ModBlocks.GREEN_MYRRH_CARVING);
+        registerCarvingBlock(ModBlocks.STRIPPED_BOSWELLIA_LOG.get(), ModBlocks.BOSWELLIA_CARVING);
+        registerCarvingBlock(ModBlocks.STRIPPED_RED_BOSWELLIA_LOG.get(), ModBlocks.RED_BOSWELLIA_CARVING);
         if (ModList.get().isLoaded(ModCompat.WINDSWEPT_ID)) {
             Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation("windswept","stripped_chestnut_log"));
             if (block != null) {

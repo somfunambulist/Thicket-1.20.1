@@ -29,6 +29,11 @@ public class ModEvents {
                     new ItemStack(ModItems.MYRRH_RESIN.get(),3),
                     new ItemStack(Items.EMERALD,1),
                     16, 12, 0.05f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(ModItems.FRANKINCENSE_RESIN.get(),3),
+                    new ItemStack(Items.EMERALD,1),
+                    16, 12, 0.05f));
         }
     }
 

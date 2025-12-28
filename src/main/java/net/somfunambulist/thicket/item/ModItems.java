@@ -77,6 +77,20 @@ public class ModItems {
     public static final RegistryObject<Item> MYRRH_RESIN = ITEMS.register("myrrh_resin",
             () -> new MistletoeItem( new Item.Properties(), ModBlocks.MYRRH_RESIN.get()));
 
+    public static final RegistryObject<Item> BOSWELLIA_SIGN = ITEMS.register("boswellia_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BOSWELLIA_SIGN.get(), ModBlocks.BOSWELLIA_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BOSWELLIA_HANGING_SIGN = ITEMS.register("boswellia_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.BOSWELLIA_HANGING_SIGN.get(), ModBlocks.BOSWELLIA_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> BOSWELLIA_BOAT = ITEMS.register("boswellia_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.BOSWELLIA, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BOSWELLIA_CHEST_BOAT = ITEMS.register("boswellia_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.BOSWELLIA, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> FRANKINCENSE_RESIN = ITEMS.register("frankincense_resin",
+            () -> new MistletoeItem( new Item.Properties(), ModBlocks.FRANKINCENSE_RESIN.get()));
+
     //template setup ===================================================================================================
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;

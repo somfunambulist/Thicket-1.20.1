@@ -19,7 +19,8 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("mod_sign", () ->
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
                             ModBlocks.HAZEL_SIGN.get(), ModBlocks.HAZEL_WALL_SIGN.get(),
-                            ModBlocks.MYRRH_SIGN.get(), ModBlocks.MYRRH_WALL_SIGN.get()
+                            ModBlocks.MYRRH_SIGN.get(), ModBlocks.MYRRH_WALL_SIGN.get(),
+                            ModBlocks.BOSWELLIA_SIGN.get(), ModBlocks.BOSWELLIA_WALL_SIGN.get()
                     ).build(null));
 
     //hanging signs=====================================================================================================
@@ -27,7 +28,8 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("mod_hanging_sign", () ->
                     BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
                             ModBlocks.HAZEL_HANGING_SIGN.get(), ModBlocks.HAZEL_WALL_HANGING_SIGN.get(),
-                            ModBlocks.MYRRH_HANGING_SIGN.get(), ModBlocks.MYRRH_WALL_HANGING_SIGN.get()
+                            ModBlocks.MYRRH_HANGING_SIGN.get(), ModBlocks.MYRRH_WALL_HANGING_SIGN.get(),
+                            ModBlocks.BOSWELLIA_HANGING_SIGN.get(), ModBlocks.BOSWELLIA_WALL_HANGING_SIGN.get()
                     ).build(null));
     //sus blocks========================================================================================================
     public static final RegistryObject<BlockEntityType<ModSusBlockEntity>> MOD_SUS_BLOCK =
