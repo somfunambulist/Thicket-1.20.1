@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#thicket:has_boswellia",
+  "features": "thicket:boswellia_placed",
+  "step": "vegetal_decoration"
+}
