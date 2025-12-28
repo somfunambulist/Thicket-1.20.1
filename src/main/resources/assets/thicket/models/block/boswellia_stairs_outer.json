@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "thicket:block/boswellia_planks",
+    "side": "thicket:block/boswellia_planks",
+    "top": "thicket:block/boswellia_planks"
+  }
+}

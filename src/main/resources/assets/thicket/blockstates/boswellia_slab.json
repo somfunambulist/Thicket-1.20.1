@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thicket:block/boswellia_slab"
+    },
+    "type=double": {
+      "model": "thicket:block/boswellia_planks"
+    },
+    "type=top": {
+      "model": "thicket:block/boswellia_slab_top"
+    }
+  }
+}

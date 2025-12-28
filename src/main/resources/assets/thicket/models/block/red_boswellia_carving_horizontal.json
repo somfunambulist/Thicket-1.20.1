@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "minecraft:block/stripped_red_boswellia_log_top",
+    "side": "thicket:block/red_boswellia_carving"
+  }
+}

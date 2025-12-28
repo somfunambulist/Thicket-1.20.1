@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "thicket:block/boswellia_pressure_plate"
+    },
+    "powered=true": {
+      "model": "thicket:block/boswellia_pressure_plate_down"
+    }
+  }
+}

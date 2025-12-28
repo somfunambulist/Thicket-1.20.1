@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thicket:block/stripped_boswellia_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thicket:block/stripped_boswellia_wood"
+    },
+    "axis=z": {
+      "model": "thicket:block/stripped_boswellia_wood_horizontal",
+      "x": 90
+    }
+  }
+}

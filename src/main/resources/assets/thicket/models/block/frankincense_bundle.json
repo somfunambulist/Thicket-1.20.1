@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "thicket:block/frankincense_bundle_bottom",
+    "top": "thicket:block/frankincense_bundle_top",
+    "side": "thicket:block/frankincense_bundle_side"
+  }
+}
