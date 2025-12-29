@@ -4,7 +4,9 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -97,6 +99,12 @@ public class Thicket {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.FIREMILK_MUSHROOM.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModItems.MISTLETOE.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.MISTLETOE_LEAVES.get().asItem(), 0.30F);
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HAZEL_SAPLING.getId(), ModBlocks.POTTED_HAZEL_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MYRRH_SAPLING.getId(), ModBlocks.POTTED_MYRRH_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BOSWELLIA_SAPLING.getId(), ModBlocks.POTTED_BOSWELLIA_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FIREMILK_MUSHROOM.getId(), ModBlocks.POTTED_FIREMILK_MUSHROOM);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HELIOTROPE.getId(), ModBlocks.POTTED_HELIOTROPE);
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.WATER, ModBlocks.FIREMILK_MUSHROOM.get().asItem(), Potions.AWKWARD));
         });

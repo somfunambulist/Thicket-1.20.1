@@ -54,6 +54,8 @@ public class ModBlocks {
     //hazel=============================================================================================================
     public static final RegistryObject<Block> HAZEL_SAPLING = registerBlock("hazel_sapling",
             () -> new SaplingBlock(new HazelTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_HAZEL_SAPLING = BLOCKS.register("potted_hazel_sapling",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), HAZEL_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_ACACIA_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> HAZEL_LEAVES = registerBlock("hazel_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> HAZEL_LOG = registerBlock("hazel_log",
@@ -99,6 +101,8 @@ public class ModBlocks {
     //myrrh=============================================================================================================
     public static final RegistryObject<Block> MYRRH_SAPLING = registerBlock("myrrh_sapling",
             () -> new SpikySaplingBlock(new MyrrhTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_MYRRH_SAPLING = BLOCKS.register("potted_myrrh_sapling",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), MYRRH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_ACACIA_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> MYRRH_LEAVES = registerBlock("myrrh_leaves",
             () -> new SpikyLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> MYRRH_LOG = registerBlock("myrrh_log",
@@ -156,6 +160,8 @@ public class ModBlocks {
     //boswellia=========================================================================================================
     public static final RegistryObject<Block> BOSWELLIA_SAPLING = registerBlock("boswellia_sapling",
             () -> new SaplingBlock(new BoswelliaTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_BOSWELLIA_SAPLING = BLOCKS.register("potted_boswellia_sapling",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), BOSWELLIA_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_ACACIA_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> BOSWELLIA_LEAVES = registerBlock("boswellia_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> BOSWELLIA_LOG = registerBlock("boswellia_log",
@@ -228,6 +234,8 @@ public class ModBlocks {
     //other blocks======================================================================================================
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
             () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM), ModFeatures.HUGE_FIREMILK_KEY));
+    public static final RegistryObject<Block> POTTED_FIREMILK_MUSHROOM = BLOCKS.register("potted_firemilk_mushroom",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), FIREMILK_MUSHROOM, BlockBehaviour.Properties.copy(Blocks.POTTED_BROWN_MUSHROOM)));
     public static final RegistryObject<HugeMushroomBlock> FIREMILK_MUSHROOM_BLOCK = registerBlock("firemilk_mushroom_block",
             () -> new HugeMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK)));
     public static final RegistryObject<HugeMushroomBlock> DARK_FIREMILK_MUSHROOM_BLOCK = registerBlock("dark_firemilk_mushroom_block",
@@ -240,6 +248,8 @@ public class ModBlocks {
             () -> new HangingMistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> HELIOTROPE = registerBlock("heliotrope",
             () -> new FlowerBlock(MobEffects.POISON,7,BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> POTTED_HELIOTROPE = BLOCKS.register("potted_heliotrope",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), HELIOTROPE, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<BrushableBlock> SUSPICIOUS_ROOTS = registerBlock("suspicious_roots",
             () -> new ModSusBlock(Blocks.ROOTED_DIRT,BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT),SoundEvents.BRUSH_GRAVEL,SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
