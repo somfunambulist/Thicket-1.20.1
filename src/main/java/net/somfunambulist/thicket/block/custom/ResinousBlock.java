@@ -31,6 +31,12 @@ public class ResinousBlock extends ModFlammableRotatedPillarBlock{
             BlockPos blockpos = pPos.relative(direction);
             BlockState blockstate = pLevel.getBlockState(blockpos);
             Block block = ModBlocks.MYRRH_RESIN.get();
+            if(pState.is(ModBlocks.STRIPPED_GREEN_MYRRH_LOG.get())||pState.is(ModBlocks.STRIPPED_GREEN_MYRRH_WOOD.get())||pState.is(ModBlocks.GREEN_MYRRH_CARVING.get())) {
+                block = ModBlocks.MYRRH_RESIN.get();
+            }
+            if(pState.is(ModBlocks.STRIPPED_RED_BOSWELLIA_LOG.get())||pState.is(ModBlocks.STRIPPED_RED_BOSWELLIA_WOOD.get())||pState.is(ModBlocks.RED_BOSWELLIA_CARVING.get())) {
+                block = ModBlocks.FRANKINCENSE_RESIN.get();
+            }
             if (blockstate.isAir()) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(AmethystClusterBlock.FACING, direction);
                 pLevel.setBlockAndUpdate(blockpos, blockstate1);
