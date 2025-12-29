@@ -91,6 +91,7 @@ public class Thicket {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.MYRRH_LEAVES.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.BOSWELLIA_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.BOSWELLIA_LEAVES.get().asItem(), 0.30F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.HELIOTROPE.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_SAPLING.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SASSAFRAS_LEAVES.get().asItem(), 0.30F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.FIREMILK_MUSHROOM.get().asItem(), 0.30F);

@@ -119,6 +119,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MISTLETOE.get());
                         output.accept(ModItems.ENCHANTED_MISTLETOE.get());
                         output.accept(ModItems.GOLD_SICKLE.get());
+                        output.accept(ModBlocks.HELIOTROPE.get());
                         //output.accept(ModItems.APOCRYPHAL_SMITHING_TEMPLATE.get());
                         output.accept(ModItems.CRUXWOOD_PICKAXE.get());
                         output.accept(ModItems.CRUXWOOD_SHOVEL.get());

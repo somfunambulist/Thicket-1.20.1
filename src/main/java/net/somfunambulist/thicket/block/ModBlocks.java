@@ -1,12 +1,14 @@
 package net.somfunambulist.thicket.block;
 
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -236,6 +238,8 @@ public class ModBlocks {
             () -> new MistletoeLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<HangingMistletoeBlock> HANGING_MISTLETOE = registerBlock("hanging_mistletoe",
             () -> new HangingMistletoeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> HELIOTROPE = registerBlock("heliotrope",
+            () -> new FlowerBlock(MobEffects.POISON,7,BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<BrushableBlock> SUSPICIOUS_ROOTS = registerBlock("suspicious_roots",
             () -> new ModSusBlock(Blocks.ROOTED_DIRT,BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT),SoundEvents.BRUSH_GRAVEL,SoundEvents.BRUSH_GRAVEL_COMPLETED));
 

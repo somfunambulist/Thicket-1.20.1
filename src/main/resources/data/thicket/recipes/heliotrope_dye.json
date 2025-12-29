@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thicket:heliotrope"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}
