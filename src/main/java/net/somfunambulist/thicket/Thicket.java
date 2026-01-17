@@ -25,6 +25,7 @@ import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
 import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
 import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
+import net.somfunambulist.thicket.effect.ModEffects;
 import net.somfunambulist.thicket.enchantment.ModEnchantments;
 import net.somfunambulist.thicket.entity.ModEntities;
 import net.somfunambulist.thicket.entity.client.MistletoeArrowRenderer;
@@ -66,6 +67,8 @@ public class Thicket {
         ModPaintings.register(modEventBus);
 
         ModFeatures.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

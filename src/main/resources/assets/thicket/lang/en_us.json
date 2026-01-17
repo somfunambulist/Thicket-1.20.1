@@ -155,5 +155,7 @@
   "painting.thicket.ritual.title": "Ritual",
   "painting.thicket.ritual.author": "Somfunambulist",
 
-  "enchantment.thicket.occult": "Occult"
+  "enchantment.thicket.occult": "Occult",
+
+  "effect.thicket.anointed": "Anointed"
 }
