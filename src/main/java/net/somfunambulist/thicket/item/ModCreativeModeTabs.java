@@ -110,6 +110,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BOSWELLIA_CHEST_BOAT.get());
                         output.accept(ModItems.FRANKINCENSE_RESIN.get());
                         output.accept(ModBlocks.FRANKINCENSE_BUNDLE.get());
+                        output.accept(ModItems.ANOINTING_OIL.get());
                         //hazel supporting features
                         output.accept(ModBlocks.FIREMILK_MUSHROOM.get());
                         output.accept(ModBlocks.FIREMILK_MUSHROOM_BLOCK.get());
