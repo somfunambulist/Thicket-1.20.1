@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
@@ -25,21 +26,23 @@ public class AnointingOilItem extends Item {
         super(pProperties);
     }
 
-    @Override
-    public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity entity, InteractionHand hand) {
+    //@Override
+    public InteractionResult doInteract(ItemStack stack, Player player, Entity entity, InteractionHand hand) {
         if (entity.level().isClientSide) return InteractionResult.PASS;
-        if (entity.isBaby()) {
-            if (!entity.hasEffect(ModEffects.ANOINTED_EFFECT.get())) {
-                entity.addEffect(new MobEffectInstance(MobEffects.GLOWING,40,0,true,false));
-                var effect = new MobEffectInstance(ModEffects.ANOINTED_EFFECT.get(),-1,0,false,false);
-                effect.setCurativeItems(List.of());
-                entity.addEffect(effect);
-                if (entity instanceof Mob) ((Mob) entity).setPersistenceRequired();
-                var level = player.level();
-                level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.BOTTLE_EMPTY, SoundSource.PLAYERS, 0.3F, 0.7F);
-                level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.5F, 0.2F);
-                player.setItemInHand(hand, Items.GLASS_BOTTLE.getDefaultInstance());
-                return InteractionResult.SUCCESS;
+        if (entity instanceof LivingEntity le) {
+            if (le.isBaby()) {
+                if (!le.hasEffect(ModEffects.ANOINTED_EFFECT.get())) {
+                    le.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, true, false));
+                    var effect = new MobEffectInstance(ModEffects.ANOINTED_EFFECT.get(), -1, 0, false, false);
+                    effect.setCurativeItems(List.of());
+                    le.addEffect(effect);
+                    if (entity instanceof Mob) ((Mob) entity).setPersistenceRequired();
+                    var level = player.level();
+                    level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.BOTTLE_EMPTY, SoundSource.PLAYERS, 0.3F, 0.7F);
+                    level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.5F, 0.2F);
+                    player.setItemInHand(hand, Items.GLASS_BOTTLE.getDefaultInstance());
+                    return InteractionResult.CONSUME;
+                }
             }
         }
         return InteractionResult.PASS;
