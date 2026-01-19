@@ -91,6 +91,8 @@ public class ModItems {
     public static final RegistryObject<Item> FRANKINCENSE_RESIN = ITEMS.register("frankincense_resin",
             () -> new ItemNameBlockItem(ModBlocks.FRANKINCENSE_RESIN.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> SUNFLOWER_OIL = ITEMS.register("sunflower_oil",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANOINTING_OIL = ITEMS.register("anointing_oil",
             () -> new AnointingOilItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 

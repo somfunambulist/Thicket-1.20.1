@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thicket:sunflower_oil"
+    },
+    {
+      "item": "thicket:frankincense_resin"
+    },
+    {
+      "item": "thicket:frankincense_resin"
+    }
+  ],
+  "result": {
+    "item": "thicket:anointing_oil"
+  }
+}

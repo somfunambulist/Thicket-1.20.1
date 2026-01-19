@@ -38,7 +38,7 @@ public class AnointingOilItem extends Item {
                 var level = player.level();
                 level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.BOTTLE_EMPTY, SoundSource.PLAYERS, 0.3F, 0.7F);
                 level.playSound((Player) null, BlockPos.containing(entity.position()), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 1.5F, 0.2F);
-                stack.setCount(0);
+                player.setItemInHand(hand, Items.GLASS_BOTTLE.getDefaultInstance());
                 return InteractionResult.SUCCESS;
             }
         }
