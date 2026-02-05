@@ -151,8 +151,8 @@
   "upgrade.thicket.apocryphal_upgrade": "謎のアップグレード",
   "item.thicket.smithing_template.apocryphal_upgrade.applies_to": "木の装備品",
   "item.thicket.smithing_template.apocryphal_upgrade.ingredients": "エンチャントされたヤドリギ",
-  "item.thicket.smithing_template.apocryphal_upgrade.base_slot_description": "木の装備品を追加",
-  "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "エンチャントされたヤドリギを追加",
+  "item.thicket.smithing_template.apocryphal_upgrade.base_slot_description": "木の装備品を置いてください",
+  "item.thicket.smithing_template.apocryphal_upgrade.additions_slot_description": "エンチャントされたヤドリギを置いてください",
 
   "painting.thicket.ritual.title": "Ritual",
   "painting.thicket.ritual.author": "Somfunambulist",
