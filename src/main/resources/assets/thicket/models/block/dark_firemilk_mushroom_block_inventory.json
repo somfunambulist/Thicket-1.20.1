@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "thicket:block/dark_firemilk_mushroom_block"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "thicket:block/hazel_planks",
-    "side": "thicket:block/hazel_planks",
-    "top": "thicket:block/hazel_planks"
-  }
-}

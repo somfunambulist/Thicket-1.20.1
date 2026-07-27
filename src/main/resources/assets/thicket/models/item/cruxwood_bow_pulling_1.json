@@ -1,6 +1,0 @@
-{
-  "parent": "thicket:item/cruxwood_bow",
-  "textures": {
-    "layer0": "thicket:item/cruxwood_bow_pulling_1"
-  }
-}

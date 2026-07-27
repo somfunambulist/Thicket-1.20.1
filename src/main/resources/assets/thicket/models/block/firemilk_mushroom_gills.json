@@ -1,6 +1,0 @@
-{
-  "parent": "block/template_single_face",
-  "textures": {
-    "texture": "thicket:block/firemilk_mushroom_gills"
-  }
-}

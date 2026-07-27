@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "thicket:block/stripped_boswellia_log",
-    "side": "thicket:block/stripped_boswellia_log"
-  }
-}
