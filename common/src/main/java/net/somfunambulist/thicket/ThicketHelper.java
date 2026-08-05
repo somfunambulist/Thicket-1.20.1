@@ -1,8 +1,10 @@
 package net.somfunambulist.thicket;
 
+import net.minecraft.core.DefaultedRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,10 +34,18 @@ public class ThicketHelper {
     }
 
     public static List<Item> getAllModItems() {
-        var list = new ArrayList<Item>();
-        var modLocations = BuiltInRegistries.ITEM.keySet().stream().filter(r -> r.getNamespace().equals(MOD_ID)).toList();
+        return getAllFromModReg(BuiltInRegistries.ITEM);
+    }
+
+    public static List<Block> getAllModBlocks() {
+        return getAllFromModReg(BuiltInRegistries.BLOCK);
+    }
+
+    public static <T> List<T> getAllFromModReg(DefaultedRegistry<T> registry) {
+        var list = new ArrayList<T>();
+        var modLocations = registry.keySet().stream().filter(r -> r.getNamespace().equals(MOD_ID)).toList();
         for (ResourceLocation location : modLocations) {
-            var item = BuiltInRegistries.ITEM.get(location);
+            var item = registry.get(location);
             list.add(item);
         }
         return list;

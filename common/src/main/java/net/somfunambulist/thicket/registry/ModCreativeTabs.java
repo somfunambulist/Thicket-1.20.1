@@ -20,6 +20,7 @@ public class ModCreativeTabs {
 
         if (thicketTab) {
             event.add(THICKET_TAB.getKey(), ModItems.POCKET_KNIFE.get());
+
         }
     }
 

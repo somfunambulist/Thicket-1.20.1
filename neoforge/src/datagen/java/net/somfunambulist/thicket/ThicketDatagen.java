@@ -8,6 +8,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.somfunambulist.thicket.client.ModBlockProvider;
 import net.somfunambulist.thicket.client.ModItemModelProvider;
 import net.somfunambulist.thicket.client.ModLangProvider;
 
@@ -26,6 +27,9 @@ public class ThicketDatagen {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(includeClient, new ModLangProvider(packOutput));
+
+        generator.addProvider(includeClient, new ModBlockProvider(packOutput, fileHelper));
         generator.addProvider(includeClient, new ModItemModelProvider(packOutput, fileHelper));
+
     }
 }
