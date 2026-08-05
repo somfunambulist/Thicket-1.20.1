@@ -1,0 +1,62 @@
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev'
+}
+
+sourceSets {
+    datagen {
+        compileClasspath += main.compileClasspath
+        runtimeClasspath += main.runtimeClasspath
+    }
+}
+
+neoForge {
+    version = neoforge_version
+    // Automatically enable neoforge AccessTransformers if the file exists
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.add(at.absolutePath)
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})" // Unify the run config names with fabric
+            gameDirectory = file('../run')
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        client {
+            client()
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('../common/src/main/generated/').getAbsolutePath(), '--existing', file('../common/src/main/resources/').getAbsolutePath()
+            sourceSet = sourceSets.datagen
+        }
+        server {
+            server()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.datagen
+        }
+    }
+
+}
+
+sourceSets.main.resources {
+    srcDir project(":common").file('src/main/generated/').getAbsolutePath()
+    exclude '.cache/'
+}
+
+
+dependencies {
+    implementation("net.mehvahdjukaar:moonlight-neoforge:$moonlight_version")
+    runtimeOnly("net.mehvahdjukaar:codecui-neoforge:$codecui_version")
+}
