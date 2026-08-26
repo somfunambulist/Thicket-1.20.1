@@ -3,6 +3,7 @@ package net.somfunambulist.thicket.registry;
 import net.mehvahdjukaar.moonlight.api.misc.RegSupplier;
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.somfunambulist.thicket.ThicketHelper;
 import net.somfunambulist.thicket.ThicketStringDefinitions;
@@ -20,7 +21,8 @@ public class ModCreativeTabs {
 
         if (thicketTab) {
             event.add(THICKET_TAB.getKey(), ModItems.POCKET_KNIFE.get());
-
+            var sculptureItems = ModBlockSets.SCULPTURE_BLOCK_ITEMS.values().stream().map(BlockItem::getDefaultInstance).toList();
+            event.addItems(THICKET_TAB.getKey(), null, false, sculptureItems);
         }
     }
 
