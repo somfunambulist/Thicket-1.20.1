@@ -8,7 +8,7 @@ import net.somfunambulist.thicket.content.items.PocketKnife;
 
 public class ModItems {
 
-    public static final RegSupplier<Item> POCKET_KNIFE = RegHelper.registerItem(ThicketHelper.modPrefix("pocket_knife"), () -> new PocketKnife(new Item.Properties().attributes(PocketKnife.createAttributes(4F, -2.0F)).stacksTo(1).durability(238)));
+    public static final RegSupplier<Item> POCKET_KNIFE = RegHelper.registerItem(ThicketHelper.path("pocket_knife"), () -> new PocketKnife(new Item.Properties().attributes(PocketKnife.createAttributes(4F, -2.0F)).stacksTo(1).durability(238)));
 
     public static void init() {}
 }

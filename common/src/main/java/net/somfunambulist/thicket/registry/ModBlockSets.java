@@ -22,11 +22,11 @@ public class ModBlockSets {
 
     private static void regCarvingBlocks(Registrator<Block> event) {
         for (WoodType wood : WoodTypeRegistry.INSTANCE) {
-            var id = ThicketHelper.modPrefix(wood.getVariantId("carving"));
+            var id = ThicketHelper.path(wood.getVariantId("carving"));
             var block = new CarvingBlock(wood.copyProperties());
             event.register(id, block);
             CARVING_BLOCKS.put(wood, block);
-            wood.addChild(ThicketHelper.modPrefix("carving").toString(), block);
+            wood.addChild(ThicketHelper.path("carving").toString(), block);
         }
     }
 

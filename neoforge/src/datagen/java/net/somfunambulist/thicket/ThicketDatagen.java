@@ -11,6 +11,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.somfunambulist.thicket.client.ModBlockProvider;
 import net.somfunambulist.thicket.client.ModItemModelProvider;
 import net.somfunambulist.thicket.client.ModLangProvider;
+import net.somfunambulist.thicket.server.recipe.ModRecipeProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -30,6 +31,8 @@ public class ThicketDatagen {
 
         generator.addProvider(includeClient, new ModBlockProvider(packOutput, fileHelper));
         generator.addProvider(includeClient, new ModItemModelProvider(packOutput, fileHelper));
+
+        generator.addProvider(includeServer, new ModRecipeProvider(packOutput, lookupProvider));
 
     }
 }

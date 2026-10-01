@@ -9,7 +9,7 @@ import net.somfunambulist.thicket.ThicketHelper;
 import net.somfunambulist.thicket.ThicketStringDefinitions;
 
 public class ModCreativeTabs {
-    public static final RegSupplier<CreativeModeTab> THICKET_TAB = RegHelper.registerCreativeModeTab(ThicketHelper.modPrefix("thicket"),
+    public static final RegSupplier<CreativeModeTab> THICKET_TAB = RegHelper.registerCreativeModeTab(ThicketHelper.path("thicket"),
             builder -> builder
                     .title(Component.translatable(ThicketStringDefinitions.TAB_KEY))
                     .icon(() -> ModItems.POCKET_KNIFE.get().getDefaultInstance()) //TODO should be Hazelnut later

@@ -1,0 +1,10 @@
+{
+  "type": "thicket:pocket_knife_item",
+  "ingredient": {
+    "item": "minecraft:acacia_sapling"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:bone_meal"
+  }
+}
