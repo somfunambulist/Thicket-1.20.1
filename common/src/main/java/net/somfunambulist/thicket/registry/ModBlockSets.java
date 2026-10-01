@@ -11,39 +11,39 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.somfunambulist.thicket.ThicketHelper;
-import net.somfunambulist.thicket.content.blocks.SculptureBlock;
+import net.somfunambulist.thicket.content.blocks.CarvingBlock;
 
 import java.util.Map;
 
 public class ModBlockSets {
 
-    public static final Map<WoodType, SculptureBlock> SCULPTURE_BLOCKS = new Object2ObjectOpenHashMap<>();
-    public static final Map<WoodType, BlockItem> SCULPTURE_BLOCK_ITEMS = new Object2ObjectOpenHashMap<>();
+    public static final Map<WoodType, CarvingBlock> CARVING_BLOCKS = new Object2ObjectOpenHashMap<>();
+    public static final Map<WoodType, BlockItem> CARVING_BLOCK_ITEMS = new Object2ObjectOpenHashMap<>();
 
-    private static void regSculptureBlocks(Registrator<Block> event) {
+    private static void regCarvingBlocks(Registrator<Block> event) {
         for (WoodType wood : WoodTypeRegistry.INSTANCE) {
-            var id = ThicketHelper.modPrefix(wood.getVariantId("sculpture"));
-            var block = new SculptureBlock(wood.copyProperties());
+            var id = ThicketHelper.modPrefix(wood.getVariantId("carving"));
+            var block = new CarvingBlock(wood.copyProperties());
             event.register(id, block);
-            SCULPTURE_BLOCKS.put(wood, block);
-            wood.addChild(ThicketHelper.modPrefix("sculpture").toString(), block);
+            CARVING_BLOCKS.put(wood, block);
+            wood.addChild(ThicketHelper.modPrefix("carving").toString(), block);
         }
     }
 
     //TODO maybe add burn time stuff
-    private static void regSculptureItems(Registrator<Item> event) {
-        for (var entry : SCULPTURE_BLOCKS.entrySet()) {
+    private static void regCarvingItems(Registrator<Item> event) {
+        for (var entry : CARVING_BLOCKS.entrySet()) {
             var woodType = entry.getKey();
             var block = entry.getValue();
             if (woodType == null) continue;
             var item = new BlockItem(block, new Item.Properties()); //TODO do we need specific properties?
             event.register(Utils.getID(block), item);
-            SCULPTURE_BLOCK_ITEMS.put(woodType, item);
+            CARVING_BLOCK_ITEMS.put(woodType, item);
         }
     }
 
     public static void init() {
-        BlockSetAPI.addDynamicRegistration(ThicketHelper.MOD_ID, ModBlockSets::regSculptureBlocks, BuiltInRegistries.BLOCK);
-        BlockSetAPI.addDynamicRegistration(ThicketHelper.MOD_ID, ModBlockSets::regSculptureItems, BuiltInRegistries.ITEM);
+        BlockSetAPI.addDynamicRegistration(ThicketHelper.MOD_ID, ModBlockSets::regCarvingBlocks, BuiltInRegistries.BLOCK);
+        BlockSetAPI.addDynamicRegistration(ThicketHelper.MOD_ID, ModBlockSets::regCarvingItems, BuiltInRegistries.ITEM);
     }
 }

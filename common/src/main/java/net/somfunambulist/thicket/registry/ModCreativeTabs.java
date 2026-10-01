@@ -21,7 +21,7 @@ public class ModCreativeTabs {
 
         if (thicketTab) {
             event.add(THICKET_TAB.getKey(), ModItems.POCKET_KNIFE.get());
-            var sculptureItems = ModBlockSets.SCULPTURE_BLOCK_ITEMS.values().stream().map(BlockItem::getDefaultInstance).toList();
+            var sculptureItems = ModBlockSets.CARVING_BLOCK_ITEMS.values().stream().map(BlockItem::getDefaultInstance).toList();
             event.addItems(THICKET_TAB.getKey(), null, false, sculptureItems);
         }
     }

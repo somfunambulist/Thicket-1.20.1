@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thicket:block/carving_birch_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thicket:block/carving_birch"
+    },
+    "axis=z": {
+      "model": "thicket:block/carving_birch_horizontal",
+      "x": 90
+    }
+  }
+}

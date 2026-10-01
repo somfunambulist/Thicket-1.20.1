@@ -5,6 +5,7 @@ import net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.somfunambulist.thicket.ThicketHelper;
@@ -23,14 +24,23 @@ public class ModBlockProvider extends BlockStateProvider {
     }
 
     private void sculpture(WoodType woodType) {
-        var sculptureBlock = woodType.getBlockOfThis("thicket:sculpture");
+        var sculptureBlock = woodType.getBlockOfThis("thicket:carving");
         if (sculptureBlock == null) return;
 
         var strippedBlock = woodType.getBlockOfThis("stripped_log");
         if (strippedBlock == null) return;
 
-        var modelFile = models().cubeColumn(name(sculptureBlock), blockTexture(sculptureBlock).withSuffix("_side"), blockTexture(strippedBlock).withSuffix("_top"));
-        simpleBlock(sculptureBlock, modelFile);
+        //var modelFile = models().cubeColumn(name(sculptureBlock), blockTexture(sculptureBlock).withSuffix("_side"), blockTexture(strippedBlock).withSuffix("_top"));
+
+        var side = blockTexture(sculptureBlock).withSuffix("_side");
+        var end = blockTexture(strippedBlock).withSuffix("_top");
+
+        var normalModel = models().cubeColumn(name(sculptureBlock), side, end);
+        axisBlock((RotatedPillarBlock) sculptureBlock,
+                normalModel,
+                models().cubeColumnHorizontal(name(sculptureBlock) + "_horizontal", side, end));
+
+        simpleBlockItem(sculptureBlock, normalModel);
     }
 
     private String name(Block block) {

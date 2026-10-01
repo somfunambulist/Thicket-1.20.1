@@ -8,6 +8,7 @@ import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.somfunambulist.thicket.ThicketHelper;
 import net.somfunambulist.thicket.ThicketStringDefinitions;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ModLangProvider extends LanguageProvider {
@@ -19,7 +20,7 @@ public class ModLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         forItems(ThicketHelper.getAllModItems());
-        forBlocks(ThicketHelper.getAllModBlocks());
+        //forBlocks(ThicketHelper.getAllModBlocks()); todo exclude block items
         add(ThicketStringDefinitions.TAB_KEY, "Thicket");
 
     }
@@ -27,7 +28,7 @@ public class ModLangProvider extends LanguageProvider {
     protected <I extends Item> void forItems(List<I> items) {
         items.forEach(item -> {
             String translation = ThicketHelper.toTitleCase(BuiltInRegistries.ITEM.getKey(item).getPath());
-            add(item, translation);
+            add(item, modifyName(translation));
         });
     }
 
@@ -36,5 +37,24 @@ public class ModLangProvider extends LanguageProvider {
             String translation = ThicketHelper.toTitleCase(BuiltInRegistries.BLOCK.getKey(block).getPath());
             add(block, translation);
         });
+    }
+
+    private String modifyName(String input) {
+        if (input.startsWith("Carving")) {
+            return firstToLast(input);
+        }
+        return input;
+    }
+
+    private String firstToLast(String input) {
+        String[] parts = input.split(" ");
+        String first = parts[0];
+        parts[0] = "";
+        StringBuilder builder = new StringBuilder();
+        for (var part : parts) {
+            if (part.isEmpty()) continue;
+            builder.append(part).append(" ");
+        }
+        return builder.append(first).toString();
     }
 }

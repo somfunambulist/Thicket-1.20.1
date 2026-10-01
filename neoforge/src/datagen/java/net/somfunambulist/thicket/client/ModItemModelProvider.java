@@ -1,7 +1,5 @@
 package net.somfunambulist.thicket.client;
 
-import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
-import net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -17,11 +15,5 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.POCKET_KNIFE.get());
-
-        for (WoodType wt : WoodTypeRegistry.INSTANCE) {
-            var sculptureBlock = wt.getBlockOfThis("thicket:sculpture");
-            if (sculptureBlock == null) continue;
-            simpleBlockItem(sculptureBlock);
-        }
     }
 }
