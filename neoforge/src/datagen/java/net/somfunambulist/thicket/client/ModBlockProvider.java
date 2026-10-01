@@ -2,11 +2,13 @@ package net.somfunambulist.thicket.client;
 
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.somfunambulist.thicket.ThicketHelper;
 
@@ -35,10 +37,22 @@ public class ModBlockProvider extends BlockStateProvider {
         var side = blockTexture(sculptureBlock).withSuffix("_side");
         var end = blockTexture(strippedBlock).withSuffix("_top");
 
+
+        var horizontalModel = models().cubeColumnHorizontal(name(sculptureBlock) + "_horizontal", side, end);
         var normalModel = models().cubeColumn(name(sculptureBlock), side, end);
-        axisBlock((RotatedPillarBlock) sculptureBlock,
-                normalModel,
-                models().cubeColumnHorizontal(name(sculptureBlock) + "_horizontal", side, end));
+
+        getVariantBuilder(sculptureBlock).forAllStates(state -> {
+            Direction dir = state.getValue(BlockStateProperties.FACING);
+            if (dir.getAxis().isVertical()) {
+                return ConfiguredModel.builder().modelFile(normalModel).build();
+            } else {
+                return ConfiguredModel.builder()
+                        .modelFile(horizontalModel)
+                        .rotationX(90)
+                        .rotationY((((int) dir.toYRot()) + 180) % 360)
+                        .build();
+            }
+        });
 
         simpleBlockItem(sculptureBlock, normalModel);
     }

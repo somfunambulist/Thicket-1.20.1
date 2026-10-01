@@ -3,7 +3,10 @@ package net.somfunambulist.thicket.content.blocks;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -11,7 +14,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
 public class CarvingBlock extends DirectionalBlock {
     public static final MapCodec<CarvingBlock> CODEC = simpleCodec(CarvingBlock::new);
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
     public CarvingBlock(Properties properties) {
         super(properties);

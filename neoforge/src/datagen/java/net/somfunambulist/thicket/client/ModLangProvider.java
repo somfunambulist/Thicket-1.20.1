@@ -8,7 +8,6 @@ import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.somfunambulist.thicket.ThicketHelper;
 import net.somfunambulist.thicket.ThicketStringDefinitions;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ModLangProvider extends LanguageProvider {

@@ -1,16 +1,29 @@
 {
   "variants": {
-    "axis=x": {
+    "facing=down": {
+      "model": "thicket:block/carving_mangrove"
+    },
+    "facing=east": {
       "model": "thicket:block/carving_mangrove_horizontal",
       "x": 90,
       "y": 90
     },
-    "axis=y": {
-      "model": "thicket:block/carving_mangrove"
-    },
-    "axis=z": {
+    "facing=north": {
       "model": "thicket:block/carving_mangrove_horizontal",
       "x": 90
+    },
+    "facing=south": {
+      "model": "thicket:block/carving_mangrove_horizontal",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "thicket:block/carving_mangrove"
+    },
+    "facing=west": {
+      "model": "thicket:block/carving_mangrove_horizontal",
+      "x": 90,
+      "y": 270
     }
   }
 }
