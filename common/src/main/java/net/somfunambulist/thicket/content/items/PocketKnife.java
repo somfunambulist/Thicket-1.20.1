@@ -22,7 +22,8 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.BaseFireBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -103,7 +104,7 @@ public class PocketKnife extends Item {
         } else {
             //TODO I reallyyyy don't like doing this through item comparison. But the block version was awful too. Figure out a nice way to handle this.
             var stackFromClickedBlock = clickedState.getBlock().asItem().getDefaultInstance();
-            var optional = level.getRecipeManager().getRecipeFor(ModRecipes.POCKET_KNIFE_ITEM.get(), new SingleRecipeInput(stackFromClickedBlock), level);
+            var optional = level.getRecipeManager().getRecipeFor(ModRecipes.POCKET_KNIFE_ITEM.get(), new SingleRecipeInput(stackFromClickedBlock), level); //TODO unable to retrieve recipe
 
             if (optional.isPresent()) {
                 var recipe = optional.get().value();
