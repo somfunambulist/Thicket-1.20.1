@@ -14,6 +14,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -21,10 +22,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseFireBlock;
-import net.minecraft.world.level.block.CampfireBlock;
-import net.minecraft.world.level.block.CandleBlock;
-import net.minecraft.world.level.block.CandleCakeBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -69,7 +67,7 @@ public class PocketKnife extends Item {
         var player = context.getPlayer();
         var clickedPos = context.getClickedPos();
         var clickedState = level.getBlockState(clickedPos);
-        ItemStack itemstack = context.getItemInHand();
+        ItemStack knife = context.getItemInHand();
 
         if (player == null) return super.useOn(context);
 
@@ -82,7 +80,7 @@ public class PocketKnife extends Item {
                 level.setBlock(clickedPos, clickedState.setValue(BlockStateProperties.LIT, Boolean.TRUE), 11);
                 level.gameEvent(player, GameEvent.BLOCK_CHANGE, clickedPos);
 
-                return finishKnifeUse(level, player, player.getUsedItemHand(), itemstack).getResult();
+                return finishKnifeUse(level, player, player.getUsedItemHand(), knife).getResult();
 
             } else {
                 BlockPos posOfFace = clickedPos.relative(context.getClickedFace());
@@ -93,13 +91,35 @@ public class PocketKnife extends Item {
                     level.gameEvent(player, GameEvent.BLOCK_PLACE, clickedPos);
 
                     if (player instanceof ServerPlayer) {
-                        CriteriaTriggers.PLACED_BLOCK.trigger((ServerPlayer)player, posOfFace, itemstack);
+                        CriteriaTriggers.PLACED_BLOCK.trigger((ServerPlayer)player, posOfFace, knife);
                     }
 
-                    return finishKnifeUse(level, player, player.getUsedItemHand(), itemstack).getResult();
+                    return finishKnifeUse(level, player, player.getUsedItemHand(), knife).getResult();
 
                 } else {
                     return super.useOn(context);
+                }
+            }
+        } else {
+            //TODO I reallyyyy don't like doing this through item comparison. But the block version was awful too. Figure out a nice way to handle this.
+            var stackFromClickedBlock = clickedState.getBlock().asItem().getDefaultInstance();
+            var optional = level.getRecipeManager().getRecipeFor(ModRecipes.POCKET_KNIFE_ITEM.get(), new SingleRecipeInput(stackFromClickedBlock), level);
+
+            if (optional.isPresent()) {
+                var recipe = optional.get().value();
+                var resultItem = recipe.getResultItem(level.registryAccess());
+                if (resultItem.getItem() instanceof BlockItem blockItem) {
+                    var blockToPlace = blockItem.getBlock();
+                    /** TODO
+                     *  Two things to do
+                     *  1. If to place block has same properties from previous block, copy them over
+                     *  2. carvings use facing direction but logs use axis -> add special handling
+                     */
+                    level.setBlock(clickedPos, blockToPlace.defaultBlockState(), Block.UPDATE_ALL);
+                    level.gameEvent(GameEvent.BLOCK_CHANGE, clickedPos, GameEvent.Context.of(context.getPlayer(), clickedState));
+                    level.addDestroyBlockEffect(clickedPos, clickedState);
+                    player.playSound(SoundEvents.AXE_STRIP, 1F, 1.5F);
+                    return finishKnifeUse(level, player, player.getUsedItemHand(), knife).getResult();
                 }
             }
         }
