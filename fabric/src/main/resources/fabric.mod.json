@@ -19,6 +19,9 @@
       "net.somfunambulist.thicket.FabricThicket"
     ]
   },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": "*",

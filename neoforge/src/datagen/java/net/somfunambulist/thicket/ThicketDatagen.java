@@ -12,6 +12,8 @@ import net.somfunambulist.thicket.client.ModBlockProvider;
 import net.somfunambulist.thicket.client.ModItemModelProvider;
 import net.somfunambulist.thicket.client.ModLangProvider;
 import net.somfunambulist.thicket.server.recipe.ModRecipeProvider;
+import net.somfunambulist.thicket.server.tags.ModBlockTagsProvider;
+import net.somfunambulist.thicket.server.tags.ModItemTagProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,14 +27,18 @@ public class ThicketDatagen {
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        CompletableFuture<HolderLookup.Provider> registriesProvider = event.getLookupProvider();
 
         generator.addProvider(includeClient, new ModLangProvider(packOutput));
 
         generator.addProvider(includeClient, new ModBlockProvider(packOutput, fileHelper));
         generator.addProvider(includeClient, new ModItemModelProvider(packOutput, fileHelper));
 
-        generator.addProvider(includeServer, new ModRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(includeServer, new ModRecipeProvider(packOutput, registriesProvider));
+
+        var blockTags = new ModBlockTagsProvider(packOutput, registriesProvider, fileHelper);
+        generator.addProvider(includeServer, blockTags);
+        generator.addProvider(includeServer, new ModItemTagProvider(packOutput, registriesProvider, blockTags.contentsGetter()));
 
     }
 }
