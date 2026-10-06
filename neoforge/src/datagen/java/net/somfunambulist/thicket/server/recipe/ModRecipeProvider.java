@@ -10,7 +10,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.somfunambulist.thicket.content.recipes.PocketKnifeOnItemRecipe;
 import net.somfunambulist.thicket.registry.ModBlockSets;
 import net.somfunambulist.thicket.registry.ModItems;
@@ -34,8 +33,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 pocketKnifeBlock(strippedBlock, carving, recipeOutput);
             }
         });
-
-        pocketKnifeBlock(Blocks.ACACIA_FENCE_GATE, Blocks.DARK_OAK_DOOR, recipeOutput);
     }
 
     public void pocketKnifeItem(ItemLike ingredient, ItemLike result, int count, RecipeOutput recipeOutput) {

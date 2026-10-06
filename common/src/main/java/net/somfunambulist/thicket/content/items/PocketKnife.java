@@ -15,7 +15,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -121,8 +120,6 @@ public class PocketKnife extends Item {
                         if (!resultState.hasProperty(property)) continue;
                         resultState = resultState.setValue(property, clickedState.getValue(property));
                     }
-
-                    //TODO currently doesn't trigger multiblock blockstates (e.g. doors)
 
                     //This is for blocks like carvings where axis needs to be translated to a facing direction
                     if (clickedState.hasProperty(BlockStateProperties.AXIS) && (!resultState.hasProperty(BlockStateProperties.AXIS) && resultState.hasProperty(BlockStateProperties.FACING))) {
