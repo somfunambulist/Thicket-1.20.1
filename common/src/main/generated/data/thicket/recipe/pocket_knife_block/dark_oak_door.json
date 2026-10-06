@@ -1,0 +1,5 @@
+{
+  "type": "thicket:pocket_knife_block",
+  "input": "minecraft:acacia_fence_gate",
+  "result": "minecraft:dark_oak_door"
+}

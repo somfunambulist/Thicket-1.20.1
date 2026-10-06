@@ -2,6 +2,7 @@ package net.somfunambulist.thicket.content.items;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -26,7 +27,9 @@ import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.somfunambulist.thicket.content.recipes.BlockLocationRecipeInput;
 import net.somfunambulist.thicket.registry.ModRecipes;
 import net.somfunambulist.thicket.registry.ModTags;
 
@@ -62,6 +65,7 @@ public class PocketKnife extends Item {
         return super.use(level, player, usedHand);
     }
 
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
     public InteractionResult useOn(UseOnContext context) {
         var level = context.getLevel();
@@ -102,21 +106,35 @@ public class PocketKnife extends Item {
                 }
             }
         } else {
-            //TODO I reallyyyy don't like doing this through item comparison. But the block version was awful too. Figure out a nice way to handle this.
-            var stackFromClickedBlock = clickedState.getBlock().asItem().getDefaultInstance();
-            var optional = level.getRecipeManager().getRecipeFor(ModRecipes.POCKET_KNIFE_ITEM.get(), new SingleRecipeInput(stackFromClickedBlock), level); //TODO unable to retrieve recipe
+            var optional = level.getRecipeManager().getRecipeFor(ModRecipes.POCKET_KNIFE_BLOCK.get(), new BlockLocationRecipeInput(clickedState.getBlock()), level);
 
             if (optional.isPresent()) {
                 var recipe = optional.get().value();
-                var resultItem = recipe.getResultItem(level.registryAccess());
-                if (resultItem.getItem() instanceof BlockItem blockItem) {
-                    var blockToPlace = blockItem.getBlock();
-                    /** TODO
-                     *  Two things to do
-                     *  1. If to place block has same properties from previous block, copy them over
-                     *  2. carvings use facing direction but logs use axis -> add special handling
-                     */
-                    level.setBlock(clickedPos, blockToPlace.defaultBlockState(), Block.UPDATE_ALL);
+                var resultBlock = recipe.getResultBlock();
+
+                if (resultBlock != null) {
+                    var resultState = resultBlock.defaultBlockState();
+
+                    //All this collects the old properties and copies the value over to the new block if the property exists there
+                    var previousProperties = clickedState.getProperties();
+                    for (Property property : previousProperties) {
+                        if (!resultState.hasProperty(property)) continue;
+                        resultState = resultState.setValue(property, clickedState.getValue(property));
+                    }
+
+                    //TODO currently doesn't trigger multiblock blockstates (e.g. doors)
+
+                    //This is for blocks like carvings where axis needs to be translated to a facing direction
+                    if (clickedState.hasProperty(BlockStateProperties.AXIS) && (!resultState.hasProperty(BlockStateProperties.AXIS) && resultState.hasProperty(BlockStateProperties.FACING))) {
+                        Direction dir = Direction.fromAxisAndDirection(clickedState.getValue(BlockStateProperties.AXIS), context.getHorizontalDirection().getAxisDirection());
+                        resultState = resultState.setValue(BlockStateProperties.FACING, dir);
+                    }
+
+                    level.setBlock(clickedPos, resultState, Block.UPDATE_ALL);
+                    var updatedState = level.getBlockState(clickedPos);
+                    //We call setPlacedBy here, because that method is responsible for placing the remaining parts of a multipart block like doors or beds.
+                    updatedState.getBlock().setPlacedBy(level, clickedPos, updatedState, player, updatedState.getBlock().getCloneItemStack(level, clickedPos, updatedState));
+
                     level.gameEvent(GameEvent.BLOCK_CHANGE, clickedPos, GameEvent.Context.of(context.getPlayer(), clickedState));
                     level.addDestroyBlockEffect(clickedPos, clickedState);
                     player.playSound(SoundEvents.AXE_STRIP, 1F, 1.5F);

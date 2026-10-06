@@ -1,9 +1,5 @@
 {
   "type": "thicket:pocket_knife_block",
-  "ingredient": {
-    "item": "minecraft:stripped_crimson_stem"
-  },
-  "result": {
-    "id": "thicket:carving_crimson"
-  }
+  "input": "minecraft:stripped_crimson_stem",
+  "result": "thicket:carving_crimson"
 }

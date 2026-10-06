@@ -1,9 +1,5 @@
 {
   "type": "thicket:pocket_knife_block",
-  "ingredient": {
-    "item": "minecraft:stripped_bamboo_block"
-  },
-  "result": {
-    "id": "thicket:carving_bamboo"
-  }
+  "input": "minecraft:stripped_bamboo_block",
+  "result": "thicket:carving_bamboo"
 }

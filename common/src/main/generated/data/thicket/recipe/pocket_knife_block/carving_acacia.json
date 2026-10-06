@@ -1,9 +1,5 @@
 {
   "type": "thicket:pocket_knife_block",
-  "ingredient": {
-    "item": "minecraft:stripped_acacia_log"
-  },
-  "result": {
-    "id": "thicket:carving_acacia"
-  }
+  "input": "minecraft:stripped_acacia_log",
+  "result": "thicket:carving_acacia"
 }

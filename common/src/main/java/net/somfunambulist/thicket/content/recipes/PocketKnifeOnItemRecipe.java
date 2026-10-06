@@ -7,9 +7,9 @@ import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 import net.somfunambulist.thicket.registry.ModRecipes;
 
-public class PocketKnifeOnItem extends SingleItemRecipe {
+public class PocketKnifeOnItemRecipe extends SingleItemRecipe {
 
-    public PocketKnifeOnItem(String group, Ingredient ingredient, ItemStack result) {
+    public PocketKnifeOnItemRecipe(String group, Ingredient ingredient, ItemStack result) {
         super(ModRecipes.POCKET_KNIFE_ITEM.get(), ModRecipes.POCKET_KNIFE_ITEM_SERIALIZER.get(), group, ingredient, result);
     }
 
@@ -18,9 +18,9 @@ public class PocketKnifeOnItem extends SingleItemRecipe {
         return this.ingredient.test(singleRecipeInput.item());
     }
 
-    public static class Serializer extends SingleItemRecipe.Serializer<PocketKnifeOnItem> {
+    public static class Serializer extends SingleItemRecipe.Serializer<PocketKnifeOnItemRecipe> {
         public Serializer() {
-            super(PocketKnifeOnItem::new);
+            super(PocketKnifeOnItemRecipe::new);
         }
     }
 }

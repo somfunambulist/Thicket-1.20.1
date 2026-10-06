@@ -1,9 +1,5 @@
 {
   "type": "thicket:pocket_knife_block",
-  "ingredient": {
-    "item": "minecraft:stripped_jungle_log"
-  },
-  "result": {
-    "id": "thicket:carving_jungle"
-  }
+  "input": "minecraft:stripped_jungle_log",
+  "result": "thicket:carving_jungle"
 }
