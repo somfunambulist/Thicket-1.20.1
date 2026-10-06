@@ -59,4 +59,11 @@ sourceSets.main.resources {
 dependencies {
     implementation("net.mehvahdjukaar:moonlight-neoforge:$moonlight_version")
     runtimeOnly("net.mehvahdjukaar:codecui-neoforge:$codecui_version")
+
+    //Used to debug dynamic block gen
+    runtimeOnly "curse.maven:oh-the-trees-youll-grow-962544:9062891"
+    runtimeOnly "curse.maven:terrablender-neoforge-940057:6054947"
+    runtimeOnly "curse.maven:geckolib-388172:8893490"
+    runtimeOnly "curse.maven:corgilib-693313:7773534"
+    runtimeOnly "curse.maven:oh-the-biomes-weve-gone-1070751:9064021"
 }

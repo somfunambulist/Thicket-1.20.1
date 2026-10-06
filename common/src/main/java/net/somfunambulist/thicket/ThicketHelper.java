@@ -15,7 +15,7 @@ public class ThicketHelper {
 
     public static final String MOD_ID = "thicket";
     public static final String MOD_NAME = "Thicket";
-    public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 
     public static ResourceLocation path(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
