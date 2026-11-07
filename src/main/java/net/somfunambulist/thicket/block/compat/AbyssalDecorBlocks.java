@@ -23,6 +23,12 @@ public class AbyssalDecorBlocks {
     //ADD BLOCKS HERE===================================================================================================
     public static final RegistryObject<Block> CINNAMON_CARVING = registerBlock("cinnamon_carving",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> ANCIENT_BIRCH_CARVING = registerBlock("ancient_birch_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> BLACKWOOD_CARVING = registerBlock("blackwood_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> WHITEWOOD_CARVING = registerBlock("whitewood_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

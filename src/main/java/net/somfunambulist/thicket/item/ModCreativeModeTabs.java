@@ -172,7 +172,10 @@ public class ModCreativeModeTabs {
                             output.accept(UpgradeAquaticBlocks.DRIFTWOOD_CARVING.get());
                         }
                         if (ModList.get().isLoaded(ABYSSAL_DECOR_ID)) {
+                            output.accept(AbyssalDecorBlocks.ANCIENT_BIRCH_CARVING.get());
                             output.accept(AbyssalDecorBlocks.CINNAMON_CARVING.get());
+                            output.accept(AbyssalDecorBlocks.WHITEWOOD_CARVING.get());
+                            output.accept(AbyssalDecorBlocks.BLACKWOOD_CARVING.get());
                         }
 
                     })).build());

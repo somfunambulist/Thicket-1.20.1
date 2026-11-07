@@ -38,7 +38,19 @@
       "required": false
     },
     {
+      "id": "thicket:ancient_birch_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:blackwood_carving",
+      "required": false
+    },
+    {
       "id": "thicket:cinnamon_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:whitewood_carving",
       "required": false
     }
   ]

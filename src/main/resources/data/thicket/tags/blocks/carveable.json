@@ -38,7 +38,19 @@
       "required": false
     },
     {
+      "id": "abyssal_decor:stripped_ancient_birch_log",
+      "required": false
+    },
+    {
+      "id": "abyssal_decor:stripped_blackwood_log",
+      "required": false
+    },
+    {
       "id": "abyssal_decor:stripped_cinnamon_log",
+      "required": false
+    },
+    {
+      "id": "abyssal_decor:stripped_whitewood_log",
       "required": false
     }
   ]

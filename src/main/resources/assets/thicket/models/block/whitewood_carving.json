@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "abyssal_decor:block/whitewoodstrippedlogtop",
+    "side": "thicket:block/whitewood_carving"
+  }
+}
