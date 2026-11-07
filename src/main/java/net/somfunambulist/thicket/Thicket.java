@@ -21,9 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.somfunambulist.thicket.block.ModBlocks;
-import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
-import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
-import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
+import net.somfunambulist.thicket.block.compat.*;
 import net.somfunambulist.thicket.block.entity.ModBlockEntities;
 import net.somfunambulist.thicket.effect.ModEffects;
 import net.somfunambulist.thicket.enchantment.ModEnchantments;
@@ -84,6 +82,12 @@ public class Thicket {
         }
         if (ModList.get().isLoaded(ModCompat.WINDSWEPT_ID)) {
             WindsweptBlocks.register(modEventBus);
+        }
+        if (ModList.get().isLoaded(ModCompat.UPGRADE_AQUATIC_ID)) {
+            UpgradeAquaticBlocks.register(modEventBus);
+        }
+        if (ModList.get().isLoaded(ModCompat.ABYSSAL_DECOR_ID)) {
+            AbyssalDecorBlocks.register(modEventBus);
         }
     }
 

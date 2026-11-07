@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "abyssal_decor:block/stripped_cinnamon_log_top",
+    "side": "thicket:block/compat/abyssal_decor/cinnamon_carving"
+  }
+}

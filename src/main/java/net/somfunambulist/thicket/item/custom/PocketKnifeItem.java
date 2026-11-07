@@ -22,6 +22,8 @@ import net.minecraftforge.fml.ModList;
 import net.somfunambulist.thicket.ModCompat;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
+import net.somfunambulist.thicket.block.compat.UpgradeAquaticBlocks;
+import net.somfunambulist.thicket.block.compat.AbyssalDecorBlocks;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -71,6 +73,22 @@ public class PocketKnifeItem extends ShearsItem {
             block = BuiltInRegistries.BLOCK.get(new ResourceLocation("windswept","stripped_pine_log"));
             if (block != null) {
                 registerCarvingBlock(block, WindsweptBlocks.PINE_CARVING);
+            }
+        }
+        if (ModList.get().isLoaded(ModCompat.UPGRADE_AQUATIC_ID)) {
+            Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation("upgrade_aquatic","stripped_river_log"));
+            if (block != null) {
+                registerCarvingBlock(block, UpgradeAquaticBlocks.RIVER_CARVING);
+            }
+            block = BuiltInRegistries.BLOCK.get(new ResourceLocation("upgrade_aquatic","stripped_driftwood_log"));
+            if (block != null) {
+                registerCarvingBlock(block, UpgradeAquaticBlocks.DRIFTWOOD_CARVING);
+            }
+        }
+        if (ModList.get().isLoaded(ModCompat.ABYSSAL_DECOR_ID)) {
+            Block block = BuiltInRegistries.BLOCK.get(new ResourceLocation("abyssal_decor","stripped_cinnamon_log"));
+            if (block != null) {
+                registerCarvingBlock(block, AbyssalDecorBlocks.CINNAMON_CARVING);
             }
         }
     }

@@ -23,6 +23,8 @@ public class DecorativeBlocksBlocks {
     //ADD BLOCKS HERE===================================================================================================
     public static final RegistryObject<Block> HAZEL_BEAM = registerBlock("hazel_beam",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> SASSAFRAS_BEAM = registerBlock("sassafras_beam",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
 
     //==================================================================================================================
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

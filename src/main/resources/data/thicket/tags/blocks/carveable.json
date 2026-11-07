@@ -28,6 +28,18 @@
     {
       "id": "windswept:stripped_pine_log",
       "required": false
+    },
+    {
+      "id": "upgrade_aquatic:stripped_river_log",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:stripped_driftwood_log",
+      "required": false
+    },
+    {
+      "id": "abyssal_decor:stripped_cinnamon_log",
+      "required": false
     }
   ]
 }

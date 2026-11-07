@@ -12,7 +12,9 @@ import net.somfunambulist.thicket.Thicket;
 import net.somfunambulist.thicket.block.ModBlocks;
 import net.somfunambulist.thicket.block.compat.DecorativeBlocksBlocks;
 import net.somfunambulist.thicket.block.compat.EcologicsBlocks;
+import net.somfunambulist.thicket.block.compat.UpgradeAquaticBlocks;
 import net.somfunambulist.thicket.block.compat.WindsweptBlocks;
+import net.somfunambulist.thicket.block.compat.AbyssalDecorBlocks;
 
 import static net.somfunambulist.thicket.ModCompat.*;
 
@@ -155,6 +157,7 @@ public class ModCreativeModeTabs {
                         //modded compat
                         if (ModList.get().isLoaded(DECORATIVE_BLOCKS_ID)) {
                             output.accept(DecorativeBlocksBlocks.HAZEL_BEAM.get());
+                            output.accept(DecorativeBlocksBlocks.SASSAFRAS_BEAM.get());
                         }
                         if (ModList.get().isLoaded(ECOLOGICS_ID)) {
                             output.accept(EcologicsBlocks.WALNUT_BUNDLE.get());
@@ -163,6 +166,13 @@ public class ModCreativeModeTabs {
                             output.accept(WindsweptBlocks.CHESTNUT_CARVING.get());
                             output.accept(WindsweptBlocks.HOLLY_CARVING.get());
                             output.accept(WindsweptBlocks.PINE_CARVING.get());
+                        }
+                        if (ModList.get().isLoaded(UPGRADE_AQUATIC_ID)) {
+                            output.accept(UpgradeAquaticBlocks.RIVER_CARVING.get());
+                            output.accept(UpgradeAquaticBlocks.DRIFTWOOD_CARVING.get());
+                        }
+                        if (ModList.get().isLoaded(ABYSSAL_DECOR_ID)) {
+                            output.accept(AbyssalDecorBlocks.CINNAMON_CARVING.get());
                         }
 
                     })).build());

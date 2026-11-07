@@ -110,6 +110,18 @@
     {
       "id": "thicket:pine_carving",
       "required": false
+    },
+    {
+      "id": "thicket:river_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:driftwood_carving",
+      "required": false
+    },
+    {
+      "id": "thicket:cinnamon_carving",
+      "required": false
     }
   ]
 }
