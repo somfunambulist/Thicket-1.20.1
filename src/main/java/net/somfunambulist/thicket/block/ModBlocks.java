@@ -219,6 +219,8 @@ public class ModBlocks {
     //sassafras=========================================================================================================
     public static final RegistryObject<Block> SASSAFRAS_SAPLING = registerBlock("sassafras_sapling",
             () -> new SaplingBlock(new SassafrasTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_SASSAFRAS_SAPLING = BLOCKS.register("potted_sassafras_sapling",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), BOSWELLIA_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_ACACIA_SAPLING)));
     public static final RegistryObject<ModLeavesBlock> SASSAFRAS_LEAVES = registerBlock("sassafras_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> SASSAFRAS_LOG = registerBlock("sassafras_log",
@@ -231,6 +233,34 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<ModPlanksBlock> SASSAFRAS_PLANKS = registerBlock("sassafras_planks",
             () -> new ModPlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> SASSAFRAS_CARVING = registerBlock("sassafras_carving",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> SASSAFRAS_STAIRS = registerBlock("sassafras_stairs",
+            () -> new StairBlock(() -> ModBlocks.SASSAFRAS_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> SASSAFRAS_SLAB = registerBlock("sassafras_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> SASSAFRAS_PRESSURE_PLATE = registerBlock("sassafras_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+    public static final RegistryObject<Block> SASSAFRAS_BUTTON = registerBlock("sassafras_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK,30,true));
+    public static final RegistryObject<Block> SASSAFRAS_FENCE = registerBlock("sassafras_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<Block> SASSAFRAS_FENCE_GATE = registerBlock("sassafras_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> SASSAFRAS_DOOR = registerBlock("sassafras_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> SASSAFRAS_TRAPDOOR = registerBlock("sassafras_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> SASSAFRAS_SIGN = BLOCKS.register("sassafras_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.SASSAFRAS));
+    public static final RegistryObject<Block> SASSAFRAS_WALL_SIGN = BLOCKS.register("sassafras_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.SASSAFRAS));
+    public static final RegistryObject<Block> SASSAFRAS_HANGING_SIGN = BLOCKS.register("sassafras_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.SASSAFRAS));
+    public static final RegistryObject<Block> SASSAFRAS_WALL_HANGING_SIGN = BLOCKS.register("sassafras_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.SASSAFRAS));
     //other blocks======================================================================================================
     public static final RegistryObject<Block> FIREMILK_MUSHROOM = registerBlock("firemilk_mushroom",
             () -> new FiremilkMushroomBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM), ModFeatures.HUGE_FIREMILK_KEY));

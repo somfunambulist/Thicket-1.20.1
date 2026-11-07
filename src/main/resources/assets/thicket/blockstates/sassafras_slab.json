@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thicket:block/sassafras_slab"
+    },
+    "type=double": {
+      "model": "thicket:block/sassafras_planks"
+    },
+    "type=top": {
+      "model": "thicket:block/sassafras_slab_top"
+    }
+  }
+}

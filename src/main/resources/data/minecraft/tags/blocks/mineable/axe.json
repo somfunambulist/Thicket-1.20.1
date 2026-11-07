@@ -11,6 +11,7 @@
     "thicket:cherry_carving",
     "thicket:crimson_carving",
     "thicket:warped_carving",
+
     "thicket:hazel_log",
     "thicket:hazel_wood",
     "thicket:stripped_hazel_log",
@@ -74,6 +75,16 @@
     "thicket:stripped_sassafras_log",
     "thicket:stripped_sassafras_wood",
     "thicket:sassafras_planks",
+    "thicket:sassafras_slab",
+    "thicket:sassafras_button",
+    "thicket:sassafras_pressure_plate",
+    "thicket:sassafras_stairs",
+    "thicket:sassafras_fence",
+    "thicket:sassafras_fence_gate",
+    "thicket:sassafras_door",
+    "thicket:sassafras_trapdoor",
+    "thicket:sassafras_carving",
+
     "thicket:firemilk_mushroom_block",
     "thicket:dark_firemilk_mushroom_block",
     {
@@ -82,6 +93,10 @@
     },
     {
       "id": "thicket:hazel_beam",
+      "required": false
+    },
+    {
+      "id": "thicket:sassafras_beam",
       "required": false
     },
     {

@@ -16,6 +16,7 @@
     "thicket:green_myrrh_carving",
     "thicket:boswellia_carving",
     "thicket:red_boswellia_carving",
+    "thicket:sassafras_carving",
     {
       "id": "thicket:chestnut_carving",
       "required": false

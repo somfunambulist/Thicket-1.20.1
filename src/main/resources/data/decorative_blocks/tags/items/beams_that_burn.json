@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "thicket:hazel_beam"
+    "thicket:hazel_beam",
+    "thicket:sassafras_beam"
   ]
 }

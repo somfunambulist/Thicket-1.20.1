@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_swamp",
+  "features": "thicket:sassafras_placed_plains",
+  "step": "vegetal_decoration"
+}

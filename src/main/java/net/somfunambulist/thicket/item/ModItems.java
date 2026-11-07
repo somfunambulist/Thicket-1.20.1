@@ -96,6 +96,17 @@ public class ModItems {
     public static final RegistryObject<Item> ANOINTING_OIL = ITEMS.register("anointing_oil",
             () -> new AnointingOilItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
+    public static final RegistryObject<Item> SASSAFRAS_SIGN = ITEMS.register("sassafras_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.SASSAFRAS_SIGN.get(), ModBlocks.SASSAFRAS_WALL_SIGN.get()));
+    public static final RegistryObject<Item> SASSAFRAS_HANGING_SIGN = ITEMS.register("sassafras_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.SASSAFRAS_HANGING_SIGN.get(), ModBlocks.SASSAFRAS_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> SASSAFRAS_BOAT = ITEMS.register("sassafras_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.SASSAFRAS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SASSAFRAS_CHEST_BOAT = ITEMS.register("sassafras_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.SASSAFRAS, new Item.Properties().stacksTo(1)));
+
     //template setup ===================================================================================================
     private static final ChatFormatting TITLE_FORMAT = ChatFormatting.GRAY;
     private static final ChatFormatting DESCRIPTION_FORMAT = ChatFormatting.BLUE;

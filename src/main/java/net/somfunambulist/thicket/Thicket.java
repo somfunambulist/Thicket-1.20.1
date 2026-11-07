@@ -106,6 +106,7 @@ public class Thicket {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HAZEL_SAPLING.getId(), ModBlocks.POTTED_HAZEL_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MYRRH_SAPLING.getId(), ModBlocks.POTTED_MYRRH_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BOSWELLIA_SAPLING.getId(), ModBlocks.POTTED_BOSWELLIA_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SASSAFRAS_SAPLING.getId(), ModBlocks.POTTED_SASSAFRAS_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FIREMILK_MUSHROOM.getId(), ModBlocks.POTTED_FIREMILK_MUSHROOM);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.HELIOTROPE.getId(), ModBlocks.POTTED_HELIOTROPE);
 
@@ -139,6 +140,7 @@ public class Thicket {
                 Sheets.addWoodType(ModWoodTypes.HAZEL);
                 Sheets.addWoodType(ModWoodTypes.MYRRH);
                 Sheets.addWoodType(ModWoodTypes.BOSWELLIA);
+                Sheets.addWoodType(ModWoodTypes.SASSAFRAS);
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer<>(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer<>(pContext, true));

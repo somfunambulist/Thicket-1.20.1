@@ -74,7 +74,8 @@ public class ModBoatEntity extends Boat {
     public enum Type {
         HAZEL("hazel", () -> ModItems.HAZEL_BOAT.get(), () -> ModItems.HAZEL_CHEST_BOAT.get()),
         MYRRH("myrrh", () -> ModItems.MYRRH_BOAT.get(), () -> ModItems.MYRRH_CHEST_BOAT.get()),
-        BOSWELLIA("boswellia", () -> ModItems.BOSWELLIA_BOAT.get(), () -> ModItems.BOSWELLIA_CHEST_BOAT.get());
+        BOSWELLIA("boswellia", () -> ModItems.BOSWELLIA_BOAT.get(), () -> ModItems.BOSWELLIA_CHEST_BOAT.get()),
+        SASSAFRAS("sassafras", () -> ModItems.SASSAFRAS_BOAT.get(), () -> ModItems.SASSAFRAS_CHEST_BOAT.get());
 
         private final String name;
         private final Supplier<Item> item;

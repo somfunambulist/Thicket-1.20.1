@@ -130,13 +130,26 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CRUXWOOD_SWORD.get());
                         output.accept(ModItems.CRUXWOOD_BOW.get());
                         //sassafras=====================================================================================
-                        //output.accept(ModBlocks.SASSAFRAS_SAPLING.get());
-                        //output.accept(ModBlocks.SASSAFRAS_LEAVES.get());
-                        //output.accept(ModBlocks.SASSAFRAS_LOG.get());
-                        //output.accept(ModBlocks.SASSAFRAS_WOOD.get());
-                        //output.accept(ModBlocks.STRIPPED_SASSAFRAS_LOG.get());
-                        //output.accept(ModBlocks.STRIPPED_SASSAFRAS_WOOD.get());
-                        //output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
+                        output.accept(ModBlocks.SASSAFRAS_SAPLING.get());
+                        output.accept(ModBlocks.SASSAFRAS_LEAVES.get());
+                        output.accept(ModBlocks.SASSAFRAS_LOG.get());
+                        output.accept(ModBlocks.SASSAFRAS_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_SASSAFRAS_WOOD.get());
+                        output.accept(ModBlocks.SASSAFRAS_PLANKS.get());
+                        output.accept(ModBlocks.SASSAFRAS_CARVING.get());
+                        output.accept(ModBlocks.SASSAFRAS_SLAB.get());
+                        output.accept(ModBlocks.SASSAFRAS_STAIRS.get());
+                        output.accept(ModBlocks.SASSAFRAS_BUTTON.get());
+                        output.accept(ModBlocks.SASSAFRAS_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.SASSAFRAS_FENCE.get());
+                        output.accept(ModBlocks.SASSAFRAS_FENCE_GATE.get());
+                        output.accept(ModBlocks.SASSAFRAS_DOOR.get());
+                        output.accept(ModBlocks.SASSAFRAS_TRAPDOOR.get());
+                        output.accept(ModItems.SASSAFRAS_SIGN.get());
+                        output.accept(ModItems.SASSAFRAS_HANGING_SIGN.get());
+                        output.accept(ModItems.SASSAFRAS_BOAT.get());
+                        output.accept(ModItems.SASSAFRAS_CHEST_BOAT.get());
                         //other blocks==================================================================================
                         //output.accept(ModBlocks.SUSPICIOUS_ROOTS.get());
                         //modded compat
