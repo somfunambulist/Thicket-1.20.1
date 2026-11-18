@@ -94,7 +94,7 @@ public class PocketKnifeItem extends ShearsItem {
             if (block != null) {
                 registerCarvingBlock(block, AbyssalDecorBlocks.BLACKWOOD_CARVING);
             }
-            block = BuiltInRegistries.BLOCK.get(new ResourceLocation("abyssal_decor","stripped_whitewood_log"));
+            block = BuiltInRegistries.BLOCK.get(new ResourceLocation("abyssal_decor","white_wood_log"));
             if (block != null) {
                 registerCarvingBlock(block, AbyssalDecorBlocks.WHITEWOOD_CARVING);
             }

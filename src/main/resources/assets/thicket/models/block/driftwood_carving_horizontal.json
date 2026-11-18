@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "upgrade_aquatic:block/driftwood_log_top_stripped",
+    "side": "thicket:block/compat/upgrade_aquatic/driftwood_carving"
+  }
+}
