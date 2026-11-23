@@ -65,7 +65,7 @@ public class ServerDynamicResourcesHandler extends DynamicServerResourceProvider
                                             .setRolls(ConstantValue.exactly(1.0F))
                                             .add(LootItem.lootTableItem(saplingBlock.asItem()))
                                             .when(AllOfCondition.allOf(
-                                                    LootItemRandomChanceCondition.randomChance(0.02F),
+                                                    LootItemRandomChanceCondition.randomChance(0.03F),
                                                     MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.POCKET_KNIFE.get())))
                                             )
                             ).setParamSet(LootContextParamSets.BLOCK).build()
