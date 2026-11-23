@@ -7,8 +7,10 @@ import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.api.set.leaves.LeavesTypeRegistry;
 import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -22,9 +24,9 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.somfunambulist.thicket.ThicketHelper;
 import net.somfunambulist.thicket.registry.ModBlockSets;
 import net.somfunambulist.thicket.registry.ModItems;
+import net.somfunambulist.thicket.registry.ModTags;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
@@ -32,6 +34,7 @@ import static net.somfunambulist.thicket.ThicketHelper.path;
 
 //TODO also add client resource provider
 public class ServerDynamicResourcesHandler extends DynamicServerResourceProvider {
+    public static final Map<ResourceLocation, ResourceLocation> LEAVES_TO_SAPLING_MAP = new HashMap<>();
 
     public ServerDynamicResourcesHandler() {
         super(path("generated_pack"), PackGenerationStrategy.REGEN_ON_EVERY_RELOAD); //TODO usually this would be turned into a config it seems
@@ -47,31 +50,32 @@ public class ServerDynamicResourcesHandler extends DynamicServerResourceProvider
         return List.of("minecraft", "thicket");
     }
 
-    //TODO doesn't seem to work yet
     @Override
     protected void regenerateDynamicAssets(Consumer<ResourceGenTask> consumer) {
         consumer.accept((resourceManager, resourceSink) -> {
             for (var leavesType : LeavesTypeRegistry.INSTANCE) {
                 var sapling = leavesType.getChild("sapling");
-                if (sapling instanceof SaplingBlock saplingBlock) {
+                if (sapling != null) {
+                    Block saplingBlock = (Block) sapling;
                     var path = path("blocks/additional_sapling_" + leavesType.getAppendableId().replace("/", "_"));
                     resourceSink.addLootTable(
                             path,
                             LootTable.lootTable().withPool(
                                     LootPool.lootPool()
                                             .setRolls(ConstantValue.exactly(1.0F))
-                                            .add(LootItem.lootTableItem(saplingBlock))
+                                            .add(LootItem.lootTableItem(saplingBlock.asItem()))
                                             .when(AllOfCondition.allOf(
                                                     LootItemRandomChanceCondition.randomChance(0.02F),
                                                     MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.POCKET_KNIFE.get())))
                                             )
                             ).setParamSet(LootContextParamSets.BLOCK).build()
                     );
+                    LEAVES_TO_SAPLING_MAP.put(leavesType.leaves.getLootTable().location(), path);
                 }
             }
 
 
-            /*TODO register RecipeTemplate
+            /*TODO register RecipeTemplate (that might take a hot minutes)
             AtomicInteger am = new AtomicInteger();
             ModBlockSets.CARVING_BLOCKS.forEach((wood, block) -> {
                 if (wood == VanillaWoodTypes.OAK) return; //Because we use oak as the template for recipe generation
