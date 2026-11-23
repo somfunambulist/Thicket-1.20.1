@@ -1,6 +1,7 @@
 package net.somfunambulist.thicket;
 
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
+import net.somfunambulist.thicket.core.ThicketCommonEvents;
 import net.somfunambulist.thicket.registry.ModBlockSets;
 import net.somfunambulist.thicket.registry.ModCreativeTabs;
 import net.somfunambulist.thicket.registry.ModItems;
@@ -16,5 +17,7 @@ public class ThicketMain {
         ModRecipes.init();
 
         RegHelper.registerDynamicResourceProvider(new ServerDynamicResourcesHandler());
+
+        ThicketCommonEvents.init();
     }
 }

@@ -11,6 +11,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.somfunambulist.thicket.client.ModBlockProvider;
 import net.somfunambulist.thicket.client.ModItemModelProvider;
 import net.somfunambulist.thicket.client.ModLangProvider;
+import net.somfunambulist.thicket.server.loot.ModLootTableGen;
 import net.somfunambulist.thicket.server.recipe.ModRecipeProvider;
 import net.somfunambulist.thicket.server.tags.ModBlockTagsProvider;
 import net.somfunambulist.thicket.server.tags.ModItemTagProvider;
@@ -39,6 +40,8 @@ public class ThicketDatagen {
         var blockTags = new ModBlockTagsProvider(packOutput, registriesProvider, fileHelper);
         generator.addProvider(includeServer, blockTags);
         generator.addProvider(includeServer, new ModItemTagProvider(packOutput, registriesProvider, blockTags.contentsGetter()));
+
+        generator.addProvider(includeServer, new ModLootTableGen(packOutput, registriesProvider));
 
     }
 }
