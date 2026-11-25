@@ -28,6 +28,7 @@ public class ModRecipeProvider extends RecipeProvider {
         pocketKnifeItem(Items.ACACIA_SAPLING, Items.BONE_MEAL, 1, recipeOutput);
 
         ModBlockSets.CARVING_BLOCKS.forEach((wood, carving) -> {
+            if (!wood.isVanilla()) return;
             var strippedBlock = wood.getBlockOfThis("stripped_log");
             if (strippedBlock != null) {
                 pocketKnifeBlock(strippedBlock, carving, recipeOutput);

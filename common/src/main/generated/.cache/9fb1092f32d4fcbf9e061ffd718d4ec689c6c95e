@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-06T23:11:12.406392	Recipes
+// 1.21.1	2026-11-25T23:57:06.2159588	Recipes
 66e65ac8ae0a53b77fc7f8bcbe5cd38dd4370ac7 data/thicket/advancement/recipes/misc/pocket_knife/bone_meal.json
 b8c5153f8f52a54dd75cc19fd5c3b0a2a347f24d data/thicket/advancement/recipes/misc/pocket_knife_block/carving_acacia.json
 c6d0fa4047fb3e8279ded221b6a9489f787cda73 data/thicket/advancement/recipes/misc/pocket_knife_block/carving_bamboo.json
@@ -11,7 +11,6 @@ e0226f50f48d5108ef68df96afe8419b2c46caec data/thicket/advancement/recipes/misc/p
 55fb5ec64f71893e53f7d5e2233240852896f884 data/thicket/advancement/recipes/misc/pocket_knife_block/carving_oak.json
 94156767101fe2185bf4f54c4e061a88e54cd8b5 data/thicket/advancement/recipes/misc/pocket_knife_block/carving_spruce.json
 59365818c48752470557eb8b88b25246051ed149 data/thicket/advancement/recipes/misc/pocket_knife_block/carving_warped.json
-0e9c010a0af62546ba0211b9ac9613928ae39c2b data/thicket/advancement/recipes/misc/pocket_knife_block/dark_oak_door.json
 84571a32bad01096a85d339ccbee2154d8bbca2c data/thicket/recipe/pocket_knife/bone_meal.json
 e9b10e467242ef6d023c9b64225621dc7fd84f1f data/thicket/recipe/pocket_knife_block/carving_acacia.json
 02f49e0d381ac822d0b1a47f152ab093af71c0ff data/thicket/recipe/pocket_knife_block/carving_bamboo.json
@@ -24,4 +23,3 @@ d4e40f0aaea02867d16140aa30f6a8ee8058f7a6 data/thicket/recipe/pocket_knife_block/
 ec8c2eb3aa857f564192c33557568d3473af6069 data/thicket/recipe/pocket_knife_block/carving_oak.json
 8cb297561b45ba905f6cb6619b7a2d4a767bf4ad data/thicket/recipe/pocket_knife_block/carving_spruce.json
 81805e03f57a22c5127d882e9d18b07d9b45fb96 data/thicket/recipe/pocket_knife_block/carving_warped.json
-183c0d54d0dc23535a1eeb5a171edbc0e2a068ab data/thicket/recipe/pocket_knife_block/dark_oak_door.json

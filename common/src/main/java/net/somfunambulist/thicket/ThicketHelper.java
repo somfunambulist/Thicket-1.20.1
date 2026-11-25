@@ -34,7 +34,7 @@ public class ThicketHelper {
     }
 
     public static List<Item> getAllModItems() {
-        return getAllFromModReg(BuiltInRegistries.ITEM);
+        return getAllFromModReg(BuiltInRegistries.ITEM).stream().filter(i -> !BuiltInRegistries.ITEM.getKey(i).getPath().contains("carving")).toList();
     }
 
     public static List<Block> getAllModBlocks() {

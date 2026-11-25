@@ -21,27 +21,26 @@ public class ModBlockProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (WoodType wt : WoodTypeRegistry.INSTANCE) {
-            sculpture(wt);
+            if (!wt.isVanilla()) continue;
+            carving(wt);
         }
     }
 
-    private void sculpture(WoodType woodType) {
-        var sculptureBlock = woodType.getBlockOfThis("thicket:carving");
-        if (sculptureBlock == null) return;
+    private void carving(WoodType woodType) {
+        var carvingBlock = woodType.getBlockOfThis("thicket:carving");
+        if (carvingBlock == null) return;
 
         var strippedBlock = woodType.getBlockOfThis("stripped_log");
         if (strippedBlock == null) return;
 
-        //var modelFile = models().cubeColumn(name(sculptureBlock), blockTexture(sculptureBlock).withSuffix("_side"), blockTexture(strippedBlock).withSuffix("_top"));
-
-        var side = blockTexture(sculptureBlock).withSuffix("_side");
+        var side = blockTexture(carvingBlock).withSuffix("_side");
         var end = blockTexture(strippedBlock).withSuffix("_top");
 
 
-        var horizontalModel = models().cubeColumnHorizontal(name(sculptureBlock) + "_horizontal", side, end);
-        var normalModel = models().cubeColumn(name(sculptureBlock), side, end);
+        var horizontalModel = models().cubeColumnHorizontal(name(carvingBlock) + "_horizontal", side, end);
+        var normalModel = models().cubeColumn(name(carvingBlock), side, end);
 
-        getVariantBuilder(sculptureBlock).forAllStates(state -> {
+        getVariantBuilder(carvingBlock).forAllStates(state -> {
             Direction dir = state.getValue(BlockStateProperties.FACING);
             if (dir.getAxis().isVertical()) {
                 return ConfiguredModel.builder().modelFile(normalModel).build();
@@ -54,7 +53,7 @@ public class ModBlockProvider extends BlockStateProvider {
             }
         });
 
-        simpleBlockItem(sculptureBlock, normalModel);
+        simpleBlockItem(carvingBlock, normalModel);
     }
 
     private String name(Block block) {

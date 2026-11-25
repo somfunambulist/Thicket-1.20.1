@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "top_temp",
+    "side": "thicket:block/carving_temp_side"
+  }
+}

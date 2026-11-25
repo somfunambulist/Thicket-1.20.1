@@ -5,29 +5,23 @@ import net.mehvahdjukaar.moonlight.api.resources.pack.DynamicServerResourceProvi
 import net.mehvahdjukaar.moonlight.api.resources.pack.PackGenerationStrategy;
 import net.mehvahdjukaar.moonlight.api.resources.pack.ResourceGenTask;
 import net.mehvahdjukaar.moonlight.api.set.leaves.LeavesTypeRegistry;
-import net.mehvahdjukaar.moonlight.api.set.wood.VanillaWoodTypes;
 import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.AllOfCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.somfunambulist.thicket.ThicketHelper;
-import net.somfunambulist.thicket.registry.ModBlockSets;
 import net.somfunambulist.thicket.registry.ModItems;
-import net.somfunambulist.thicket.registry.ModTags;
 
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 import static net.somfunambulist.thicket.ThicketHelper.path;

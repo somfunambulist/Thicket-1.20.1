@@ -21,6 +21,7 @@ public class ModLangProvider extends LanguageProvider {
         forItems(ThicketHelper.getAllModItems());
         //forBlocks(ThicketHelper.getAllModBlocks()); todo exclude block items
         add(ThicketStringDefinitions.TAB_KEY, "Thicket");
+        add("block.thicket.carving", "%s Carving");
 
     }
 
@@ -39,9 +40,6 @@ public class ModLangProvider extends LanguageProvider {
     }
 
     private String modifyName(String input) {
-        if (input.startsWith("Carving")) {
-            return firstToLast(input);
-        }
         return input;
     }
 
